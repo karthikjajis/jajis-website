@@ -26,12 +26,26 @@ const desktopLinks = [
   { path: "/event-hall", label: "Book a hall" },
 ];
 
-const caps = "text-[0.8rem] font-medium tracking-[0.16em] uppercase";
+const caps = "text-[16px] font-medium";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
   const isAuthenticated = !!localStorage.getItem("token");
+
+  // The phone's bottom bar steps aside while reading down and returns on the way back up.
+  const [barHidden, setBarHidden] = useState(false);
+  useEffect(() => {
+    let last = window.scrollY;
+    const onScroll = () => {
+      const y = window.scrollY;
+      if (Math.abs(y - last) < 8) return;
+      setBarHidden(y > last && y > 200);
+      last = y;
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   // Close the menu whenever the page changes, and stop the page scrolling behind it.
   useEffect(() => setIsOpen(false), [location.pathname]);
@@ -41,29 +55,22 @@ export default function Navbar() {
   }, [isOpen]);
 
   const linkClass = ({ isActive }) =>
-    `${caps} py-2 border-b ${isActive ? "border-black" : "border-transparent hover:border-black"}`;
+    `text-[17px] py-2 underline-offset-[6px] decoration-1 hover:underline ${isActive ? "underline" : ""}`;
 
   return (
     <>
-      {/* Fixed header: 32px strip + 64px bar = 96px, same height pages already leave room for */}
       <header className="fixed top-0 left-0 w-full z-50 bg-white">
-        <p className="h-8 flex items-center justify-center bg-black text-white text-[0.7rem] tracking-[0.2em] uppercase px-4 text-center">
-          <span className="hidden sm:inline mr-1">Kerala’s family salon since 2002 ·</span>
-          <Link to="/products" className="underline underline-offset-4">
-            Shop Jaji’s online
-          </Link>
-        </p>
-
-        <div className="h-16 border-b border-gray-200 px-4 lg:px-12 grid grid-cols-[1fr_auto_1fr] items-center">
-          <div className="flex items-center gap-7">
-            <button
-              type="button"
-              onClick={() => setIsOpen(true)}
-              aria-label="Open menu"
-              className="p-2 -ml-2"
-            >
+        <div className="h-20 px-[clamp(16px,2.2vw,32px)] flex items-center justify-between gap-6">
+          <div className="flex items-center gap-3">
+            <button type="button" onClick={() => setIsOpen(true)} aria-label="Open menu" className="p-2 -ml-2">
               <Menu className="w-6 h-6" strokeWidth={1.5} />
             </button>
+            <Link to="/" aria-label="Jaji's home">
+              <img src={logo} alt="Jaji's Innovation" className="h-12 w-auto" width="120" height="48" />
+            </Link>
+          </div>
+
+          <div className="flex items-center gap-7">
             <nav aria-label="Main" className="hidden lg:flex items-center gap-7">
               {desktopLinks.map((l) => (
                 <NavLink key={l.path} to={l.path} className={linkClass}>
@@ -71,16 +78,6 @@ export default function Navbar() {
                 </NavLink>
               ))}
             </nav>
-          </div>
-
-          <Link to="/" aria-label="Jaji's home" className="justify-self-center">
-            <img src={logo} alt="Jaji's Innovation" className="h-12 w-auto" width="120" height="48" />
-          </Link>
-
-          <div className="flex items-center justify-end gap-6">
-            <NavLink to="/wishlist" className={(s) => `${linkClass(s)} hidden md:block`}>
-              Wishlist
-            </NavLink>
             <NavLink
               to={isAuthenticated ? "/profile" : "/login"}
               className={(s) => `${linkClass(s)} hidden md:block`}
@@ -91,6 +88,12 @@ export default function Navbar() {
               <span className="hidden md:inline">Cart</span>
               <ShoppingBag className="w-5 h-5 md:hidden" strokeWidth={1.5} />
             </NavLink>
+            <Link
+              to="/salons"
+              className="hidden sm:inline-flex items-center min-h-11 px-5 bg-black text-white text-[17px] font-medium hover:bg-[#2b2b2b] active:scale-[0.97] transition-[background-color,transform] duration-150"
+            >
+              Book a salon
+            </Link>
           </div>
         </div>
       </header>
@@ -100,11 +103,10 @@ export default function Navbar() {
         role="dialog"
         aria-modal="true"
         aria-label="Menu"
-        className={`fixed inset-0 bg-white z-[100] overflow-y-auto transition-opacity duration-300 ${
-          isOpen ? "opacity-100 visible" : "opacity-0 invisible"
-        }`}
+        hidden={!isOpen}
+        className="fixed inset-0 bg-white z-[100] overflow-y-auto"
       >
-        <div className="h-16 px-4 lg:px-12 flex items-center justify-between border-b border-gray-200">
+        <div className="h-20 px-[clamp(16px,2.2vw,32px)] flex items-center justify-between">
           <img src={logo} alt="" className="h-10 w-auto" />
           <button type="button" onClick={() => setIsOpen(false)} aria-label="Close menu" className="p-2 -mr-2">
             <X className="w-6 h-6" strokeWidth={1.5} />
@@ -118,8 +120,8 @@ export default function Navbar() {
               to={item.path}
               end
               className={({ isActive }) =>
-                `py-4 border-b border-gray-200 text-lg tracking-[0.14em] uppercase ${
-                  isActive ? "font-medium" : "font-light hover:pl-2 transition-all"
+                `py-3 text-[clamp(24px,3vw,32px)] tracking-[-0.01em] ${
+                  isActive ? "font-medium underline underline-offset-8 decoration-1" : "hover:translate-x-2 transition-transform"
                 }`
               }
             >
@@ -127,8 +129,8 @@ export default function Navbar() {
             </NavLink>
           ))}
           <div className="sm:col-span-2 pt-10 flex flex-wrap gap-4">
-            <a href="https://jajisqcafe.com/book" className={`${caps} bg-black text-white px-6 py-3`}>Book Q Café hall</a>
-            <Link to="/myorders" className={`${caps} border border-black px-6 py-3`}>My orders</Link>
+            <a href="https://jajisqcafe.com/book" className={`${caps} bg-black text-white px-6 py-3`}>Book the Q Café hall</a>
+            <Link to="/myorders" className={`${caps} bg-[#efedea] px-6 py-3`}>My orders</Link>
             <Link to={isAuthenticated ? "/profile" : "/login"} className={`${caps} bg-black text-white px-6 py-3`}>
               {isAuthenticated ? "My account" : "Log in"}
             </Link>
@@ -144,7 +146,7 @@ export default function Navbar() {
       {/* Mobile bottom bar */}
       <nav
         aria-label="Quick links"
-        className="fixed bottom-0 left-0 right-0 z-[95] bg-white border-t border-gray-200 md:hidden"
+        className={`fixed bottom-0 left-0 right-0 z-[95] bg-[#efedea] md:hidden transition-transform duration-300 ${barHidden && !isOpen ? "translate-y-full" : ""}`}
         style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
       >
         <div className="grid grid-cols-5 h-16">
@@ -160,8 +162,8 @@ export default function Navbar() {
               to={to}
               end={to === "/"}
               className={({ isActive }) =>
-                `flex flex-col items-center justify-center gap-1 text-[0.65rem] tracking-[0.12em] uppercase ${
-                  isActive ? "text-black font-medium" : "text-gray-500"
+                `flex flex-col items-center justify-center gap-1 text-[13px] ${
+                  isActive ? "text-black font-medium" : "text-[#4d4d4d]"
                 }`
               }
             >

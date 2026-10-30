@@ -53,7 +53,7 @@ function busyShare(segs) {
 const pct = (m) => ((Math.min(DAY_END, Math.max(DAY_START, m)) - DAY_START) / SPAN) * 100;
 
 const btn =
-  "inline-flex items-center justify-center min-w-[200px] px-7 py-4 text-[0.8rem] font-medium tracking-[0.18em] uppercase transition-colors";
+  "inline-flex items-center justify-center min-h-[52px] px-7 text-[16px] font-medium transition-[background-color,transform] duration-150 active:scale-[0.97]";
 
 export default function QCafeBooking() {
   const start = useMemo(todayIST, []);
@@ -75,51 +75,44 @@ export default function QCafeBooking() {
   const freeDays = blocks && !failed ? days.filter((d) => busyShare(busyOnDate(blocks, d)) < 0.9).length : null;
 
   return (
-    <section id="qcafe-booking" className="bg-white text-black scroll-mt-24">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 py-20 md:py-24 grid gap-12 lg:grid-cols-[1fr_1.1fr] items-center">
-        <div className="flex flex-col gap-6">
-          <p className="text-[0.75rem] tracking-[0.2em] uppercase text-gray-600">Q Café A/C hall · Ashramam, Kollam</p>
-          <h2 className="text-3xl md:text-5xl font-light">Book the Q Café hall online</h2>
-          <p className="text-gray-700 max-w-lg">
-            Birthdays, engagements, meetings and family get-togethers in our air-conditioned hall. See which dates are
-            free right now, send a request in two minutes, and we confirm with you on WhatsApp.
+    <section id="qcafe-booking" className="bg-[#efedea] text-black scroll-mt-24">
+      <div className="px-[clamp(16px,2.2vw,32px)] py-[clamp(96px,12vw,200px)] grid gap-12 lg:grid-cols-[1fr_1.15fr] items-start">
+        <div className="flex flex-col gap-6 lg:sticky lg:top-28">
+          <h2 className="text-[clamp(30px,3.4vw,52px)] !normal-case !tracking-[-0.02em] !font-medium !leading-none">
+            Book the Q Café hall
+          </h2>
+          <p className="text-[clamp(19px,1.5vw,22px)] leading-[1.45] max-w-[38ch]">
+            Our air-conditioned hall at Ashramam, Kollam, for birthdays, engagements, meetings and family
+            get-togethers. See which days are free, send a request in two minutes, and we confirm on WhatsApp.
           </p>
-          <ol className="grid sm:grid-cols-2 gap-x-8 gap-y-4 text-sm text-gray-700 max-w-lg">
-            {[
-              "Pick a date and time",
-              "Tell us about the event",
-              "Accept the hall agreement",
-              "We confirm, you pay the advance",
-            ].map((s, i) => (
-              <li key={s} className="flex gap-3">
-                <span className="font-medium text-black">{i + 1}</span>
-                {s}
-              </li>
-            ))}
+          <ol className="list-none p-0 m-0 flex flex-col gap-2 text-[17px] max-w-[40ch]">
+            <li>Pick a day and time, then tell us about the event.</li>
+            <li>Accept the hall agreement online.</li>
+            <li>We confirm on WhatsApp and you pay the advance.</li>
           </ol>
-          <div className="flex flex-col sm:flex-row gap-3">
-            <a href={`${QCAFE_URL}/book`} className={`${btn} bg-black text-white hover:bg-gray-800`}>
-              Check dates &amp; request
+          <div className="flex flex-col sm:flex-row gap-3 pt-2">
+            <a href={`${QCAFE_URL}/book`} className={`${btn} bg-black text-white hover:bg-[#2b2b2b]`}>
+              Check dates and request
             </a>
             <a
               href={WHATSAPP}
               target="_blank"
               rel="noopener noreferrer"
-              className={`${btn} border border-black hover:bg-black hover:text-white`}
+              className={`${btn} bg-white text-black hover:bg-[#e2dfdb]`}
             >
               Ask on WhatsApp
             </a>
           </div>
         </div>
 
-        <div className="border border-gray-200 p-5 md:p-7">
-          <div className="flex flex-wrap items-baseline justify-between gap-2 mb-5">
-            <h3 className="text-[0.85rem] font-medium tracking-[0.16em]">Next two weeks</h3>
-            <span className="text-sm text-gray-600" aria-live="polite">
+        <div className="bg-white p-5 md:p-8">
+          <div className="flex flex-wrap items-baseline justify-between gap-2 mb-6">
+            <h3 className="text-[24px] !normal-case !tracking-[-0.01em] !font-medium">The next two weeks</h3>
+            <span className="text-[15px] text-[#4d4d4d]" aria-live="polite">
               {blocks === null
-                ? "Loading live calendar…"
+                ? "Loading the live calendar…"
                 : failed
-                  ? "Live calendar unavailable — tap a day to check"
+                  ? "Live calendar unavailable, tap a day to check"
                   : `${freeDays} of ${DAYS} days have free time`}
             </span>
           </div>
@@ -130,7 +123,6 @@ export default function QCafeBooking() {
               const dow = dt.toLocaleDateString("en-IN", { weekday: "short", timeZone: "Asia/Kolkata" });
               const segs = blocks ? busyOnDate(blocks, d) : [];
               const full = busyShare(segs) >= 0.9;
-              const weekend = dt.getUTCDay() === 0 || dt.getUTCDay() === 6;
               const label = `${dt.toLocaleDateString("en-IN", {
                 weekday: "long",
                 day: "numeric",
@@ -144,15 +136,13 @@ export default function QCafeBooking() {
                   href={`${QCAFE_URL}/book?date=${d}`}
                   aria-label={label}
                   title={label}
-                  className={`group flex flex-col items-center gap-2 py-2 border ${
-                    full ? "border-gray-100 text-gray-400 pointer-events-none" : "border-gray-200 hover:border-black"
+                  className={`flex flex-col items-center gap-2 py-3 transition-[background-color,transform] duration-150 active:scale-95 ${
+                    full ? "bg-[#f6f5f3] text-[#767676] pointer-events-none" : "bg-[#efedea] hover:bg-black hover:text-white"
                   }`}
                 >
-                  <span className={`text-[0.65rem] tracking-[0.12em] uppercase ${weekend ? "text-black" : "text-gray-500"}`}>
-                    {dow}
-                  </span>
-                  <span className="text-lg font-light leading-none">{dt.getUTCDate()}</span>
-                  <span className="relative w-3 h-16 bg-gray-100" aria-hidden="true">
+                  <span className="text-[15px]">{dow}</span>
+                  <span className="text-[22px] font-medium leading-none">{dt.getUTCDate()}</span>
+                  <span className="relative w-2.5 h-16 bg-white" aria-hidden="true">
                     {segs.map((s, i) => (
                       <span
                         key={i}
@@ -166,15 +156,10 @@ export default function QCafeBooking() {
             })}
           </div>
 
-          <div className="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-xs text-gray-600">
-            <span className="flex items-center gap-2">
-              <i className="w-3 h-3 bg-gray-100 border border-gray-200" /> Free
-            </span>
-            <span className="flex items-center gap-2">
-              <i className="w-3 h-3 bg-black" /> Booked
-            </span>
-            <span>Each bar runs 6 AM (top) to midnight (bottom). Tap a day to book.</span>
-          </div>
+          <p className="mt-6 text-[15px] text-[#4d4d4d] max-w-[52ch]">
+            Each bar is one day from 6 am at the top to midnight at the bottom; black is already booked. Tap a day to
+            request it.
+          </p>
         </div>
       </div>
     </section>

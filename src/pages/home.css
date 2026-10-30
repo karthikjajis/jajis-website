@@ -1,0 +1,762 @@
+/* ---------- Jaji's home: the pinned poster ----------
+   Tokens: one ground, one ink, one accent (black, the brand), one surface step.
+   Five type steps: display, title, heading, lead, body (+ small for notes). */
+.jh {
+  --bg: #ffffff;
+  --ink: #000000;
+  --muted: #4d4d4d;
+  --surface: #efedea;
+  --accent: #000000;
+  --on-accent: #ffffff;
+  --margin: clamp(16px, 2.2vw, 32px);
+  --gap: clamp(16px, 2vw, 28px);
+  --step-display: clamp(96px, 21vw, 380px);
+  --step-title: clamp(40px, 4.4vw, 72px);
+  --step-head: clamp(30px, 3.4vw, 52px);
+  --step-lead: clamp(19px, 1.5vw, 22px);
+  --step-body: 17px;
+  --step-small: 15px;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  background: var(--bg);
+  color: var(--ink);
+  font-size: var(--step-body);
+  line-height: 1.55;
+}
+.jh h1,
+.jh h2,
+.jh h3 {
+  text-transform: none;
+  letter-spacing: -0.02em;
+  font-weight: 500;
+  line-height: 1;
+}
+.jh p {
+  margin: 0;
+}
+.jh-wrap {
+  padding-inline: var(--margin);
+}
+.jh-section {
+  padding-block: clamp(96px, 12vw, 200px);
+}
+.jh-head {
+  font-size: var(--step-head);
+  max-width: 18ch;
+}
+.jh-lead {
+  font-size: var(--step-lead);
+  line-height: 1.45;
+  max-width: 40ch;
+}
+.jh-muted {
+  color: var(--muted);
+}
+
+/* Buttons: flat, square, one fill. */
+.jh-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 52px;
+  padding: 0 28px;
+  background: var(--accent);
+  color: var(--on-accent);
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 0;
+  transition: transform 160ms var(--ease-out), background-color 160ms ease, color 160ms ease;
+}
+.jh-btn:hover {
+  background: #2b2b2b;
+}
+.jh-btn:active {
+  transform: scale(0.97);
+}
+.jh-btn--quiet {
+  background: var(--surface);
+  color: var(--ink);
+}
+.jh-btn--quiet:hover {
+  background: #e2dfdb;
+}
+.jh-btn[disabled] {
+  background: #8a8a8a;
+  cursor: not-allowed;
+}
+.jh-link {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  text-decoration-thickness: 1px;
+  transition: text-underline-offset 160ms ease;
+}
+.jh-link:hover {
+  text-underline-offset: 8px;
+}
+
+/* ---------- 1. Hero: the sentence split across the top, the reel passing beneath ---------- */
+.jh-hero {
+  position: relative;
+  height: calc(100svh - 80px);
+  min-height: 620px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  row-gap: 3svh;
+  padding: 1svh var(--margin) 32px;
+  overflow: hidden;
+}
+.jh-hero__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  column-gap: 1em;
+  font-size: min(7.8vw, 13svh);
+  line-height: 0.92;
+  letter-spacing: -0.035em;
+  margin: 0;
+}
+.jh-hero__reel {
+  justify-self: center;
+  height: 100%;
+  min-height: 0;
+  aspect-ratio: 16 / 10;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+  background: var(--surface);
+}
+.jh-hero__track {
+  position: absolute;
+  inset: 0;
+  will-change: transform;
+  transition: transform 1100ms var(--ease-out);
+}
+.jh-hero__frame {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.jh-hero__frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.jh-hero__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: var(--gap);
+}
+.jh-hero__foot {
+  display: flex;
+  align-items: flex-end;
+  gap: 28px;
+}
+.jh-hero__foot p {
+  font-size: var(--step-lead);
+  line-height: 1.45;
+  max-width: 34ch;
+}
+.jh-hero__foot .jh-btn {
+  flex: none;
+}
+.jh-hero__facts {
+  display: flex;
+  gap: 40px;
+  text-align: right;
+  font-size: var(--step-small);
+}
+.jh-hero__facts strong {
+  display: block;
+  font-size: var(--step-lead);
+  font-weight: 500;
+}
+
+/* ---------- 2. The salon: sticky photograph, active list ---------- */
+.jh-salon {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--gap);
+  align-items: start;
+}
+.jh-salon__pic {
+  grid-column: 1 / span 5;
+  position: sticky;
+  top: 14vh;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--surface);
+}
+.jh-salon__pic img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+.jh-salon__pic img.is-on {
+  opacity: 1;
+}
+.jh-salon__body {
+  grid-column: 7 / span 6;
+}
+.jh-salon__body .jh-head {
+  margin-bottom: 48px;
+}
+.jh-rows {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.jh-row,
+.jh-houses__index button {
+  letter-spacing: 0;
+}
+.jh-row {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 14px 0;
+  color: var(--muted);
+  cursor: pointer;
+  transition: color 200ms ease;
+}
+.jh-row__line {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+}
+.jh-row__name {
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+.jh-row__note {
+  font-size: var(--step-small);
+}
+.jh-row__desc {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 300ms var(--ease-out);
+}
+.jh-row__desc > p {
+  overflow: hidden;
+  max-width: 40ch;
+  font-size: var(--step-body);
+  color: var(--ink);
+}
+.jh-row.is-on {
+  color: var(--ink);
+}
+.jh-row.is-on .jh-row__desc {
+  grid-template-rows: 1fr;
+}
+.jh-row.is-on .jh-row__desc > p {
+  padding-top: 10px;
+}
+.jh-salon__cta {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* ---------- 3. Products: one frame, three distances ---------- */
+.jh-show {
+  height: 300svh;
+  position: relative;
+  background: var(--surface);
+}
+.jh-show__stage {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: 1fr auto 1fr;
+  align-items: center;
+  padding-inline: var(--margin);
+  overflow: hidden;
+}
+.jh-show__a,
+.jh-show__b {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: var(--step-title);
+  line-height: 0.95;
+}
+.jh-show__a {
+  grid-row: 1;
+  align-self: end;
+  padding-bottom: 24px;
+}
+.jh-show__b {
+  grid-row: 3;
+  align-self: start;
+  padding-top: 24px;
+}
+.jh-show__b span {
+  display: inline-block;
+  transition: opacity 500ms ease, transform 600ms var(--ease-out);
+}
+.jh-show__frame {
+  grid-column: 2;
+  grid-row: 2;
+  width: min(26vw, 40svh);
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  clip-path: inset(0);
+  isolation: isolate;
+  position: relative;
+  background: #000;
+}
+.jh-show__frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 700ms var(--ease-out);
+}
+.jh-show__note {
+  grid-column: 3;
+  grid-row: 2;
+  align-self: start;
+  justify-self: start;
+  max-width: 26ch;
+  margin-left: 56px;
+  font-size: var(--step-body);
+  transition: opacity 500ms ease, transform 600ms var(--ease-out);
+}
+.jh-show[data-stage="0"] .jh-show__b span,
+.jh-show[data-stage="0"] .jh-show__note,
+.jh-show[data-stage="1"] .jh-show__note {
+  opacity: 0;
+  transform: translateY(16px);
+}
+.jh-show[data-stage="1"] .jh-show__frame img {
+  transform: scale(1.8);
+  transform-origin: 50% 62%;
+}
+.jh-show[data-stage="2"] .jh-show__frame img {
+  transform: scale(3.2);
+  transform-origin: 50% 30%;
+}
+.jh-show__markers {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  pointer-events: none;
+}
+
+.jh-shop__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--gap);
+  margin-top: 56px;
+}
+.jh-prod {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.jh-prod__img {
+  display: block;
+  background: var(--surface);
+  padding: 24px;
+  overflow: hidden;
+}
+.jh-prod__img img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: contain;
+  transition: transform 400ms var(--ease-out);
+}
+.jh-prod__img:hover img {
+  transform: scale(1.04);
+}
+.jh-prod__name {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.3;
+  margin-top: 8px;
+}
+.jh-prod .jh-btn {
+  margin-top: auto;
+}
+.jh-shop__head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+}
+.jh-shop__empty {
+  margin-top: 56px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap);
+  align-items: center;
+}
+.jh-shop__empty img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+/* ---------- 4. Jaji's: the pinned name, its houses change beneath it ---------- */
+.jh-houses {
+  background: #000;
+  color: #fff;
+  position: relative;
+}
+.jh-houses__name {
+  font-size: var(--step-display);
+  line-height: 0.8;
+  letter-spacing: -0.04em !important;
+  text-transform: uppercase !important;
+  font-weight: 600 !important;
+  color: #fff;
+  text-align: center;
+}
+/* Static layout: phones, tablets, reduced motion, no script. */
+.jh-houses__stage {
+  padding: clamp(96px, 10vw, 160px) var(--margin);
+}
+.jh-houses__list {
+  list-style: none;
+  margin: 64px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 72px var(--gap);
+}
+.jh-house__pic {
+  display: block;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: #1a1a1a;
+}
+.jh-house__pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 700ms var(--ease-out);
+}
+.jh-house__pic:hover img {
+  transform: scale(1.04);
+}
+.jh-house h3 {
+  margin-top: 20px;
+  font-size: 24px;
+  letter-spacing: -0.01em;
+}
+.jh-house__role {
+  margin-top: 6px;
+  font-size: var(--step-small);
+  color: #b8b8b8;
+}
+.jh-house__text {
+  margin-top: 10px;
+  max-width: 36ch;
+}
+.jh-house__go {
+  display: inline-block;
+  margin-top: 14px;
+  font-weight: 500;
+}
+.jh-houses__index {
+  display: none;
+}
+
+/* Poster layout: the name holds, one frame in the middle changes, the caption and index answer it. */
+.jh-houses.is-poster {
+  height: calc(100svh + var(--n) * 58svh);
+}
+.is-poster .jh-houses__stage {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  padding: 96px var(--margin) 40px;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  row-gap: 3svh;
+}
+.is-poster .jh-houses__name {
+  font-size: min(15vw, 24svh);
+}
+.is-poster .jh-houses__body {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 48px;
+  min-height: 0;
+}
+.is-poster .jh-houses__list {
+  display: contents;
+}
+.is-poster .jh-house {
+  display: contents;
+}
+.is-poster .jh-house__pic {
+  grid-column: 2;
+  grid-row: 1;
+  height: 100%;
+  min-height: 0;
+  aspect-ratio: 4 / 5;
+  opacity: 0;
+  transform: scale(0.98);
+  transition: opacity 450ms ease, transform 700ms var(--ease-out);
+}
+.is-poster .jh-house__cap {
+  grid-column: 1;
+  grid-row: 1;
+  align-self: end;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 400ms ease, transform 600ms var(--ease-out);
+  visibility: hidden;
+}
+.is-poster .jh-house.is-on .jh-house__pic,
+.is-poster .jh-house.is-on .jh-house__cap {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
+.is-poster .jh-house.is-on .jh-house__cap {
+  transition-delay: 120ms;
+}
+.is-poster .jh-houses__index {
+  display: flex;
+  grid-column: 3;
+  grid-row: 1;
+  align-self: end;
+  flex-direction: column;
+  gap: 6px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.jh-houses__index button {
+  font-size: var(--step-lead);
+  color: #9a9a9a;
+  text-align: left;
+  transition: color 200ms ease, transform 200ms var(--ease-out);
+}
+.jh-houses__index button:hover {
+  color: #fff;
+  transform: translateX(4px);
+}
+.jh-houses__index button[aria-current="true"] {
+  color: #fff;
+}
+
+/* ---------- 6. One word is the button ---------- */
+.jh-cta {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 50svh;
+  gap: 48px;
+  padding: 28px var(--margin) 0;
+  background: var(--accent);
+  color: var(--on-accent);
+  overflow: hidden;
+  transition: background-color 120ms linear, color 120ms linear;
+}
+.jh-cta:hover,
+.jh-cta:focus-visible {
+  background: var(--surface);
+  color: var(--ink);
+}
+.jh-cta__top {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  font-size: var(--step-lead);
+}
+.jh-cta__top p {
+  max-width: 30ch;
+}
+.jh-cta__word {
+  font-size: var(--step-display);
+  font-weight: 600 !important;
+  letter-spacing: -0.05em !important;
+  line-height: 0.74 !important;
+  text-transform: none !important;
+  margin-bottom: -0.02em;
+  transition: transform 500ms var(--ease-out);
+}
+.jh-cta:hover .jh-cta__word {
+  transform: translateX(1.5vw);
+}
+.jh-cta__arrow {
+  width: 48px;
+  height: 48px;
+  flex: none;
+  transition: transform 300ms var(--ease-out);
+}
+.jh-cta:hover .jh-cta__arrow {
+  transform: translate(6px, -6px);
+}
+
+/* ---------- Entrances (hidden only when motion is allowed and the script has run) ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  .js-reveal [data-rv] {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 700ms var(--ease-out), transform 700ms var(--ease-out);
+    transition-delay: calc(var(--i, 0) * 80ms);
+  }
+  .js-reveal [data-rv].is-in {
+    opacity: 1;
+    transform: none;
+  }
+  .jh-drift {
+    animation: jh-drift 18s ease-in-out infinite alternate;
+  }
+  @keyframes jh-drift {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.08);
+    }
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .jh-show {
+    height: auto;
+  }
+  .jh-show__stage {
+    position: relative;
+  }
+  .jh-show .jh-show__b span,
+  .jh-show .jh-show__note {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* ---------- Tablet and phone ---------- */
+@media (max-width: 1024px) {
+  .jh-show {
+    height: 260svh;
+  }
+  .jh-show__stage {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    align-content: center;
+    gap: 16px;
+  }
+  .jh-show__a,
+  .jh-show__b {
+    font-size: clamp(44px, 7vw, 64px);
+    padding: 0;
+    grid-row: auto;
+  }
+  .jh-show__frame {
+    grid-column: 1;
+    grid-row: auto;
+    justify-self: center;
+    width: min(62vw, 44svh);
+  }
+  .jh-show__note {
+    grid-column: 1;
+    grid-row: auto;
+    justify-self: center;
+    text-align: center;
+    margin: 0;
+    font-size: 17px;
+  }
+  .jh-hero__foot {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .jh-shop__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .jh-houses__list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 760px) {
+  .jh-hero {
+    height: auto;
+    min-height: 0;
+    row-gap: 20px;
+    padding-bottom: 48px;
+  }
+  .jh-hero__title {
+    display: block;
+    font-size: 13vw;
+  }
+  .jh-hero__title span {
+    display: block;
+  }
+  .jh-hero__title span + span {
+    text-align: right;
+  }
+  .jh-hero__reel {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+  }
+  .jh-hero__foot {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+  .jh-hero__foot p {
+    font-size: 17px;
+  }
+  .jh-hero__facts {
+    display: none;
+  }
+
+  .jh-salon {
+    display: block;
+  }
+  .jh-salon__pic {
+    position: relative;
+    top: auto;
+    aspect-ratio: 4 / 3;
+    margin-bottom: 32px;
+  }
+  .jh-salon__body .jh-head {
+    margin-bottom: 24px;
+  }
+
+  .jh-shop__empty {
+    grid-template-columns: 1fr;
+  }
+
+  .jh-houses__name {
+    font-size: 25vw;
+  }
+  .jh-houses__list {
+    grid-template-columns: 1fr;
+    row-gap: 64px;
+  }
+  .jh-house {
+    width: 84%;
+  }
+  .jh-house:nth-child(even) {
+    margin-left: auto;
+  }
+
+  .jh-cta {
+    min-height: 46svh;
+  }
+  .jh-cta__top {
+    font-size: 17px;
+  }
+  .jh-cta__arrow {
+    width: 32px;
+    height: 32px;
+  }
+}

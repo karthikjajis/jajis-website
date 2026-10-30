@@ -1,0 +1,2067 @@
+{
+ "url": "http://localhost:4173/",
+ "at": "2026-10-30T14:58:05.897Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 6,
+   "filled": [
+    0.79,
+    0.33,
+    0.62,
+    0.6,
+    0.93,
+    0.94
+   ],
+   "motion": {
+    "elements": 16,
+    "css": 16,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 4710,
+     "screens": 5.2,
+     "words": 335,
+     "img": 12,
+     "video": 0,
+     "canvas": 0,
+     "svg": 14,
+     "sections": 7,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 9,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "home-bridal-CPwCaIkh.webp",
+      "home-hero-makeup-C13sLapI.webp",
+      "home-salon-interior-DvEuxqAI.webp",
+      "home-spa-RcDG-K28.webp",
+      "saloon-7-DJR5Ag5v.webp",
+      "home-eventhall-CPPqrOOm.webp",
+      "home-foodcourt-DcGgqUHF.webp",
+      "home-design-fXfd14Ji.webp"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "WELCOME TO THE WORLD OF JAJI’S",
+     "words": 6,
+     "chars": 30,
+     "lines": 2,
+     "size": 72,
+     "vw": 5,
+     "font": "Jost Variable",
+     "weight": 300,
+     "tracking": 0.12,
+     "leading": 1.15,
+     "upper": true,
+     "italic": false,
+     "mono": false,
+     "align": "center",
+     "position": "center",
+     "widthRatio": 0.49,
+     "top": 395,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "WELCOME TO THE WORLD OF JAJI’S",
+     "words": 6,
+     "lines": 2,
+     "size": 72,
+     "font": "Jost Variable"
+    },
+    "headings": [
+     {
+      "text": "WELCOME TO THE WORLD OF JAJI’S",
+      "words": 6,
+      "chars": 30,
+      "lines": 2,
+      "size": 72,
+      "vw": 5,
+      "font": "Jost Variable",
+      "weight": 300,
+      "tracking": 0.12,
+      "leading": 1.15,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.49,
+      "top": 395,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "SHOP OUR BESTSELLERS",
+      "words": 3,
+      "chars": 20,
+      "lines": 1,
+      "size": 36,
+      "vw": 2.5,
+      "font": "Jost Variable",
+      "weight": 400,
+      "tracking": 0.12,
+      "leading": 1.15,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.82,
+      "top": 894,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "2002",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 36,
+      "vw": 2.5,
+      "font": "Jost Variable",
+      "weight": 300,
+      "tracking": 0.06,
+      "leading": 1.11,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "left",
+      "widthRatio": 0.19,
+      "top": 1266,
+      "tag": "dd",
+      "kind": "statement"
+     },
+     {
+      "text": "5000+",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 36,
+      "vw": 2.5,
+      "font": "Jost Variable",
+      "weight": 300,
+      "tracking": 0.06,
+      "leading": 1.11,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "left",
+      "widthRatio": 0.19,
+      "top": 1266,
+      "tag": "dd",
+      "kind": "statement"
+     },
+     {
+      "text": "200+",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 36,
+      "vw": 2.5,
+      "font": "Jost Variable",
+      "weight": 300,
+      "tracking": 0.06,
+      "leading": 1.11,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "right",
+      "widthRatio": 0.19,
+      "top": 1266,
+      "tag": "dd",
+      "kind": "statement"
+     },
+     {
+      "text": "7",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 36,
+      "vw": 2.5,
+      "font": "Jost Variable",
+      "weight": 300,
+      "tracking": 0.06,
+      "leading": 1.11,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "right",
+      "widthRatio": 0.19,
+      "top": 1266,
+      "tag": "dd",
+      "kind": "statement"
+     },
+     {
+      "text": "EXPLORE OUR WORLD",
+      "words": 3,
+      "chars": 17,
+      "lines": 1,
+      "size": 36,
+      "vw": 2.5,
+      "font": "Jost Variable",
+      "weight": 400,
+      "tracking": 0.12,
+      "leading": 1.15,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.82,
+      "top": 1473,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "BOOK THE Q CAFÉ HALL ONLINE",
+      "words": 6,
+      "chars": 27,
+      "lines": 2,
+      "size": 48,
+      "vw": 3.3,
+      "font": "Jost Variable",
+      "weight": 400,
+      "tracking": 0.12,
+      "leading": 1.15,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.38,
+      "top": 2773,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "YOUR BEAUTY JOURNEY STARTS HERE",
+      "words": 5,
+      "chars": 31,
+      "lines": 3,
+      "size": 48,
+      "vw": 3.3,
+      "font": "Jost Variable",
+      "weight": 400,
+      "tracking": 0.12,
+      "leading": 1.15,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.41,
+      "top": 3376,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "OWN A LEGACY. BUILD YOUR SUCCESS WITH JAJI’S.",
+      "words": 8,
+      "chars": 45,
+      "lines": 2,
+      "size": 48,
+      "vw": 3.3,
+      "font": "Jost Variable",
+      "weight": 400,
+      "tracking": 0.12,
+      "leading": 1.15,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.64,
+      "top": 3931,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 10,
+     "maxLines": 3,
+     "over2Lines": 1,
+     "statements": 4,
+     "centered": 8,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Jost Variable",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      16,
+      18,
+      36,
+      48,
+      72
+     ],
+     "sizeCount": 10,
+     "notLoaded": [],
+     "body": {
+      "font": "Jost Variable",
+      "size": 16,
+      "leading": 1.5,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 10.3
+     },
+     "measureChars": 64,
+     "max": {
+      "size": 72,
+      "vw": 5,
+      "font": "Jost Variable",
+      "text": "Welcome to theworld of Jaji’s"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 13,
+     "microLabelShare": 0.112,
+     "microSamples": [
+      "Kerala’s family salon since 2002 ·",
+      "Serving Kerala since",
+      "Happy customers",
+      "Expert staff",
+      "Businesses, one brand",
+      "Q Café A/C hall · Ashramam, Kollam"
+     ],
+     "upperShare": 0.37,
+     "centerShare": 0.38,
+     "smallText": 13
+    },
+    "eyebrows": [
+     {
+      "text": "Q Café A/C hall · Ashramam, Kollam",
+      "above": "BOOK THE Q CAFÉ HALL ONLINE",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 2731
+     },
+     {
+      "text": "Since 2002 · Kollam",
+      "above": "YOUR BEAUTY JOURNEY STARTS HERE",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 3334
+     },
+     {
+      "text": "Franchise",
+      "above": "OWN A LEGACY. BUILD YOUR SUCCESS WITH JA",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 3889
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#ffffff",
+     "bodyBgHsl": {
+      "h": 0,
+      "s": 0,
+      "l": 1
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#ffffff",
+       "top": 0,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      },
+      {
+       "color": "#000000",
+       "top": 96,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 0
+       }
+      },
+      {
+       "color": "#f3f4f6",
+       "top": 3233,
+       "hsl": {
+        "h": 220,
+        "s": 0.14,
+        "l": 0.96
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#364153",
+       "share": 0.22
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.21
+      },
+      {
+       "color": "#4a5565",
+       "share": 0.19
+      },
+      {
+       "color": "#000000",
+       "share": 0.14
+      },
+      {
+       "color": "#99a1af",
+       "share": 0.14
+      }
+     ],
+     "button": {
+      "bg": "#000000",
+      "hsl": {
+       "h": 0,
+       "s": 0,
+       "l": 0
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": [
+      {
+       "text": "Developed by InspireZest Technologies Pv",
+       "ratio": 2.8,
+       "need": 4.5,
+       "size": 12,
+       "fg": "#4a5565",
+       "bg": "#000000"
+      }
+     ]
+    },
+    "buttons": {
+     "count": 11,
+     "inHero": 5,
+     "radius": 0,
+     "height": 53,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 11,
+     "heroLabels": [
+      "BOOK HERE",
+      "SHOP NOW"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 6,
+     "scrims": 0,
+     "gradientSamples": [
+      "span.absolute.inset-x-0 → linear-gradient(to top, oklab(0 0 0 / 0.75) 0%, rgba(0, 0, 0, 0) 100%)",
+      "span.absolute.inset-x-0 → linear-gradient(to top, oklab(0 0 0 / 0.75) 0%, rgba(0, 0, 0, 0) 100%)",
+      "span.absolute.inset-x-0 → linear-gradient(to top, oklab(0 0 0 / 0.75) 0%, rgba(0, 0, 0, 0) 100%)",
+      "span.absolute.inset-x-0 → linear-gradient(to top, oklab(0 0 0 / 0.75) 0%, rgba(0, 0, 0, 0) 100%)"
+     ],
+     "gradientText": 0,
+     "hairlines": 4,
+     "hairlineSamples": [
+      "div.h-16.border-b 1440px",
+      "section.border-y.border-gray-200 1440px",
+      "div.border-t.border-gray-200 1440px",
+      "div.mt-14.pt-8 1184px"
+     ],
+     "outlinedBoxes": 1,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 9,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": false,
+       "top": 1562
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.39
+     },
+     {
+      "type": "img",
+      "ratio": 0.39
+     }
+    ],
+    "nav": {
+     "links": 9,
+     "fixed": true,
+     "height": 96,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "jost variable"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 4710,
+    "margins": {
+     "left": 128,
+     "right": 128
+    },
+    "sections": [
+     {
+      "sel": "main.flex-grow",
+      "tag": "main",
+      "top": 0,
+      "height": 4286,
+      "words": 251,
+      "media": 9,
+      "middle": 0,
+      "heading": {
+       "text": "Welcome to the",
+       "size": 72,
+       "tag": "h1"
+      },
+      "left": 0,
+      "right": 0,
+      "textLeft": 128,
+      "textRight": 157,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer.bg-black.text-gray-400",
+      "tag": "footer",
+      "top": 4286,
+      "height": 424,
+      "words": 52,
+      "media": 0,
+      "middle": 203,
+      "heading": {
+       "text": "Book",
+       "size": 13,
+       "tag": "h2"
+      },
+      "left": 128,
+      "right": 128,
+      "textLeft": 128,
+      "textRight": 128,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "WELCOME TO THE WORLD OF JAJI’S",
+      "size": 72,
+      "top": 395,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 128,
+      "n": 2
+     },
+     {
+      "x": 784,
+      "n": 2
+     }
+    ],
+    "leftBlocks": 4,
+    "bodySize": 16,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0.02,
+    "voidBox": {
+     "x": 960,
+     "y": 840,
+     "w": 480,
+     "h": 60
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 6,
+   "filled": [
+    0.84,
+    0.41,
+    0.81,
+    0.19,
+    0.93,
+    0.93
+   ],
+   "motion": {
+    "elements": 16,
+    "css": 16,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 5768,
+     "screens": 5.6,
+     "words": 329,
+     "img": 12,
+     "video": 0,
+     "canvas": 0,
+     "svg": 14,
+     "sections": 7,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 9,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "home-bridal-CPwCaIkh.webp",
+      "home-hero-makeup-C13sLapI.webp",
+      "home-salon-interior-DvEuxqAI.webp",
+      "home-spa-RcDG-K28.webp",
+      "saloon-7-DJR5Ag5v.webp",
+      "home-eventhall-CPPqrOOm.webp",
+      "home-foodcourt-DcGgqUHF.webp",
+      "home-design-fXfd14Ji.webp"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "WELCOME TO THE WORLD OF JAJI’S",
+     "words": 6,
+     "chars": 30,
+     "lines": 2,
+     "size": 48,
+     "vw": 6.3,
+     "font": "Jost Variable",
+     "weight": 300,
+     "tracking": 0.12,
+     "leading": 1.15,
+     "upper": true,
+     "italic": false,
+     "mono": false,
+     "align": "center",
+     "position": "center",
+     "widthRatio": 0.62,
+     "top": 547,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "WELCOME TO THE WORLD OF JAJI’S",
+     "words": 6,
+     "lines": 2,
+     "size": 48,
+     "font": "Jost Variable"
+    },
+    "headings": [
+     {
+      "text": "WELCOME TO THE WORLD OF JAJI’S",
+      "words": 6,
+      "chars": 30,
+      "lines": 2,
+      "size": 48,
+      "vw": 6.3,
+      "font": "Jost Variable",
+      "weight": 300,
+      "tracking": 0.12,
+      "leading": 1.15,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.62,
+      "top": 547,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "SHOP OUR BESTSELLERS",
+      "words": 3,
+      "chars": 20,
+      "lines": 1,
+      "size": 36,
+      "vw": 4.7,
+      "font": "Jost Variable",
+      "weight": 400,
+      "tracking": 0.12,
+      "leading": 1.15,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.94,
+      "top": 991,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "2002",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 36,
+      "vw": 4.7,
+      "font": "Jost Variable",
+      "weight": 300,
+      "tracking": 0.06,
+      "leading": 1.11,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "left",
+      "widthRatio": 0.2,
+      "top": 1362,
+      "tag": "dd",
+      "kind": "statement"
+     },
+     {
+      "text": "7",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 36,
+      "vw": 4.7,
+      "font": "Jost Variable",
+      "weight": 300,
+      "tracking": 0.06,
+      "leading": 1.11,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "right",
+      "widthRatio": 0.2,
+      "top": 1362,
+      "tag": "dd",
+      "kind": "statement"
+     },
+     {
+      "text": "5000+",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 36,
+      "vw": 4.7,
+      "font": "Jost Variable",
+      "weight": 300,
+      "tracking": 0.06,
+      "leading": 1.11,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "left",
+      "widthRatio": 0.2,
+      "top": 1380,
+      "tag": "dd",
+      "kind": "statement"
+     },
+     {
+      "text": "200+",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 36,
+      "vw": 4.7,
+      "font": "Jost Variable",
+      "weight": 300,
+      "tracking": 0.06,
+      "leading": 1.11,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "right",
+      "widthRatio": 0.2,
+      "top": 1380,
+      "tag": "dd",
+      "kind": "statement"
+     },
+     {
+      "text": "EXPLORE OUR WORLD",
+      "words": 3,
+      "chars": 17,
+      "lines": 1,
+      "size": 36,
+      "vw": 4.7,
+      "font": "Jost Variable",
+      "weight": 400,
+      "tracking": 0.12,
+      "leading": 1.15,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.94,
+      "top": 1587,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "BOOK THE Q CAFÉ HALL ONLINE",
+      "words": 6,
+      "chars": 27,
+      "lines": 2,
+      "size": 48,
+      "vw": 6.3,
+      "font": "Jost Variable",
+      "weight": 400,
+      "tracking": 0.12,
+      "leading": 1.15,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.94,
+      "top": 3264,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "YOUR BEAUTY JOURNEY STARTS HERE",
+      "words": 5,
+      "chars": 31,
+      "lines": 5,
+      "size": 48,
+      "vw": 6.3,
+      "font": "Jost Variable",
+      "weight": 400,
+      "tracking": 0.12,
+      "leading": 1.15,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.33,
+      "top": 4282,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "OWN A LEGACY. BUILD YOUR SUCCESS WITH JAJI’S.",
+      "words": 8,
+      "chars": 45,
+      "lines": 3,
+      "size": 48,
+      "vw": 6.3,
+      "font": "Jost Variable",
+      "weight": 400,
+      "tracking": 0.12,
+      "leading": 1.15,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.94,
+      "top": 4934,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 10,
+     "maxLines": 5,
+     "over2Lines": 2,
+     "statements": 4,
+     "centered": 8,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Jost Variable",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      16,
+      18,
+      36,
+      48
+     ],
+     "sizeCount": 9,
+     "notLoaded": [],
+     "body": {
+      "font": "Jost Variable",
+      "size": 16,
+      "leading": 1.5,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 10.3
+     },
+     "measureChars": 64,
+     "max": {
+      "size": 48,
+      "vw": 6.3,
+      "font": "Jost Variable",
+      "text": "Welcome to theworld of Jaji’s"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 13,
+     "microLabelShare": 0.113,
+     "microSamples": [
+      "Kerala’s family salon since 2002 ·",
+      "Serving Kerala since",
+      "Happy customers",
+      "Expert staff",
+      "Businesses, one brand",
+      "Q Café A/C hall · Ashramam, Kollam"
+     ],
+     "upperShare": 0.36,
+     "centerShare": 0.38,
+     "smallText": 13
+    },
+    "eyebrows": [
+     {
+      "text": "Q Café A/C hall · Ashramam, Kollam",
+      "above": "BOOK THE Q CAFÉ HALL ONLINE",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 3222
+     },
+     {
+      "text": "Since 2002 · Kollam",
+      "above": "YOUR BEAUTY JOURNEY STARTS HERE",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 4240
+     },
+     {
+      "text": "Franchise",
+      "above": "OWN A LEGACY. BUILD YOUR SUCCESS WITH JA",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 4892
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#ffffff",
+     "bodyBgHsl": {
+      "h": 0,
+      "s": 0,
+      "l": 1
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#ffffff",
+       "top": 0,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      },
+      {
+       "color": "#000000",
+       "top": 96,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 0
+       }
+      },
+      {
+       "color": "#f3f4f6",
+       "top": 4176,
+       "hsl": {
+        "h": 220,
+        "s": 0.14,
+        "l": 0.96
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#364153",
+       "share": 0.22
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.22
+      },
+      {
+       "color": "#4a5565",
+       "share": 0.19
+      },
+      {
+       "color": "#99a1af",
+       "share": 0.14
+      },
+      {
+       "color": "#000000",
+       "share": 0.13
+      }
+     ],
+     "button": {
+      "bg": "#000000",
+      "hsl": {
+       "h": 0,
+       "s": 0,
+       "l": 0
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": [
+      {
+       "text": "Developed by InspireZest Technologies Pv",
+       "ratio": 2.8,
+       "need": 4.5,
+       "size": 12,
+       "fg": "#4a5565",
+       "bg": "#000000"
+      }
+     ]
+    },
+    "buttons": {
+     "count": 11,
+     "inHero": 5,
+     "radius": 0,
+     "height": 53,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 11,
+     "heroLabels": [
+      "BOOK HERE",
+      "SHOP NOW"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 6,
+     "scrims": 0,
+     "gradientSamples": [
+      "span.absolute.inset-x-0 → linear-gradient(to top, oklab(0 0 0 / 0.75) 0%, rgba(0, 0, 0, 0) 100%)",
+      "span.absolute.inset-x-0 → linear-gradient(to top, oklab(0 0 0 / 0.75) 0%, rgba(0, 0, 0, 0) 100%)",
+      "span.absolute.inset-x-0 → linear-gradient(to top, oklab(0 0 0 / 0.75) 0%, rgba(0, 0, 0, 0) 100%)",
+      "span.absolute.inset-x-0 → linear-gradient(to top, oklab(0 0 0 / 0.75) 0%, rgba(0, 0, 0, 0) 100%)"
+     ],
+     "gradientText": 0,
+     "hairlines": 4,
+     "hairlineSamples": [
+      "div.h-16.border-b 768px",
+      "section.border-y.border-gray-200 768px",
+      "div.border-t.border-gray-200 768px",
+      "div.mt-14.pt-8 720px"
+     ],
+     "outlinedBoxes": 1,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 9,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": false,
+       "top": 1677
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.39
+     },
+     {
+      "type": "img",
+      "ratio": 0.39
+     }
+    ],
+    "nav": {
+     "links": 5,
+     "fixed": true,
+     "height": 96,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "jost variable"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 5768,
+    "margins": {
+     "left": 24,
+     "right": 24
+    },
+    "sections": [
+     {
+      "sel": "main.flex-grow",
+      "tag": "main",
+      "top": 0,
+      "height": 5344,
+      "words": 251,
+      "media": 9,
+      "middle": 0,
+      "heading": {
+       "text": "Welcome to the",
+       "size": 48,
+       "tag": "h1"
+      },
+      "left": 0,
+      "right": 0,
+      "textLeft": 24,
+      "textRight": -12,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer.bg-black.text-gray-400",
+      "tag": "footer",
+      "top": 5344,
+      "height": 424,
+      "words": 52,
+      "media": 0,
+      "middle": 33,
+      "heading": {
+       "text": "Book",
+       "size": 13,
+       "tag": "h2"
+      },
+      "left": 24,
+      "right": 24,
+      "textLeft": 24,
+      "textRight": 24,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "WELCOME TO THE WORLD OF JAJI’S",
+      "size": 48,
+      "top": 547,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 24,
+      "n": 2
+     },
+     {
+      "x": 448,
+      "n": 2
+     }
+    ],
+    "leftBlocks": 4,
+    "bodySize": 16,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 7,
+   "filled": [
+    0.84,
+    0.3,
+    0.56,
+    0.39,
+    0.93,
+    0.92,
+    0.92
+   ],
+   "motion": {
+    "elements": 16,
+    "css": 16,
+    "transitions": 0,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 5574,
+     "screens": 6.6,
+     "words": 325,
+     "img": 12,
+     "video": 0,
+     "canvas": 0,
+     "svg": 14,
+     "sections": 7,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 8,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "home-bridal-CPwCaIkh.webp",
+      "home-salon-interior-DvEuxqAI.webp",
+      "home-spa-RcDG-K28.webp",
+      "saloon-7-DJR5Ag5v.webp",
+      "home-eventhall-CPPqrOOm.webp",
+      "home-foodcourt-DcGgqUHF.webp",
+      "home-design-fXfd14Ji.webp",
+      "home-salon-front-hyeP6GVR.webp"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "WELCOME TO THE WORLD OF JAJI’S",
+     "words": 6,
+     "chars": 30,
+     "lines": 2,
+     "size": 33.6,
+     "vw": 8.6,
+     "font": "Jost Variable",
+     "weight": 300,
+     "tracking": 0.12,
+     "leading": 1.15,
+     "upper": true,
+     "italic": false,
+     "mono": false,
+     "align": "center",
+     "position": "center",
+     "widthRatio": 0.85,
+     "top": 377,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "WELCOME TO THE WORLD OF JAJI’S",
+     "words": 6,
+     "lines": 2,
+     "size": 33.6,
+     "font": "Jost Variable"
+    },
+    "headings": [
+     {
+      "text": "WELCOME TO THE WORLD OF JAJI’S",
+      "words": 6,
+      "chars": 30,
+      "lines": 2,
+      "size": 33.6,
+      "vw": 8.6,
+      "font": "Jost Variable",
+      "weight": 300,
+      "tracking": 0.12,
+      "leading": 1.15,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.85,
+      "top": 377,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "SHOP OUR BESTSELLERS",
+      "words": 3,
+      "chars": 20,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Jost Variable",
+      "weight": 400,
+      "tracking": 0.12,
+      "leading": 1.15,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.88,
+      "top": 834,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "2002",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 30,
+      "vw": 7.7,
+      "font": "Jost Variable",
+      "weight": 300,
+      "tracking": 0.06,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "left",
+      "widthRatio": 0.4,
+      "top": 1176,
+      "tag": "dd",
+      "kind": "statement"
+     },
+     {
+      "text": "5000+",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 30,
+      "vw": 7.7,
+      "font": "Jost Variable",
+      "weight": 300,
+      "tracking": 0.06,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "right",
+      "widthRatio": 0.4,
+      "top": 1194,
+      "tag": "dd",
+      "kind": "statement"
+     },
+     {
+      "text": "7",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 30,
+      "vw": 7.7,
+      "font": "Jost Variable",
+      "weight": 300,
+      "tracking": 0.06,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "right",
+      "widthRatio": 0.4,
+      "top": 1284,
+      "tag": "dd",
+      "kind": "statement"
+     },
+     {
+      "text": "200+",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 30,
+      "vw": 7.7,
+      "font": "Jost Variable",
+      "weight": 300,
+      "tracking": 0.06,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "left",
+      "widthRatio": 0.4,
+      "top": 1302,
+      "tag": "dd",
+      "kind": "statement"
+     },
+     {
+      "text": "EXPLORE OUR WORLD",
+      "words": 3,
+      "chars": 17,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Jost Variable",
+      "weight": 400,
+      "tracking": 0.12,
+      "leading": 1.15,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.88,
+      "top": 1489,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "BOOK THE Q CAFÉ HALL ONLINE",
+      "words": 6,
+      "chars": 27,
+      "lines": 2,
+      "size": 30,
+      "vw": 7.7,
+      "font": "Jost Variable",
+      "weight": 400,
+      "tracking": 0.12,
+      "leading": 1.15,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.88,
+      "top": 2410,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "YOUR BEAUTY JOURNEY STARTS HERE",
+      "words": 5,
+      "chars": 31,
+      "lines": 3,
+      "size": 30,
+      "vw": 7.7,
+      "font": "Jost Variable",
+      "weight": 400,
+      "tracking": 0.12,
+      "leading": 1.15,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.88,
+      "top": 3899,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "OWN A LEGACY. BUILD YOUR SUCCESS WITH JAJI’S.",
+      "words": 8,
+      "chars": 45,
+      "lines": 4,
+      "size": 30,
+      "vw": 7.7,
+      "font": "Jost Variable",
+      "weight": 400,
+      "tracking": 0.12,
+      "leading": 1.15,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.88,
+      "top": 4401,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 10,
+     "maxLines": 4,
+     "over2Lines": 2,
+     "statements": 4,
+     "centered": 8,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Jost Variable",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      16,
+      18,
+      24,
+      30,
+      34
+     ],
+     "sizeCount": 10,
+     "notLoaded": [],
+     "body": {
+      "font": "Jost Variable",
+      "size": 16,
+      "leading": 1.5,
+      "weight": 400,
+      "tracking": 0.025,
+      "contrast": null
+     },
+     "measureChars": 43,
+     "max": {
+      "size": 33.6,
+      "vw": 8.6,
+      "font": "Jost Variable",
+      "text": "Welcome to theworld of Jaji’s"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 12,
+     "microLabelShare": 0.095,
+     "microSamples": [
+      "Serving Kerala since",
+      "Happy customers",
+      "Expert staff",
+      "Businesses, one brand",
+      "Q Café A/C hall · Ashramam, Kollam",
+      "Next two weeks"
+     ],
+     "upperShare": 0.35,
+     "centerShare": 0.37,
+     "smallText": 15
+    },
+    "eyebrows": [
+     {
+      "text": "Q Café A/C hall · Ashramam, Kollam",
+      "above": "BOOK THE Q CAFÉ HALL ONLINE",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 2368
+     },
+     {
+      "text": "Since 2002 · Kollam",
+      "above": "YOUR BEAUTY JOURNEY STARTS HERE",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 3857
+     },
+     {
+      "text": "Franchise",
+      "above": "OWN A LEGACY. BUILD YOUR SUCCESS WITH JA",
+      "upper": true,
+      "tracked": true,
+      "mono": false,
+      "pill": false,
+      "size": 12,
+      "top": 4359
+     }
+    ],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#ffffff",
+     "bodyBgHsl": {
+      "h": 0,
+      "s": 0,
+      "l": 1
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#ffffff",
+       "top": 0,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      },
+      {
+       "color": "#000000",
+       "top": 96,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 0
+       }
+      },
+      {
+       "color": "#f3f4f6",
+       "top": 3473,
+       "hsl": {
+        "h": 220,
+        "s": 0.14,
+        "l": 0.96
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#364153",
+       "share": 0.23
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.2
+      },
+      {
+       "color": "#4a5565",
+       "share": 0.2
+      },
+      {
+       "color": "#99a1af",
+       "share": 0.14
+      },
+      {
+       "color": "#000000",
+       "share": 0.12
+      }
+     ],
+     "button": {
+      "bg": "#000000",
+      "hsl": {
+       "h": 0,
+       "s": 0,
+       "l": 0
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 11,
+     "inHero": 2,
+     "radius": 0,
+     "height": 53,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 11,
+     "heroLabels": [
+      "BOOK HERE",
+      "SHOP NOW"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 6,
+     "scrims": 0,
+     "gradientSamples": [
+      "span.absolute.inset-x-0 → linear-gradient(to top, oklab(0 0 0 / 0.75) 0%, rgba(0, 0, 0, 0) 100%)",
+      "span.absolute.inset-x-0 → linear-gradient(to top, oklab(0 0 0 / 0.75) 0%, rgba(0, 0, 0, 0) 100%)",
+      "span.absolute.inset-x-0 → linear-gradient(to top, oklab(0 0 0 / 0.75) 0%, rgba(0, 0, 0, 0) 100%)",
+      "span.absolute.inset-x-0 → linear-gradient(to top, oklab(0 0 0 / 0.75) 0%, rgba(0, 0, 0, 0) 100%)"
+     ],
+     "gradientText": 0,
+     "hairlines": 5,
+     "hairlineSamples": [
+      "div.h-16.border-b 390px",
+      "nav.fixed.bottom-0 390px",
+      "section.border-y.border-gray-200 390px",
+      "div.border-t.border-gray-200 390px",
+      "div.mt-14.pt-8 342px"
+     ],
+     "outlinedBoxes": 1,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 2,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": false,
+       "top": 1565
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.78
+     }
+    ],
+    "nav": {
+     "links": 3,
+     "fixed": true,
+     "height": 96,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "jost variable"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 5574,
+    "margins": {
+     "left": 24,
+     "right": 24
+    },
+    "sections": [
+     {
+      "sel": "main.flex-grow",
+      "tag": "main",
+      "top": 0,
+      "height": 4792,
+      "words": 251,
+      "media": 8,
+      "middle": 0,
+      "heading": {
+       "text": "Welcome to the",
+       "size": 34,
+       "tag": "h1"
+      },
+      "left": 24,
+      "right": 24,
+      "textLeft": 24,
+      "textRight": 26,
+      "fullBleed": true,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer.bg-black.text-gray-400",
+      "tag": "footer",
+      "top": 4792,
+      "height": 782,
+      "words": 52,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Book",
+       "size": 13,
+       "tag": "h2"
+      },
+      "left": 24,
+      "right": 72,
+      "textLeft": 24,
+      "textRight": 72,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "WELCOME TO THE WORLD OF JAJI’S",
+      "size": 34,
+      "top": 377,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 24,
+      "n": 4
+     }
+    ],
+    "leftBlocks": 4,
+    "bodySize": 16,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "FAIL",
+   "id": "headline-lines",
+   "width": 1440,
+   "message": "1 headline(s) wrap past two lines at 1440px: \"YOUR BEAUTY JOURNEY STARTS HERE\" → 3 lines (5 words, 48px)",
+   "fix": "Cut words first (a headline is a title, not a sentence). Then give it a wider measure. Lower the size only as a last resort and never below the scale you chose. A real statement paragraph belongs in a <p> or <blockquote> at 36px or less."
+  },
+  {
+   "level": "FAIL",
+   "id": "eyebrow",
+   "width": 1440,
+   "message": "3 eyebrow/kicker label(s) above headings: \"Q Café A/C hall · Ashramam, Kollam\" above \"BOOK THE Q CAFÉ HALL ONLINE\"; \"Since 2002 · Kollam\" above \"YOUR BEAUTY JOURNEY STARTS HERE\"; \"Franchise\" above \"OWN A LEGACY. BUILD YOUR SUCCESS WITH JA\"",
+   "fix": "Delete them. If the label carried real information, fold it into the headline or the supporting sentence.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "micro-label",
+   "width": 1440,
+   "message": "13 tiny uppercase letter-spaced labels (e.g. \"Kerala’s family salon since 2002 ·\", \"Serving Kerala since\", \"Happy customers\", \"Expert staff\").",
+   "fix": "Use sentence-case text at a readable size, or delete the label.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "gradient",
+   "width": 1440,
+   "message": "6 gradient fill(s): span.absolute.inset-x-0 → linear-gradient(to top, oklab(0 0 0 / 0.75) 0%, rgba(0, 0, 0, 0) 100%) | span.absolute.inset-x-0 → linear-gradient(to top, oklab(0 0 0 / 0.75) 0%, rgba(0, 0, 0, 0) 100%) | span.absolute.inset-x-0 → linear-gradient(to top, oklab(0 0 0 / 0.75) 0%, rgba(0, 0, 0, 0) 100%)",
+   "fix": "Use a flat colour or a real image. The only gradient allowed by default is a neutral scrim over a photo for legibility.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "hairline",
+   "width": 1440,
+   "message": "4 thin rule(s)/divider line(s): div.h-16.border-b 1440px | section.border-y.border-gray-200 1440px | div.border-t.border-gray-200 1440px | div.mt-14.pt-8 1184px",
+   "fix": "Delete. Separate with space, a tone change, or scale. Lines are only for real tables and form fields.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "outlined-box",
+   "width": 1440,
+   "message": "1 box(es) drawn with a 1px outline.",
+   "fix": "Prefer a filled surface or no box.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "contrast",
+   "width": 1440,
+   "message": "Low-contrast text: \"Developed by InspireZest Technologies Pv\" 2.8:1 needs 4.5:1",
+   "fix": "Darken or lighten the text colour.",
+   "alsoAt": [
+    768
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "size-count",
+   "width": 1440,
+   "message": "10 different font sizes (10, 11, 12, 13, 14, 16, 18, 36, 48, 72).",
+   "fix": "A page needs about five: display, heading, lead, body, small.",
+   "alsoAt": [
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "FAIL",
+   "id": "small-text",
+   "width": 1440,
+   "message": "13 text blocks under 13px.",
+   "fix": "Nothing meant to be read goes below 13px.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "FAIL",
+   "id": "headline-lines",
+   "width": 768,
+   "message": "2 headline(s) wrap past two lines at 768px: \"YOUR BEAUTY JOURNEY STARTS HERE\" → 5 lines (5 words, 48px); \"OWN A LEGACY. BUILD YOUR SUCCESS WITH JAJI’S.\" → 3 lines (8 words, 48px)",
+   "fix": "Cut words first (a headline is a title, not a sentence). Then give it a wider measure. Lower the size only as a last resort and never below the scale you chose. A real statement paragraph belongs in a <p> or <blockquote> at 32px or less."
+  },
+  {
+   "level": "FAIL",
+   "id": "headline-lines",
+   "width": 390,
+   "message": "2 headline(s) wrap past two lines at 390px: \"YOUR BEAUTY JOURNEY STARTS HERE\" → 3 lines (5 words, 30px); \"OWN A LEGACY. BUILD YOUR SUCCESS WITH JAJI’S.\" → 4 lines (8 words, 30px)",
+   "fix": "Cut words first (a headline is a title, not a sentence). Then give it a wider measure. Lower the size only as a last resort and never below the scale you chose. A real statement paragraph belongs in a <p> or <blockquote> at 24px or less."
+  },
+  {
+   "level": "FAIL",
+   "id": "covered-text",
+   "width": 390,
+   "message": "Large text lies under another element at some scroll position: \"BOOK THE Q CAFÉ HALL ONLINE\" (screen 3, 38% hidden)",
+   "fix": "Nothing may sit on top of a headline or statement. Move the picture, shorten the pinned run, or raise the text above it (z-index) and give it a ground."
+  },
+  {
+   "level": "FAIL",
+   "id": "reduced-hidden",
+   "width": 1440,
+   "message": "With reduced motion requested, 15 text block(s) on the first screen stay invisible: \"Home\", \"Shop online\", \"Salons\", \"Cosmetics\"",
+   "fix": "Put every hidden starting state inside @media (prefers-reduced-motion: no-preference); the reduced page is the finished page (references/motion.md §8)."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "/home/claude/jajis-website/.taste-skill/before/desktop-fold.jpg",
+   "pages": [
+    "/home/claude/jajis-website/.taste-skill/before/desktop-page-01.jpg",
+    "/home/claude/jajis-website/.taste-skill/before/desktop-page-02.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "/home/claude/jajis-website/.taste-skill/before/tablet-fold.jpg",
+   "pages": [
+    "/home/claude/jajis-website/.taste-skill/before/tablet-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "/home/claude/jajis-website/.taste-skill/before/mobile-fold.jpg",
+   "pages": [
+    "/home/claude/jajis-website/.taste-skill/before/mobile-page-01.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

@@ -1,0 +1,2378 @@
+{
+ "url": "http://localhost:4173/",
+ "at": "2026-10-30T15:21:00.541Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 12,
+   "filled": [
+    0.57,
+    0.46,
+    0.89,
+    0.96,
+    0.96,
+    0.39,
+    0.83,
+    0.94,
+    0.94,
+    0.95,
+    0.91,
+    0.94
+   ],
+   "motion": {
+    "elements": 45,
+    "css": 5,
+    "transitions": 39,
+    "scripted": 1,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 11796,
+     "screens": 13.1,
+     "words": 482,
+     "img": 21,
+     "video": 0,
+     "canvas": 0,
+     "svg": 15,
+     "sections": 6,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 19,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "home-hero-makeup-C13sLapI.webp",
+      "home-bridal-CPwCaIkh.webp",
+      "saloon-7-DJR5Ag5v.webp",
+      "home-salon-front-hyeP6GVR.webp",
+      "saloon-3-CA4HVjPz.webp",
+      "saloon-1-D5YygDuy.webp",
+      "saloon-7-DJR5Ag5v.webp",
+      "saloon-8-BiK-E941.webp"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Kerala’s salon since 2002",
+     "words": 4,
+     "chars": 25,
+     "lines": 1,
+     "size": 112.3,
+     "vw": 7.8,
+     "font": "Jost Variable",
+     "weight": 500,
+     "tracking": -0.02,
+     "leading": 1,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.96,
+     "top": 89,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Kerala’s salon since 2002",
+     "words": 4,
+     "lines": 1,
+     "size": 112.3,
+     "font": "Jost Variable"
+    },
+    "headings": [
+     {
+      "text": "Made by Jaji’s Research",
+      "words": 4,
+      "chars": 23,
+      "lines": 2,
+      "size": 63.4,
+      "vw": 4.4,
+      "font": "Jost Variable",
+      "weight": 500,
+      "tracking": -0.005,
+      "leading": 0.95,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "left",
+      "widthRatio": 0,
+      "top": 0,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Kerala’s salon since 2002",
+      "words": 4,
+      "chars": 25,
+      "lines": 1,
+      "size": 112.3,
+      "vw": 7.8,
+      "font": "Jost Variable",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.96,
+      "top": 89,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "In our salons",
+      "words": 3,
+      "chars": 13,
+      "lines": 1,
+      "size": 49,
+      "vw": 3.4,
+      "font": "Jost Variable",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.38,
+      "top": 1073,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Our bestsellers",
+      "words": 2,
+      "chars": 15,
+      "lines": 1,
+      "size": 49,
+      "vw": 3.4,
+      "font": "Jost Variable",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.22,
+      "top": 4818,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "JAJI’S",
+      "words": 1,
+      "chars": 6,
+      "lines": 1,
+      "size": 216,
+      "vw": 15,
+      "font": "Jost Variable",
+      "weight": 600,
+      "tracking": -0.04,
+      "leading": 1,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.96,
+      "top": 5698,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Book the Q Café hall",
+      "words": 5,
+      "chars": 20,
+      "lines": 1,
+      "size": 49,
+      "vw": 3.4,
+      "font": "Jost Variable",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.43,
+      "top": 9806,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Book",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 302.4,
+      "vw": 21,
+      "font": "Jost Variable",
+      "weight": 600,
+      "tracking": -0.05,
+      "leading": 0.74,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.96,
+      "top": 10680,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "Jaji’s",
+      "words": 1,
+      "chars": 6,
+      "lines": 1,
+      "size": 302.4,
+      "vw": 21,
+      "font": "Jost Variable",
+      "weight": 600,
+      "tracking": -0.045,
+      "leading": 0.8,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.96,
+      "top": 11013,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 8,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 2,
+     "medianWords": 2,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Jost Variable",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      15,
+      16,
+      17,
+      22,
+      24,
+      49,
+      63,
+      112,
+      216,
+      302
+     ],
+     "sizeCount": 10,
+     "notLoaded": [],
+     "body": {
+      "font": "Jost Variable",
+      "size": 21.6,
+      "leading": 1.45,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 21
+     },
+     "measureChars": 46,
+     "max": {
+      "size": 302.4,
+      "vw": 21,
+      "font": "Jost Variable",
+      "text": "Book"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.01,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#ffffff",
+     "bodyBgHsl": {
+      "h": 0,
+      "s": 0,
+      "l": 1
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#ffffff",
+       "top": 0,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      },
+      {
+       "color": "#efedea",
+       "top": 228,
+       "hsl": {
+        "h": 36,
+        "s": 0.14,
+        "l": 0.93
+       }
+      },
+      {
+       "color": "#000000",
+       "top": 5602,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 0
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#000000",
+       "share": 0.61
+      },
+      {
+       "color": "#4d4d4d",
+       "share": 0.22
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.13
+      },
+      {
+       "color": "#9a9a9a",
+       "share": 0.03
+      },
+      {
+       "color": "#b8b8b8",
+       "share": 0.02
+      }
+     ],
+     "button": {
+      "bg": "#000000",
+      "hsl": {
+       "h": 0,
+       "s": 0,
+       "l": 0
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 8,
+     "inHero": 2,
+     "radius": 0,
+     "height": 52,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Book a salon",
+      "Book a salon"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 19,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.37
+     },
+     {
+      "type": "img",
+      "ratio": 0.18
+     },
+     {
+      "type": "img",
+      "ratio": 0.09
+     }
+    ],
+    "nav": {
+     "links": 8,
+     "fixed": true,
+     "height": 80,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "jost variable"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 11796,
+    "margins": {
+     "left": 32,
+     "right": 32
+    },
+    "sections": [
+     {
+      "sel": "main.flex-grow",
+      "tag": "main",
+      "top": 0,
+      "height": 10897,
+      "words": 319,
+      "media": 6,
+      "middle": 0,
+      "heading": {
+       "text": "Kerala’s salon",
+       "size": 112,
+       "tag": "h1"
+      },
+      "left": 32,
+      "right": 32,
+      "textLeft": 32,
+      "textRight": 32,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": true
+     },
+     {
+      "sel": "footer.bg-[#efedea].text-black",
+      "tag": "footer",
+      "top": 10897,
+      "height": 898,
+      "words": 69,
+      "media": 0,
+      "middle": 47,
+      "heading": {
+       "text": "Jaji’s",
+       "size": 302,
+       "tag": "h2"
+      },
+      "left": 32,
+      "right": 32,
+      "textLeft": 32,
+      "textRight": 32,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Kerala’s salon since 2002",
+      "size": 112,
+      "top": 89,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 32,
+      "n": 5
+     },
+     {
+      "x": 730,
+      "n": 4
+     },
+     {
+      "x": 867,
+      "n": 1
+     },
+     {
+      "x": 900,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 11,
+    "bodySize": 22,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0.1,
+    "voidBox": {
+     "x": 1200,
+     "y": 240,
+     "w": 240,
+     "h": 540
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 10,
+   "filled": [
+    0.74,
+    0.53,
+    0.96,
+    0.96,
+    0.64,
+    0.96,
+    0.96,
+    0.87,
+    0.79,
+    0.9
+   ],
+   "motion": {
+    "elements": 37,
+    "css": 5,
+    "transitions": 31,
+    "scripted": 1,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 9874,
+     "screens": 9.6,
+     "words": 577,
+     "img": 21,
+     "video": 0,
+     "canvas": 0,
+     "svg": 15,
+     "sections": 6,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 19,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "home-hero-makeup-C13sLapI.webp",
+      "home-bridal-CPwCaIkh.webp",
+      "saloon-7-DJR5Ag5v.webp",
+      "home-salon-front-hyeP6GVR.webp",
+      "saloon-3-CA4HVjPz.webp",
+      "saloon-1-D5YygDuy.webp",
+      "saloon-7-DJR5Ag5v.webp",
+      "saloon-8-BiK-E941.webp"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Kerala’s salon since 2002",
+     "words": 4,
+     "chars": 25,
+     "lines": 1,
+     "size": 59.9,
+     "vw": 7.8,
+     "font": "Jost Variable",
+     "weight": 500,
+     "tracking": -0.02,
+     "leading": 1,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.96,
+     "top": 90,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Kerala’s salon since 2002",
+     "words": 4,
+     "lines": 1,
+     "size": 59.9,
+     "font": "Jost Variable"
+    },
+    "headings": [
+     {
+      "text": "Made by Jaji’s Research",
+      "words": 4,
+      "chars": 23,
+      "lines": 2,
+      "size": 53.8,
+      "vw": 7,
+      "font": "Jost Variable",
+      "weight": 500,
+      "tracking": -0.006,
+      "leading": 0.95,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "left",
+      "widthRatio": 0,
+      "top": 0,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Kerala’s salon since 2002",
+      "words": 4,
+      "chars": 25,
+      "lines": 1,
+      "size": 59.9,
+      "vw": 7.8,
+      "font": "Jost Variable",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.96,
+      "top": 90,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "In our salons",
+      "words": 3,
+      "chars": 13,
+      "lines": 1,
+      "size": 30,
+      "vw": 3.9,
+      "font": "Jost Variable",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.44,
+      "top": 1120,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Our bestsellers",
+      "words": 2,
+      "chars": 15,
+      "lines": 1,
+      "size": 30,
+      "vw": 3.9,
+      "font": "Jost Variable",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.25,
+      "top": 4684,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "JAJI’S",
+      "words": 1,
+      "chars": 6,
+      "lines": 1,
+      "size": 161.3,
+      "vw": 21,
+      "font": "Jost Variable",
+      "weight": 600,
+      "tracking": -0.04,
+      "leading": 1,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.96,
+      "top": 5232,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Book the Q Café hall",
+      "words": 5,
+      "chars": 20,
+      "lines": 1,
+      "size": 30,
+      "vw": 3.9,
+      "font": "Jost Variable",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.96,
+      "top": 7647,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Book",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 161.3,
+      "vw": 21,
+      "font": "Jost Variable",
+      "weight": 600,
+      "tracking": -0.05,
+      "leading": 0.74,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.96,
+      "top": 9022,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "Jaji’s",
+      "words": 1,
+      "chars": 6,
+      "lines": 1,
+      "size": 161.3,
+      "vw": 21,
+      "font": "Jost Variable",
+      "weight": 600,
+      "tracking": -0.045,
+      "leading": 0.8,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.96,
+      "top": 9202,
+      "tag": "h2",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 8,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 2,
+     "medianWords": 2,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Jost Variable",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      15,
+      16,
+      17,
+      19,
+      22,
+      24,
+      30,
+      54,
+      60,
+      161
+     ],
+     "sizeCount": 10,
+     "notLoaded": [],
+     "body": {
+      "font": "Jost Variable",
+      "size": 17,
+      "leading": 1.55,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 21
+     },
+     "measureChars": 46,
+     "max": {
+      "size": 161.3,
+      "vw": 21,
+      "font": "Jost Variable",
+      "text": "Jaji’s"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.04,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#ffffff",
+     "bodyBgHsl": {
+      "h": 0,
+      "s": 0,
+      "l": 1
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#ffffff",
+       "top": 0,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      },
+      {
+       "color": "#efedea",
+       "top": 181,
+       "hsl": {
+        "h": 36,
+        "s": 0.14,
+        "l": 0.93
+       }
+      },
+      {
+       "color": "#000000",
+       "top": 2154,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 0
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#000000",
+       "share": 0.46
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.32
+      },
+      {
+       "color": "#4d4d4d",
+       "share": 0.18
+      },
+      {
+       "color": "#b8b8b8",
+       "share": 0.05
+      }
+     ],
+     "button": {
+      "bg": "#000000",
+      "hsl": {
+       "h": 0,
+       "s": 0,
+       "l": 0
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 8,
+     "inHero": 2,
+     "radius": 0,
+     "height": 52,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Book a salon",
+      "Book a salon"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 19,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.63
+     },
+     {
+      "type": "img",
+      "ratio": 0.23
+     },
+     {
+      "type": "img",
+      "ratio": 0.19
+     }
+    ],
+    "nav": {
+     "links": 4,
+     "fixed": true,
+     "height": 80,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "jost variable"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 9874,
+    "margins": {
+     "left": 17,
+     "right": 17
+    },
+    "sections": [
+     {
+      "sel": "main.flex-grow",
+      "tag": "main",
+      "top": 0,
+      "height": 9138,
+      "words": 419,
+      "media": 12,
+      "middle": 0,
+      "heading": {
+       "text": "Kerala’s salon",
+       "size": 60,
+       "tag": "h1"
+      },
+      "left": 17,
+      "right": 17,
+      "textLeft": 17,
+      "textRight": 17,
+      "fullBleed": true,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": true
+     },
+     {
+      "sel": "footer.bg-[#efedea].text-black",
+      "tag": "footer",
+      "top": 9138,
+      "height": 736,
+      "words": 69,
+      "media": 0,
+      "middle": 20,
+      "heading": {
+       "text": "Jaji’s",
+       "size": 161,
+       "tag": "h2"
+      },
+      "left": 17,
+      "right": 20,
+      "textLeft": 17,
+      "textRight": 20,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Kerala’s salon since 2002",
+      "size": 60,
+      "top": 90,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 17,
+      "n": 5
+     },
+     {
+      "x": 49,
+      "n": 2
+     },
+     {
+      "x": 392,
+      "n": 2
+     },
+     {
+      "x": 463,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 10,
+    "bodySize": 17,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 12,
+   "filled": [
+    0.62,
+    0.71,
+    0.85,
+    0.94,
+    0.77,
+    0.69,
+    0.93,
+    0.92,
+    0.92,
+    0.94,
+    0.9,
+    0.76
+   ],
+   "motion": {
+    "elements": 34,
+    "css": 5,
+    "transitions": 28,
+    "scripted": 1,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 11725,
+     "screens": 13.9,
+     "words": 568,
+     "img": 21,
+     "video": 0,
+     "canvas": 0,
+     "svg": 15,
+     "sections": 6,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 19,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "home-hero-makeup-C13sLapI.webp",
+      "home-bridal-CPwCaIkh.webp",
+      "saloon-7-DJR5Ag5v.webp",
+      "home-salon-front-hyeP6GVR.webp",
+      "saloon-3-CA4HVjPz.webp",
+      "saloon-1-D5YygDuy.webp",
+      "saloon-7-DJR5Ag5v.webp",
+      "saloon-8-BiK-E941.webp"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "Kerala’s salon since 2002",
+     "words": 4,
+     "chars": 25,
+     "lines": 2,
+     "size": 50.7,
+     "vw": 13,
+     "font": "Jost Variable",
+     "weight": 500,
+     "tracking": -0.02,
+     "leading": 1,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.92,
+     "top": 88,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Kerala’s salon since 2002",
+     "words": 4,
+     "lines": 2,
+     "size": 50.7,
+     "font": "Jost Variable"
+    },
+    "headings": [
+     {
+      "text": "Made by Jaji’s Research",
+      "words": 4,
+      "chars": 23,
+      "lines": 2,
+      "size": 44,
+      "vw": 11.3,
+      "font": "Jost Variable",
+      "weight": 500,
+      "tracking": -0.008,
+      "leading": 0.95,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "left",
+      "widthRatio": 0,
+      "top": 0,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Kerala’s salon since 2002",
+      "words": 4,
+      "chars": 25,
+      "lines": 2,
+      "size": 50.7,
+      "vw": 13,
+      "font": "Jost Variable",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 88,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "In our salons",
+      "words": 3,
+      "chars": 13,
+      "lines": 1,
+      "size": 30,
+      "vw": 7.7,
+      "font": "Jost Variable",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.87,
+      "top": 1087,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Cuts and styling",
+      "words": 3,
+      "chars": 16,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Jost Variable",
+      "weight": 500,
+      "tracking": -0.01,
+      "leading": 1.55,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.42,
+      "top": 1155,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "Hair colour",
+      "words": 2,
+      "chars": 11,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Jost Variable",
+      "weight": 500,
+      "tracking": -0.01,
+      "leading": 1.55,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.3,
+      "top": 1220,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "Keratin and hair care",
+      "words": 4,
+      "chars": 21,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Jost Variable",
+      "weight": 500,
+      "tracking": -0.01,
+      "leading": 1.55,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.55,
+      "top": 1374,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "Skin and facials",
+      "words": 3,
+      "chars": 16,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Jost Variable",
+      "weight": 500,
+      "tracking": -0.01,
+      "leading": 1.55,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.41,
+      "top": 1439,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "Bridal makeup",
+      "words": 2,
+      "chars": 13,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Jost Variable",
+      "weight": 500,
+      "tracking": -0.01,
+      "leading": 1.55,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.38,
+      "top": 1505,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "Makeup",
+      "words": 1,
+      "chars": 6,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Jost Variable",
+      "weight": 500,
+      "tracking": -0.01,
+      "leading": 1.55,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.21,
+      "top": 1570,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "Our bestsellers",
+      "words": 2,
+      "chars": 15,
+      "lines": 1,
+      "size": 30,
+      "vw": 7.7,
+      "font": "Jost Variable",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.49,
+      "top": 4187,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "JAJI’S",
+      "words": 1,
+      "chars": 6,
+      "lines": 1,
+      "size": 97.5,
+      "vw": 25,
+      "font": "Jost Variable",
+      "weight": 600,
+      "tracking": -0.04,
+      "leading": 1,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 4960,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Dr. Jajimole K.",
+      "words": 3,
+      "chars": 15,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Jost Variable",
+      "weight": 500,
+      "tracking": -0.01,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.77,
+      "top": 5518,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Jaji's Academy",
+      "words": 2,
+      "chars": 14,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Jost Variable",
+      "weight": 500,
+      "tracking": -0.01,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.77,
+      "top": 6144,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Jaji's Q Café & Event Hall",
+      "words": 6,
+      "chars": 26,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Jost Variable",
+      "weight": 500,
+      "tracking": -0.01,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.77,
+      "top": 6771,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Jaji's Food Court",
+      "words": 3,
+      "chars": 17,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Jost Variable",
+      "weight": 500,
+      "tracking": -0.01,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.77,
+      "top": 7397,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Jaji's Designing & Stitching",
+      "words": 4,
+      "chars": 28,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Jost Variable",
+      "weight": 500,
+      "tracking": -0.01,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.77,
+      "top": 7998,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "A Jaji's of your own",
+      "words": 5,
+      "chars": 20,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Jost Variable",
+      "weight": 500,
+      "tracking": -0.01,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.77,
+      "top": 8598,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Book the Q Café hall",
+      "words": 5,
+      "chars": 20,
+      "lines": 1,
+      "size": 30,
+      "vw": 7.7,
+      "font": "Jost Variable",
+      "weight": 500,
+      "tracking": -0.02,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 8956,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "The next two weeks",
+      "words": 4,
+      "chars": 18,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Jost Variable",
+      "weight": 500,
+      "tracking": -0.01,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.51,
+      "top": 9509,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "30",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Jost Variable",
+      "weight": 500,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.07,
+      "top": 9632,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "31",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Jost Variable",
+      "weight": 500,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.06,
+      "top": 9632,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "1",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Jost Variable",
+      "weight": 500,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.03,
+      "top": 9632,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "2",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Jost Variable",
+      "weight": 500,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.03,
+      "top": 9632,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "3",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Jost Variable",
+      "weight": 500,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.03,
+      "top": 9632,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "4",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Jost Variable",
+      "weight": 500,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.04,
+      "top": 9632,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "5",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Jost Variable",
+      "weight": 500,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.03,
+      "top": 9632,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "6",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Jost Variable",
+      "weight": 500,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.03,
+      "top": 9789,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "7",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Jost Variable",
+      "weight": 500,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.03,
+      "top": 9789,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "8",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Jost Variable",
+      "weight": 500,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.03,
+      "top": 9789,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "9",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Jost Variable",
+      "weight": 500,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.03,
+      "top": 9789,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "10",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Jost Variable",
+      "weight": 500,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.06,
+      "top": 9789,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "11",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Jost Variable",
+      "weight": 500,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.05,
+      "top": 9789,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "12",
+      "words": 1,
+      "chars": 2,
+      "lines": 1,
+      "size": 22,
+      "vw": 5.6,
+      "font": "Jost Variable",
+      "weight": 500,
+      "tracking": 0,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.06,
+      "top": 9789,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "Book",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 96,
+      "vw": 24.6,
+      "font": "Jost Variable",
+      "weight": 600,
+      "tracking": -0.05,
+      "leading": 0.74,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 10424,
+      "tag": "span",
+      "kind": "heading"
+     },
+     {
+      "text": "Jaji’s",
+      "words": 1,
+      "chars": 6,
+      "lines": 1,
+      "size": 96,
+      "vw": 24.6,
+      "font": "Jost Variable",
+      "weight": 600,
+      "tracking": -0.045,
+      "leading": 0.8,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 10533,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "+91 98479 48242",
+      "words": 3,
+      "chars": 15,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Jost Variable",
+      "weight": 500,
+      "tracking": -0.01,
+      "leading": 1.5,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 10705,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "+91 70346 24625",
+      "words": 3,
+      "chars": 15,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Jost Variable",
+      "weight": 500,
+      "tracking": -0.01,
+      "leading": 1.5,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 10779,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "+91 92072 09207",
+      "words": 3,
+      "chars": 15,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Jost Variable",
+      "weight": 500,
+      "tracking": -0.01,
+      "leading": 1.5,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 10854,
+      "tag": "span",
+      "kind": "statement"
+     },
+     {
+      "text": "+91 98470 24347",
+      "words": 3,
+      "chars": 15,
+      "lines": 1,
+      "size": 24,
+      "vw": 6.2,
+      "font": "Jost Variable",
+      "weight": 500,
+      "tracking": -0.01,
+      "leading": 1.5,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.92,
+      "top": 10928,
+      "tag": "span",
+      "kind": "statement"
+     }
+    ],
+    "headingSummary": {
+     "count": 39,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 10,
+     "centered": 2,
+     "medianWords": 2,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Jost Variable",
+       "share": 1,
+       "mono": false
+      }
+     ],
+     "familyCount": 1,
+     "sizes": [
+      13,
+      15,
+      16,
+      17,
+      19,
+      22,
+      24,
+      30,
+      44,
+      51,
+      96,
+      98
+     ],
+     "sizeCount": 12,
+     "notLoaded": [],
+     "body": {
+      "font": "Jost Variable",
+      "size": 17,
+      "leading": 1.45,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 21
+     },
+     "measureChars": 38,
+     "max": {
+      "size": 97.5,
+      "vw": 25,
+      "font": "Jost Variable",
+      "text": "Jaji’s"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.04,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#ffffff",
+     "bodyBgHsl": {
+      "h": 0,
+      "s": 0,
+      "l": 1
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#ffffff",
+       "top": 0,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      },
+      {
+       "color": "#efedea",
+       "top": 1873,
+       "hsl": {
+        "h": 36,
+        "s": 0.14,
+        "l": 0.93
+       }
+      },
+      {
+       "color": "#000000",
+       "top": 4864,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 0
+       }
+      },
+      {
+       "color": "#1a1a1a",
+       "top": 5122,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 0.1
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#000000",
+       "share": 0.45
+      },
+      {
+       "color": "#ffffff",
+       "share": 0.32
+      },
+      {
+       "color": "#4d4d4d",
+       "share": 0.18
+      },
+      {
+       "color": "#b8b8b8",
+       "share": 0.05
+      }
+     ],
+     "button": {
+      "bg": "#000000",
+      "hsl": {
+       "h": 0,
+       "s": 0,
+       "l": 0
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 7,
+     "inHero": 1,
+     "radius": 0,
+     "height": 52,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Book a salon"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 0,
+     "boxRadius": 0,
+     "squareMedia": 19,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.33
+     },
+     {
+      "type": "img",
+      "ratio": 0.33
+     },
+     {
+      "type": "img",
+      "ratio": 0.33
+     }
+    ],
+    "nav": {
+     "links": 2,
+     "fixed": true,
+     "height": 80,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "jost variable"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 11725,
+    "margins": {
+     "left": 6,
+     "right": 6
+    },
+    "sections": [
+     {
+      "sel": "main.flex-grow",
+      "tag": "main",
+      "top": 0,
+      "height": 10469,
+      "words": 409,
+      "media": 12,
+      "middle": 0,
+      "heading": {
+       "text": "Kerala’s salon",
+       "size": 51,
+       "tag": "h1"
+      },
+      "left": 6,
+      "right": 6,
+      "textLeft": 16,
+      "textRight": 16,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": true
+     },
+     {
+      "sel": "footer.bg-[#efedea].text-black",
+      "tag": "footer",
+      "top": 10469,
+      "height": 1255,
+      "words": 69,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Jaji’s",
+       "size": 96,
+       "tag": "h2"
+      },
+      "left": 16,
+      "right": 56,
+      "textLeft": 16,
+      "textRight": 56,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [
+     {
+      "top": 10164,
+      "height": 336
+     }
+    ],
+    "h1s": [
+     {
+      "text": "Kerala’s salon since 2002",
+      "size": 51,
+      "top": 88,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 16,
+      "n": 6
+     },
+     {
+      "x": 36,
+      "n": 2
+     }
+    ],
+    "leftBlocks": 8,
+    "bodySize": 17,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "WARN",
+   "id": "size-count",
+   "width": 1440,
+   "message": "10 different font sizes (15, 16, 17, 22, 24, 49, 63, 112, 216, 302).",
+   "fix": "A page needs about five: display, heading, lead, body, small.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "no-footage",
+   "width": 1440,
+   "message": "No video anywhere on the page.",
+   "fix": "Look for one honest clip with scripts/assets.mjs --video (the place, the material, the process) and use it as a muted loop with a poster frame. Defend its absence only if no clip fits the subject."
+  },
+  {
+   "level": "WARN",
+   "id": "pinned-over-picture",
+   "width": 1440,
+   "message": "Pinned large text slides across pictures while the page scrolls: \"Made by\" (screen 5, 100% over a picture); \"Jaji’s Research\" (screen 6, 100% over a picture); \"JAJI’S\" (screen 11, 27% over a picture)",
+   "fix": "Jurors read a pinned title crossing drawings or photographs as a collision. Keep the pictures in the column the title does not occupy, or unpin it.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "long-pin",
+   "width": 1440,
+   "message": "The same large text stays on screen for 4 screens in a row: \"JAJI’S\"",
+   "fix": "A pinned element earns two screens, and something must change at each. Shorten the run or give every screen its own content."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "/home/claude/jajis-website/.taste-skill/after/desktop-fold.jpg",
+   "pages": [
+    "/home/claude/jajis-website/.taste-skill/after/desktop-page-01.jpg",
+    "/home/claude/jajis-website/.taste-skill/after/desktop-page-02.jpg",
+    "/home/claude/jajis-website/.taste-skill/after/desktop-page-03.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "/home/claude/jajis-website/.taste-skill/after/tablet-fold.jpg",
+   "pages": [
+    "/home/claude/jajis-website/.taste-skill/after/tablet-page-01.jpg",
+    "/home/claude/jajis-website/.taste-skill/after/tablet-page-02.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "/home/claude/jajis-website/.taste-skill/after/mobile-fold.jpg",
+   "pages": [
+    "/home/claude/jajis-website/.taste-skill/after/mobile-page-01.jpg",
+    "/home/claude/jajis-website/.taste-skill/after/mobile-page-02.jpg"
+   ],
+   "film": []
+  }
+ ]
+}
