@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import QCafeBooking from "../components/QCafeBooking";
 import { API } from "../config/api";
 import { Link } from "react-router-dom";
 
@@ -187,15 +188,23 @@ export default function EventHall() {
 
             <div className="flex flex-wrap gap-4 justify-center">
               <a
-                href="#event"
-                className="px-8 py-3 bg-white text-black rounded-full font-semibold hover:bg-gray-200 transform hover:-translate-y-1 transition-all"
+                href="#qcafe-booking"
+                className="px-8 py-4 bg-white text-black text-[0.8rem] font-medium tracking-[0.18em] uppercase hover:bg-gray-200 transition-colors"
               >
-                View More
+                Book the Q Café hall
+              </a>
+              <a
+                href="#event"
+                className="px-8 py-4 border border-white text-white text-[0.8rem] font-medium tracking-[0.18em] uppercase hover:bg-white hover:text-black transition-colors"
+              >
+                Larger venues
               </a>
             </div>
           </div>
         </div>
       </div>
+
+      <QCafeBooking />
 
       <section className="bg-[linear-gradient(135deg,#fffdf7_0%,#f7f7f7_100%)] py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">

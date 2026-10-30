@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { API } from "../config/api";
+import QCafeBooking from "../components/QCafeBooking";
 
 import heroLeft from "../assets/img/home-bridal.webp";
 import heroRight from "../assets/img/home-hero-makeup.webp";
@@ -228,6 +229,11 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      {/* ---------- Q Café hall booking (live calendar from jajisqcafe.com) ---------- */}
+      <div className="border-t border-gray-200">
+        <QCafeBooking />
+      </div>
 
       {/* ---------- Booking feature ---------- */}
       <section className="grid md:grid-cols-2 bg-gray-100">

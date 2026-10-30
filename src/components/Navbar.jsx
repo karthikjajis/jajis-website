@@ -23,7 +23,7 @@ const desktopLinks = [
   { path: "/salons", label: "Salons" },
   { path: "/products", label: "Shop" },
   { path: "/academy", label: "Academy" },
-  { path: "/event-hall", label: "Events" },
+  { path: "/event-hall", label: "Book a hall" },
 ];
 
 const caps = "text-[0.8rem] font-medium tracking-[0.16em] uppercase";
@@ -127,6 +127,7 @@ export default function Navbar() {
             </NavLink>
           ))}
           <div className="sm:col-span-2 pt-10 flex flex-wrap gap-4">
+            <a href="https://jajisqcafe.com/book" className={`${caps} bg-black text-white px-6 py-3`}>Book Q Café hall</a>
             <Link to="/myorders" className={`${caps} border border-black px-6 py-3`}>My orders</Link>
             <Link to={isAuthenticated ? "/profile" : "/login"} className={`${caps} bg-black text-white px-6 py-3`}>
               {isAuthenticated ? "My account" : "Log in"}

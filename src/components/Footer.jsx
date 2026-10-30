@@ -7,6 +7,7 @@ const columns = [
     title: "Book",
     links: [
       ["Find a salon", "/salons"],
+      ["Book the Q Café hall", "https://jajisqcafe.com/book"],
       ["Q Café & Event Hall", "/event-hall"],
       ["Food Court", "/food-court"],
     ],
@@ -49,9 +50,11 @@ export default function Footer() {
               <ul className="space-y-3">
                 {col.links.map(([label, path]) => (
                   <li key={path}>
-                    <Link to={path} className="hover:text-white transition-colors">
-                      {label}
-                    </Link>
+                    {path.startsWith("http") ? (
+                      <a href={path} className="hover:text-white transition-colors">{label}</a>
+                    ) : (
+                      <Link to={path} className="hover:text-white transition-colors">{label}</Link>
+                    )}
                   </li>
                 ))}
               </ul>
