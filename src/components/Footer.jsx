@@ -31,6 +31,7 @@ const columns = [
   {
     title: "Company",
     links: [
+      ["House of Jaji’s", "/house-of-jajis"],
       ["About us", "/about-us"],
       ["Management", "/management"],
       ["Franchise", "/franchise"],

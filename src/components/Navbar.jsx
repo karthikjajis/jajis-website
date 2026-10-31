@@ -8,6 +8,7 @@ const menuItems = [
   { path: "/", label: "Home" },
   { path: "/products", label: "Shop online" },
   { path: "/salons", label: "Salons" },
+  { path: "/house-of-jajis", label: "House of Jaji’s · Coming soon" },
   { path: "/cosmetics", label: "Cosmetics" },
   { path: "/academy", label: "Academy" },
   { path: "/event-hall", label: "Q Café & Event Hall" },

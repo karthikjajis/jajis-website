@@ -12,6 +12,7 @@ import eventHall from "../assets/img/home-eventhall.webp";
 import foodCourt from "../assets/img/home-foodcourt.webp";
 import designStudio from "../assets/img/home-design.webp";
 import academyImg from "../assets/img/saloon-7.webp";
+import hojImg from "../assets/img/house-of-jajis.webp";
 
 const btnSolid =
   "inline-flex items-center justify-center min-w-[180px] px-7 py-4 bg-black text-white text-[0.8rem] font-medium tracking-[0.18em] uppercase hover:bg-gray-800 transition-colors";
@@ -227,6 +228,45 @@ export default function Home() {
               </span>
             </Link>
           ))}
+        </div>
+      </section>
+
+      {/* ---------- House of Jaji's (coming soon) ---------- */}
+      <section className="bg-black text-white">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 py-20 md:py-24 grid gap-12 md:grid-cols-2 items-center">
+          <img
+            src={hojImg}
+            alt="Architect's render of House of Jaji's in Kollam"
+            loading="lazy"
+            className="w-full aspect-[4/5] object-cover"
+          />
+          <div className="flex flex-col gap-6">
+            <p className="text-[0.75rem] tracking-[0.2em] uppercase text-gray-400">Coming soon · Kollam</p>
+            <h2 className="text-3xl md:text-5xl font-light">House of Jaji’s</h2>
+            <p className="text-[0.8rem] font-medium tracking-[0.2em] uppercase">Hair · Skin · Academy</p>
+            <p className="text-gray-300 leading-relaxed max-w-lg">
+              A new 13,000 sq ft home for the Jaji’s Group — a skin clinic, a salon affordable to all, our premium
+              Jaji’s Luxe lounge and the academy, under one roof. Now in its final stage of completion.
+            </p>
+            <ul className="grid grid-cols-2 gap-x-6 border-t border-gray-700 text-sm">
+              {[
+                ["Ground floor", "Skin clinic"],
+                ["First floor", "Salon for all"],
+                ["Second floor", "Jaji’s Luxe"],
+                ["Plus", "Jaji’s Academy"],
+              ].map(([f, n]) => (
+                <li key={n} className="border-b border-gray-700 py-3">
+                  <span className="block text-[0.7rem] tracking-[0.18em] uppercase text-gray-400">{f}</span>
+                  {n}
+                </li>
+              ))}
+            </ul>
+            <div>
+              <Link to="/house-of-jajis" className={btnGhostLight}>
+                Discover House of Jaji’s
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 
