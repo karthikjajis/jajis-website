@@ -13,7 +13,7 @@ const btnGhostLight =
 const eyebrow = "text-[0.75rem] tracking-[0.2em] uppercase text-gray-600";
 
 const stats = [
-  ["5,00,000+", "Happy clients"],
+  ["10,00,000+", "Happy clients"],
   ["20+", "Years experience"],
   ["7", "Salon locations"],
   ["100+", "Beauty services"],
@@ -22,7 +22,7 @@ const stats = [
 const achievements = [
   ["International recognition", "Award-winning team at the CMC Russia-Ural Championship"],
   ["Certified professionals", "Internationally trained and certified beauticians"],
-  ["5,00,000+ happy clients", "Trusted by families across Kerala since 2002"],
+  ["10,00,000+ happy clients", "Trusted by families across Kerala since 2002"],
   ["20+ years of excellence", "Consistently delivering quality beauty services"],
 ];
 

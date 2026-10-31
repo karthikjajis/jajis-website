@@ -198,7 +198,7 @@ export default function Franchise() {
         <Btn href="tel:+919744012345" variant="ghostLight">Call us</Btn>
       </PageHero>
 
-      <Stats items={[["2002", "Serving Kerala since"], ["7", "Salon locations"], ["5,00,000+", "Happy customers"]]} />
+      <Stats items={[["2002", "Serving Kerala since"], ["7", "Salon locations"], ["10,00,000+", "Happy customers"]]} />
 
       <Split image={storyImg} alt="A Jaji's salon reception">
         <p className={eyebrow}>Our journey</p>

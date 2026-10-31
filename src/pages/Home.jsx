@@ -33,7 +33,7 @@ const worlds = [
 
 const stats = [
   ["2002", "Serving Kerala since"],
-  ["5,00,000+", "Happy customers"],
+  ["10,00,000+", "Happy customers"],
   ["200+", "Expert staff"],
   ["7", "Businesses, one brand"],
 ];
