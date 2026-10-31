@@ -16,7 +16,6 @@ const amenities = [
   ["AC dining", "Climate-controlled comfort"],
   ["Takeaway", "Convenient pickup service"],
   ["Sanitised", "Highest hygiene standards"],
-  ["Open 24/7", "Always here for you"],
 ];
 
 export default function FoodCourt() {

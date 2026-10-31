@@ -51,7 +51,7 @@ export default function Management() {
           </p>
           <p className="text-gray-700 leading-relaxed">
             Under her leadership, Jaji’s Innovation has expanded into luxury unisex salons, kids’ salons, cafés, food courts,
-            cosmetic and skincare lines, and upcoming luxe skin &amp; hair clinics, employing over 150 professionals.
+            cosmetic and skincare lines, and upcoming luxe skin &amp; hair clinics, employing over 200 team members.
           </p>
         </div>
       </section>
