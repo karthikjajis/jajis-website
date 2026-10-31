@@ -74,6 +74,7 @@ export default function Footer() {
           <div className="flex flex-wrap gap-x-6 gap-y-2">
             <Link to="/privacy" className="hover:text-white">Privacy policy</Link>
             <Link to="/terms" className="hover:text-white">Terms of service</Link>
+            <Link to="/return-policy" className="hover:text-white">Return &amp; refund policy</Link>
             <span>© {new Date().getFullYear()} Jaji’s Innovation Pvt. Ltd.</span>
           </div>
         </div>

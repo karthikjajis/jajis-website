@@ -31,9 +31,9 @@ export default function Terms() {
 
       <h2 className="text-xl font-semibold mb-3">Returns & Refunds</h2>
       <p className="mb-6">
-        Returns or refunds are subject to product condition and company
-        policies. Please contact our support team for assistance regarding
-        returns.
+        Products are non-returnable. Damaged, defective or wrong items are
+        replaced or refunded — see our{" "}
+        <a href="/return-policy" className="underline">return &amp; refund policy</a>.
       </p>
 
       <h2 className="text-xl font-semibold mb-3">Limitation of Liability</h2>

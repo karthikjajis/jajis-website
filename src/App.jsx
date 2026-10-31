@@ -21,6 +21,7 @@ const AboutUs = lazy(() => import("./pages/AboutUs"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Privacy = lazy(() => import("./pages/privacy"));
 const Terms = lazy(() => import("./pages/terms"));
+const ReturnPolicy = lazy(() => import("./pages/ReturnPolicy"));
 const Management = lazy(() => import("./pages/management"));
 const Login = lazy(() => import("./pages/E-Login"));
 const Register = lazy(() => import("./pages/E-Register"));
@@ -44,6 +45,8 @@ const PAGE_SEO = {
   "/franchise": { title: "Salon franchise opportunity", description: "Own a Jaji's salon. Training, branding, set-up and ongoing support from Kerala's family salon brand since 2002." },
   "/about-us": { title: "About us", description: "The story of Jaji's Innovation — beauty and lifestyle in Kerala since 2002." },
   "/management": { title: "Management", description: "Meet Dr. Jajimole K and the leadership team of Jaji's Innovation Pvt. Ltd." },
+  "/return-policy": { title: "Return & refund policy", description: "Jaji's Innovation return and refund policy: personal care products are non-returnable; damaged or wrong items are replaced or refunded." },
+  "/refund-policy": { title: "Return & refund policy", description: "Jaji's Innovation return and refund policy: personal care products are non-returnable; damaged or wrong items are replaced or refunded." },
   "/contact": { title: "Contact us", description: "Call, WhatsApp or visit Jaji's salons, Q Café, Food Court, studio and academy across Kerala." },
 };
 
@@ -87,6 +90,8 @@ export default function App() {
               <Route path="/contact" element={<Contact />} />
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/terms" element={<Terms />} />
+              <Route path="/return-policy" element={<ReturnPolicy />} />
+              <Route path="/refund-policy" element={<ReturnPolicy />} />
               <Route path="/management" element={<Management />} />
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
