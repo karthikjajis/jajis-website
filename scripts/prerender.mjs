@@ -19,6 +19,8 @@ const DEFAULT_DESC =
 const DEFAULT_IMAGE = `${SITE}/house-of-jajis-og.jpg`;
 
 const template = fs.readFileSync(path.join(dist, "index.html"), "utf8");
+// Empty app shell for pages that only exist in the browser (cart, account, new products).
+fs.writeFileSync(path.join(dist, "app.html"), template);
 
 const esc = (s) =>
   String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
