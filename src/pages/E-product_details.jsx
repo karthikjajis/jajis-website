@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
+import Seo, { productJsonLd } from "../components/Seo";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { API } from "../config/api";
@@ -25,6 +26,7 @@ export default function ProductDetails() {
   const [isShareOpen, setIsShareOpen] = useState(false);
   const [addingItem, setAddingItem] = useState(false);
   const [message, setMessage] = useState(null);
+  const productLd = useMemo(() => productJsonLd(product, id), [product, id]);
 
   const showMessage = (text, type = "success") => {
     setMessage({ text, type });
@@ -120,6 +122,13 @@ export default function ProductDetails() {
 
   return (
     <div className="min-h-screen py-16 px-6 lg:px-20 mt-20">
+      <Seo
+        title={product.title}
+        description={product.description}
+        image={product.image1}
+        type="product"
+        jsonLd={productLd}
+      />
       {/* Toast Message */}
       {message && (
         <div

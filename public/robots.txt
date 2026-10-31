@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Disallow: /cart
+Disallow: /myorders
+Disallow: /wishlist
+Disallow: /profile
+Disallow: /login
+Disallow: /register
+Disallow: /forgot-password
+
+Sitemap: https://www.jajisinnovation.com/sitemap.xml
