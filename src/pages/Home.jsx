@@ -245,12 +245,12 @@ export default function Home() {
             <h2 className="text-3xl md:text-5xl font-light">House of Jaji’s</h2>
             <p className="text-[0.8rem] font-medium tracking-[0.2em] uppercase">Hair · Skin · Academy</p>
             <p className="text-gray-300 leading-relaxed max-w-lg">
-              A new 13,000 sq ft home for the Jaji’s Group — a skin clinic, a salon affordable to all, our premium
+              A new 13,000 sq ft home for the Jaji’s Group — Jaji’s Signature Skin &amp; Hair Clinic, a salon affordable to all, our premium
               Jaji’s Luxe lounge and the academy, under one roof. Now in its final stage of completion.
             </p>
             <ul className="grid grid-cols-2 gap-x-6 border-t border-gray-700 text-sm">
               {[
-                ["Ground floor", "Skin clinic"],
+                ["Ground floor", "Jaji’s Signature Skin & Hair Clinic"],
                 ["First floor", "Salon for all"],
                 ["Second floor", "Jaji’s Luxe"],
                 ["Plus", "Jaji’s Academy"],

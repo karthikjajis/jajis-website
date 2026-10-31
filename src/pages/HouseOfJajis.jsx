@@ -2,7 +2,7 @@ import { Btn, SectionTitle, CtaBand, eyebrow, wrap, sectionPad } from "../compon
 import render from "../assets/img/house-of-jajis.webp";
 
 export const HOJ_FLOORS = [
-  ["Ground floor", "Skin clinic", "Advanced skin care and treatments in a dedicated clinic."],
+  ["Ground floor", "Jaji’s Signature Skin & Hair Clinic", "Advanced skin and hair treatments in a dedicated clinic."],
   ["First floor", "Jaji’s Salon", "Our family salon — hair, beauty and grooming that is affordable to all."],
   ["Second floor", "Jaji’s Luxe", "A premium lounge for an exclusive, luxury salon experience."],
   ["Academy", "Jaji’s Academy", "A home for training the next generation of beauty and hair professionals."],
@@ -29,8 +29,8 @@ export default function HouseOfJajis() {
           <h1 className="text-[2.1rem] sm:text-5xl lg:text-6xl font-light">House of Jaji’s</h1>
           <p className="text-[0.8rem] font-medium tracking-[0.2em] uppercase">Hair · Skin · Academy</p>
           <p className="text-gray-700 leading-relaxed">
-            House of Jaji’s is a new 13,000 sq ft destination in Kollam by the Jaji’s Group — bringing our skin clinic,
-            salon, premium lounge and academy together under one roof.
+            House of Jaji’s is a new 13,000 sq ft destination in Kollam by the Jaji’s Group — bringing Jaji’s Signature Skin &amp; Hair Clinic,
+            our salon, premium lounge and academy together under one roof.
           </p>
           <p className="text-gray-700 leading-relaxed">
             The building is in its final stage of completion. Opening soon.

@@ -46,7 +46,7 @@ const PAGE_SEO = {
   "/franchise": { title: "Salon franchise opportunity", description: "Own a Jaji's salon. Training, branding, set-up and ongoing support from Kerala's family salon brand since 2002." },
   "/about-us": { title: "About us", description: "The story of Jaji's Innovation — beauty and lifestyle in Kerala since 2002." },
   "/management": { title: "Management", description: "Meet Dr. Jajimole K and the leadership team of Jaji's Innovation Pvt. Ltd." },
-  "/house-of-jajis": { title: "House of Jaji's — Hair, Skin & Academy, Kollam", description: "House of Jaji's: a new 13,000 sq ft destination in Kollam with a skin clinic, affordable salon, Jaji's Luxe premium lounge and academy. Opening soon.", image: "https://www.jajisinnovation.com/house-of-jajis-og.jpg" },
+  "/house-of-jajis": { title: "House of Jaji's — Hair, Skin & Academy, Kollam", description: "House of Jaji's: a new 13,000 sq ft destination in Kollam with Jaji\'s Signature Skin & Hair Clinic, an affordable salon, Jaji's Luxe premium lounge and academy. Opening soon.", image: "https://www.jajisinnovation.com/house-of-jajis-og.jpg" },
   "/return-policy": { title: "Return & refund policy", description: "Jaji's Innovation return and refund policy: personal care products are non-returnable; damaged or wrong items are replaced or refunded." },
   "/refund-policy": { title: "Return & refund policy", description: "Jaji's Innovation return and refund policy: personal care products are non-returnable; damaged or wrong items are replaced or refunded." },
   "/contact": { title: "Contact us", description: "Call, WhatsApp or visit Jaji's salons, Q Café, Food Court, studio and academy across Kerala." },
