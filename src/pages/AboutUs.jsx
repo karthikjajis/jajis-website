@@ -1,371 +1,118 @@
-import {
-  FaStar,
-  FaLightbulb,
-  FaHandshake,
-  FaHeart,
-  FaBuilding,
-  FaUserTie,
-  FaPaintBrush,
-  FaLaptopCode,
-  FaCut,
-  FaGraduationCap,
-  FaUtensils,
-  FaGlassCheers,
-  FaShoppingBag,
-} from "react-icons/fa";
+import { PageHero, Btn, Stats, SectionTitle, FeatureList, CtaBand, Split, eyebrow, wrap, sectionPad } from "../components/ui";
 
-import CEO from "../assets/img/management-ceo.webp";
-import DIRECTOR from "../assets/img/management-jaji-main-image.webp";
-import JAJI from "../assets/img/management-jaji.webp";
-import jaji1 from "../assets/img/management-jajis.webp";
-import jaji2 from "../assets/img/management-jajis1.webp";
-import jaji3 from "../assets/img/management-jajis2.webp";
+import heroImg from "../assets/img/saloon-3.webp";
+import storyImg from "../assets/img/saloon-1.webp";
+import founderImg from "../assets/img/founder-jajimole.webp";
+import directorImg from "../assets/img/management-jaji-main-image.webp";
+import ceoImg from "../assets/img/management-ceo.webp";
 
-import salon from "../assets/img/saloon-1.webp";
-import salonbg from "../assets/img/saloon-2.webp";
-import cosmeticsImg from "../assets/img/images-cosmatics.webp";
-import cosmetics_bg from "../assets/img/saloon-3.webp";
-import LOGO from "../assets/img/images-logo.webp";
-import eventbg from "../assets/img/event-hall-3.webp";
-import event from "../assets/img/event-hall-2.webp";
+const team = [
+  { name: "Dr. Jajimole K", role: "Founder & Director", image: founderImg },
+  { name: "Keerthi Sunil", role: "Director", image: directorImg },
+  { name: "Karthik Sunil", role: "Creative Director", image: ceoImg },
+];
 
-import qcafe from "../assets/img/foodcourt-2.webp";
-import qcafebg from "../assets/img/foodcourt-1.webp";
+const values = [
+  ["Excellence", "We strive for excellence in everything we do."],
+  ["Innovation", "Constantly innovating to serve you better."],
+  ["Integrity", "Honest and transparent in all operations."],
+  ["Customer focus", "Our customers are always our top priority."],
+];
 
-import design from "../assets/img/design-1.webp";
-import designbg from "../assets/img/design-3.webp";
+const offer = [
+  ["Beauty salons", "Professional beauty services for all.", "/salons"],
+  ["Cosmetics", "Premium beauty products, made by Jaji’s Research.", "/cosmetics"],
+  ["Event halls", "Perfect venues for celebrations.", "/event-hall"],
+  ["Food court", "Open-air dining at Ashramam Maidanam.", "/food-court"],
+  ["Designing & stitching", "Custom fashion, bridal wear and tailoring.", "/designing-stitching"],
+  ["Academy", "Professional beauty and hairdressing training.", "/academy"],
+];
 
 export default function AboutUs() {
   return (
-    <div className="min-h-screen bg-black">
-      {/* Hero Section */}
-      <div
-        className="relative h-[100vh] mt-12 w-full bg-fixed bg-cover bg-center"
-        style={{
-          backgroundImage: `url(${JAJI})`,
-        }}
-      >
-        <div className="absolute inset-0 bg-black/60">
-          <div className="h-full flex flex-col items-center justify-center text-center px-4">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              About Us
-            </h1>
+    <div className="bg-white text-black pt-24">
+      <PageHero image={heroImg} alt="Inside a Jaji's salon" kicker="Since 2002 · Kerala" title="About us" subtitle="Beauty, lifestyle and celebration — under one family brand." />
+
+      <Stats items={[["20+", "Years experience"], ["5,00,000+", "Happy customers"], ["200+", "Team members"], ["7", "Businesses"]]} />
+
+      <Split image={storyImg} alt="A Jaji's salon">
+        <p className={eyebrow}>Our journey</p>
+        <h2 className="text-3xl md:text-5xl font-light">Crafting excellence since day one</h2>
+        <p className="text-gray-700 leading-relaxed">
+          Founded with a vision to provide exceptional beauty and lifestyle services, Jaji’s has grown from a small local
+          business to a comprehensive service provider that touches lives across communities.
+        </p>
+        <p className="text-gray-700 leading-relaxed">
+          Our mission has always been to make beauty and wellness accessible to everyone while maintaining the highest
+          standards of quality and professionalism.
+        </p>
+        <dl className="grid sm:grid-cols-2 gap-x-8">
+          <div className="border-t border-gray-200 py-5">
+            <dt className="text-[0.85rem] font-medium tracking-[0.12em] uppercase">Our mission</dt>
+            <dd className="mt-1 text-sm text-gray-600">
+              To provide innovative, high-quality beauty and lifestyle services that enhance confidence and well-being,
+              making every client feel valued and beautiful.
+            </dd>
           </div>
-        </div>
-      </div>
-
-      {/* Story Section */}
-      <section
-        className="relative bg-gray-100 bg-fixed bg-center bg-cover"
-        id="more"
-      >
-        <div className="relative max-w-7xl mx-auto px-6 py-32">
-          <div className="grid lg:grid-cols-2 gap-20 items-center">
-            {/* Left Content */}
-            <div className="space-y-8">
-              <span className="text-sm font-bold tracking-widest text-gray-600 uppercase">
-                Our Journey
-              </span>
-              <h2 className="text-5xl font-extrabold text-black leading-tight drop-shadow">
-                Crafting <span className="text-gray-800">Excellence</span> Since
-                Day One
-              </h2>
-              <div className="w-24 h-1 bg-black mb-6"></div>
-
-              <p className="text-lg text-gray-800 leading-relaxed text-justify">
-                Founded with a vision to provide exceptional beauty and
-                lifestyle services, Jajis has grown from a small local business
-                to a comprehensive service provider that touches lives across
-                communities.
-              </p>
-              <p className="text-lg text-gray-800 leading-relaxed text-justify">
-                Our mission has always been to make beauty and wellness
-                accessible to everyone while maintaining the highest standards
-                of quality and professionalism.
-              </p>
-
-              {/* Stats */}
-              <div className="grid grid-cols-2 gap-8 mt-10">
-                <div className="bg-white shadow-md p-6 rounded-2xl hover:scale-105 hover:bg-gray-100 transition-transform">
-                  <div className="text-5xl font-extrabold text-black mb-2">
-                    20+
-                  </div>
-                  <div className="text-gray-600 text-sm uppercase tracking-wide">
-                    Years Experience
-                  </div>
-                </div>
-                <div className="bg-white shadow-md p-6 rounded-2xl hover:scale-105 hover:bg-gray-100 transition-transform">
-                  <div className="text-5xl font-extrabold text-black mb-2">
-                    50+
-                  </div>
-                  <div className="text-gray-600 text-sm uppercase tracking-wide">
-                    Team Members
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Right Content - Cards */}
-            <div className="space-y-10">
-              <div
-                className="bg-white p-10 rounded-2xl shadow-lg border border-gray-300 hover:shadow-xl transition-all group"
-              >
-                <div className="w-16 h-16 flex items-center justify-center rounded-full bg-gray-100 text-black text-4xl mb-6 group-hover:scale-110 transition-transform">
-                  <FaBuilding />
-                </div>
-                <h3 className="text-2xl font-bold text-black mb-4">
-                  Our Mission
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  To provide innovative, high-quality beauty and lifestyle
-                  services that enhance confidence and well-being, making every
-                  client feel valued and beautiful.
-                </p>
-              </div>
-
-              <div
-                className="bg-white p-10 rounded-2xl shadow-lg border border-gray-300 hover:shadow-xl transition-all group"
-              >
-                <div className="w-16 h-16 flex items-center justify-center rounded-full bg-gray-100 text-black text-4xl mb-6 group-hover:scale-110 transition-transform">
-                  <FaStar />
-                </div>
-                <h3 className="text-2xl font-bold text-black mb-4">
-                  Our Vision
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  To be the leading beauty & lifestyle brand, known for
-                  innovation, excellence, and customer satisfaction across all
-                  service lines.
-                </p>
-              </div>
-            </div>
+          <div className="border-t border-gray-200 py-5">
+            <dt className="text-[0.85rem] font-medium tracking-[0.12em] uppercase">Our vision</dt>
+            <dd className="mt-1 text-sm text-gray-600">
+              To be the leading beauty and lifestyle brand, known for innovation, excellence and customer satisfaction
+              across all our services.
+            </dd>
           </div>
-        </div>
-      </section>
+        </dl>
+      </Split>
 
-      {/* Team Section */}
-      <section
-        className="relative bg-fixed bg-center bg-top"
-        style={{
-          backgroundImage: `url(${cosmetics_bg})`,
-        }}
-      >
-        <div className="absolute inset-0 bg-black/60"></div>
-        <div className="relative py-32">
-          <div className="text-center mb-20">
-            <span className="text-sm font-bold tracking-widest text-gray-400 uppercase">
-              Meet The Experts
-            </span>
-            <h2 className="text-5xl font-bold text-white mt-4 mb-6">
-              Our Leadership Team
-            </h2>
-            <div className="w-20 h-1 bg-white mx-auto"></div>
-          </div>
-
-          <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                name: "Dr. Jajimole K",
-                role: "Founder & Director",
-                image: JAJI,
-              },
-
-              {
-                name: "Keerthi Sunil",
-                role: "Director",
-                image: DIRECTOR,
-              },
-
-              {
-                name: "Karthik Sunil",
-                role: "Creative Director",
-                image: CEO,
-              },
-            ].map((member, i) => (
-              <div
-                key={i}
-                className="group text-center p-8 
-              transition-all duration-300 rounded-2xl"
-              >
-                {/* Profile Image */}
-                <div className="relative w-62 h-62 mx-auto mb-6">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-full object-top object-cover rounded-full 
-                 border-1 border-white 
-                 transition-all duration-300"
-                  />
-                </div>
-
-                {/* Name */}
-                <h3 className="text-xl font-bold text-white mb-1 transition-colors duration-300">
-                  {member.name}
-                </h3>
-
-                {/* Role */}
-                <p className="text-gray-300 text-sm uppercase tracking-wider transition-colors duration-300">
-                  {member.role}
-                </p>
-              </div>
+      {/* Leadership */}
+      <section className="border-t border-gray-200">
+        <div className={`${wrap} ${sectionPad}`}>
+          <SectionTitle title="Our leadership team" sub="The family behind Jaji’s." />
+          <ul className="grid sm:grid-cols-3 gap-x-6 gap-y-12">
+            {team.map((m) => (
+              <li key={m.name} className="flex flex-col gap-3">
+                <img src={m.image} alt={m.name} loading="lazy" className="w-full aspect-[4/5] object-cover object-top bg-gray-100" />
+                <h3 className="mt-2 text-[1rem] font-medium tracking-[0.12em]">{m.name}</h3>
+                <p className="text-[0.75rem] tracking-[0.18em] uppercase text-gray-600">{m.role}</p>
+              </li>
             ))}
+          </ul>
+          <div className="text-center mt-12">
+            <Btn to="/management" variant="outline">Meet the management</Btn>
           </div>
         </div>
       </section>
 
-      {/* Values Section */}
-      <section
-        className="relative bg-fixed bg-center bg-cover"
-        style={{
-          backgroundImage: `url(${jaji1})`,
-        }}
-      >
-        <div className="absolute inset-0 bg-black/70"></div>
-        <div className="relative py-32">
-          <div className="text-center mb-20">
-            <span className="text-sm font-bold tracking-widest text-gray-400 uppercase">
-              What Drives Us
-            </span>
-            <h2 className="text-5xl font-bold text-white mt-4 mb-6">
-              Our Core Values
-            </h2>
-            <div className="w-20 h-1 bg-white mx-auto"></div>
-          </div>
-
-          <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                name: "Excellence",
-                icon: <FaStar />,
-                desc: "We strive for excellence in everything we do",
-              },
-              {
-                name: "Innovation",
-                icon: <FaLightbulb />,
-                desc: "Constantly innovating to serve you better",
-              },
-              {
-                name: "Integrity",
-                icon: <FaHandshake />,
-                desc: "Honest and transparent in all operations",
-              },
-              {
-                name: "Customer Focus",
-                icon: <FaHeart />,
-                desc: "Our customers are always our top priority",
-              },
-            ].map((value, i) => (
-              <div
-                key={i}
-                className="group text-center p-8 bg-white/5 backdrop-blur-sm border-2 border-white/20 hover:border-white hover:-translate-y-2 transition-all duration-300"
-              >
-                <div className="w-20 h-20 mx-auto mb-6 border-2 border-white rounded-full flex items-center justify-center group-hover:bg-white transition-all duration-300">
-                  <div className="text-4xl text-white group-hover:text-black transition-colors duration-300">
-                    {value.icon}
-                  </div>
-                </div>
-                <h3 className="text-2xl font-bold mb-4 text-white">
-                  {value.name}
-                </h3>
-                <p className="text-gray-300">{value.desc}</p>
-              </div>
-            ))}
-          </div>
+      {/* Values */}
+      <section className="bg-gray-100">
+        <div className={`${wrap} ${sectionPad}`}>
+          <SectionTitle title="Our core values" />
+          <FeatureList items={values} />
         </div>
       </section>
 
-      {/* Services Section */}
-      <section
-        className="relative bg-fixed bg-center bg-cover"
-        style={{
-          backgroundImage: `url(${jaji3})`,
-        }}
-      >
-        <div className="absolute inset-0 bg-black/70"></div>
-        <div className="relative py-32">
-          <div className="text-center mb-20">
-            <span className="text-sm font-bold tracking-widest text-gray-400 uppercase">
-              Our Services
-            </span>
-            <h2 className="text-5xl font-bold text-white mt-4 mb-6">
-              What We Offer
-            </h2>
-            <div className="w-20 h-1 bg-white mx-auto"></div>
-          </div>
-
-          <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                name: "Beauty Salons",
-                icon: <FaUserTie />,
-                desc: "Professional beauty services for all",
-              },
-              {
-                name: "Cosmetics",
-                icon: <FaShoppingBag />,
-                desc: "Premium beauty products curated",
-              },
-              {
-                name: "Event Halls",
-                icon: <FaGlassCheers />,
-                desc: "Perfect venues for celebrations",
-              },
-              {
-                name: "Food Court",
-                icon: <FaUtensils />,
-                desc: "Delicious dining experiences",
-              },
-              {
-                name: "Design & Stitching",
-                icon: <FaCut />,
-                desc: "Custom fashion services delivered",
-              },
-              {
-                name: "Academy",
-                icon: <FaGraduationCap />,
-                desc: "Professional training programs",
-              },
-            ].map((service, i) => (
-              <div
-                key={i}
-                className="group bg-white/5 backdrop-blur-sm border border-white/20 p-8 hover:bg-white hover:border-white hover:scale-105 transition-all duration-300 text-center"
-              >
-                <div className="text-5xl text-white group-hover:text-black mb-6 transition-colors duration-300">
-                  {service.icon}
-                </div>
-                <h3 className="text-xl font-bold mb-3 text-white group-hover:text-black transition-colors duration-300">
-                  {service.name}
-                </h3>
-                <p className="text-gray-300 group-hover:text-gray-700 transition-colors duration-300">
-                  {service.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
+      {/* What we offer */}
+      <section className={`${wrap} ${sectionPad}`}>
+        <SectionTitle title="What we offer" />
+        <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 border-t border-gray-200">
+          {offer.map(([title, desc, to]) => (
+            <li key={title} className="border-b border-gray-200">
+              <Btn to={to} variant={null} className="group flex items-start justify-between gap-4 py-7">
+                <span>
+                  <span className="block text-[0.95rem] font-medium tracking-[0.12em] uppercase">{title}</span>
+                  <span className="block mt-1 text-sm text-gray-600">{desc}</span>
+                </span>
+                <span aria-hidden="true" className="text-xl group-hover:translate-x-1 transition-transform">→</span>
+              </Btn>
+            </li>
+          ))}
+        </ul>
       </section>
 
-      {/* Final CTA Section */}
-      <section
-        className="relative bg-fixed bg-center bg-cover"
-        style={{
-          backgroundImage: `url(${salonbg})`,
-        }}
-      >
-        <div className="absolute inset-0 bg-black/80"></div>
-        <div className="relative max-w-4xl mx-auto px-6 py-32 text-center">
-          <h2 className="text-5xl font-bold text-white mb-8">
-            Ready to Experience Excellence?
-          </h2>
-          <p className="text-xl text-gray-300 mb-12">
-            Join thousands of satisfied customers who trust us with their beauty
-            and lifestyle needs.
-          </p>
-          <button className="px-12 py-4 bg-white text-black font-bold text-lg uppercase tracking-wide hover:bg-gray-200 hover:scale-105 transition-all duration-300">
-            Get Started Today
-          </button>
-        </div>
-      </section>
+      <CtaBand kicker="Visit us" title="Ready to experience excellence?" text="Join the families across Kerala who trust Jaji’s with their beauty and lifestyle needs.">
+        <Btn to="/salons" variant="light">Find a salon</Btn>
+        <Btn to="/contact" variant="ghostLight">Contact us</Btn>
+      </CtaBand>
     </div>
   );
 }

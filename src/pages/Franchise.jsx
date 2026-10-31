@@ -26,6 +26,8 @@ import {
   FaExclamationCircle,
 } from "react-icons/fa";
 import saloonBg from "../assets/img/saloon-4.webp";
+import storyImg from "../assets/img/saloon-1.webp";
+import { PageHero, Btn, Stats, SectionTitle, FeatureList, Split, eyebrow, wrap, sectionPad } from "../components/ui";
 
 export default function Franchise() {
   const [data, setData] = useState({ page: "" });
@@ -184,220 +186,87 @@ export default function Franchise() {
   }
 
   return (
-    <div className="min-h-screen w-full overflow-x-hidden font-sans bg-black text-white">
-      {/* HERO */}
-      <section
-        className="relative bg-center bg-cover h-[70vh] text-white flex items-center justify-center md:bg-fixed"
-        style={{
-          backgroundImage:
-            "url('https://www.causeway.com/hs-fs/hubfs/iStock-1225020118-1-scaled.webp')",
-        }}
+    <div className="w-full overflow-x-hidden bg-white text-black pt-24">
+      <PageHero
+        image={saloonBg}
+        alt="Inside a Jaji's salon"
+        kicker="Franchise"
+        title="Own a Jaji’s salon"
+        subtitle="Own a premium beauty brand and build your success with Jaji’s."
       >
-        <div className="absolute inset-0 bg-black/70" />
+        <Btn href="#enquiry-form-section" variant="light">Apply now</Btn>
+        <Btn href="tel:+919744012345" variant="ghostLight">Call us</Btn>
+      </PageHero>
 
-        <div className="relative z-10 text-center px-6 max-w-3xl">
-          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight">
-            {data.page || "Jaji’s Beauty Saloon Franchise"}
-          </h1>
-          <p className="text-lg md:text-2xl text-gray-200 mt-4 font-light">
-            Own a premium beauty brand and build your success with Jaji’s.
-          </p>
+      <Stats items={[["2002", "Serving Kerala since"], ["7", "Salon locations"], ["5,00,000+", "Happy customers"]]} />
 
-          <div className="mt-8 flex flex-wrap gap-4 justify-center">
-            <a
-              href="#enquiry-form-section"
-              className="px-8 py-3.5 bg-black border border-white text-white rounded-full font-bold hover:bg-white hover:text-black transition shadow-lg flex items-center gap-2"
-            >
-              <FaPaperPlane className="text-sm" /> Apply Now
-            </a>
+      <Split image={storyImg} alt="A Jaji's salon reception">
+        <p className={eyebrow}>Our journey</p>
+        <h2 className="text-3xl md:text-5xl font-light">Crafting excellence since day one</h2>
+        <p className="text-gray-700 leading-relaxed">
+          Founded with a vision to provide exceptional beauty and lifestyle services, Jaji’s has grown from a small local
+          business into a trusted brand serving communities with professionalism and care.
+        </p>
+        <p className="text-gray-700 leading-relaxed">
+          Our mission is to make beauty and wellness accessible to everyone while maintaining the highest standards of
+          quality, hygiene and customer satisfaction.
+        </p>
+        <dl className="grid sm:grid-cols-2 gap-x-8">
+          <div className="border-t border-gray-200 py-5">
+            <dt className="text-[0.85rem] font-medium tracking-[0.12em] uppercase">Our mission</dt>
+            <dd className="mt-1 text-sm text-gray-600">
+              To deliver innovative, high-quality beauty and lifestyle services that enhance confidence and well-being,
+              ensuring every client feels valued and beautiful.
+            </dd>
           </div>
+          <div className="border-t border-gray-200 py-5">
+            <dt className="text-[0.85rem] font-medium tracking-[0.12em] uppercase">Our vision</dt>
+            <dd className="mt-1 text-sm text-gray-600">
+              To be a leading beauty and lifestyle brand known for excellence, innovation and customer satisfaction across
+              India.
+            </dd>
+          </div>
+        </dl>
+      </Split>
+
+      <section className="bg-gray-100">
+        <div className={`${wrap} ${sectionPad}`}>
+          <SectionTitle title="Why partner with Jaji’s" sub="A proven beauty brand with strong support, modern systems and growth-focused opportunities." />
+          <FeatureList
+            items={[
+              ["Proven business model"],
+              ["Strong brand trust"],
+              ["Professional training"],
+              ["Marketing support"],
+              ["Continuous guidance"],
+              ["Premium services"],
+              ["Modern systems"],
+              ["Growth opportunities"],
+            ]}
+          />
         </div>
       </section>
 
-      {/* ABOUT JAJIS */}
-      <section className="bg-white text-black py-24">
-        <div className="relative max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* LEFT */}
-            <div className="space-y-8">
-              <span className="text-xs font-bold tracking-widest text-black uppercase bg-gray-100 border border-gray-300 px-3 py-1 rounded-full">
-                Our Journey
-              </span>
-
-              <h2 className="text-4xl md:text-5xl font-extrabold leading-tight">
-                Crafting Excellence Since Day One
-              </h2>
-
-              <div className="w-20 h-1 bg-black"></div>
-
-              <p className="text-lg text-gray-800 leading-relaxed text-justify">
-                Founded with a vision to provide exceptional beauty and
-                lifestyle services, Jajis has grown from a small local business
-                into a trusted brand serving communities with professionalism
-                and care.
-              </p>
-
-              <p className="text-lg text-gray-800 leading-relaxed text-justify">
-                Our mission is to make beauty and wellness accessible to
-                everyone while maintaining the highest standards of quality,
-                hygiene, and customer satisfaction.
-              </p>
-
-              <div className="grid grid-cols-2 gap-6 mt-8">
-                <div className="bg-gray-100 border border-gray-200 p-6 rounded-2xl text-center shadow-sm">
-                  <div className="text-4xl md:text-5xl font-extrabold text-black">
-                    2003
-                  </div>
-                  <div className="text-gray-600 text-xs font-semibold uppercase tracking-wider mt-2">
-                    Established Year
-                  </div>
-                </div>
-                <div className="bg-gray-100 border border-gray-200 p-6 rounded-2xl text-center shadow-sm">
-                  <div className="text-4xl md:text-5xl font-extrabold text-black">
-                    50+
-                  </div>
-                  <div className="text-gray-600 text-xs font-semibold uppercase tracking-wider mt-2">
-                    Team Members
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* RIGHT */}
-            <div className="space-y-6">
-              <div className="bg-white p-8 rounded-2xl border border-gray-200 shadow-lg">
-                <div className="w-12 h-12 rounded-xl bg-black text-white flex items-center justify-center text-2xl mb-4">
-                  <FaBuilding />
-                </div>
-                <h3 className="text-2xl font-bold mb-2">Our Mission</h3>
-                <p className="text-gray-700 leading-relaxed">
-                  To deliver innovative, high-quality beauty and lifestyle
-                  services that enhance confidence and well-being, ensuring
-                  every client feels valued and beautiful.
-                </p>
-              </div>
-
-              <div className="bg-white p-8 rounded-2xl border border-gray-200 shadow-lg">
-                <div className="w-12 h-12 rounded-xl bg-black text-white flex items-center justify-center text-2xl mb-4">
-                  <FaStar />
-                </div>
-                <h3 className="text-2xl font-bold mb-2">Our Vision</h3>
-                <p className="text-gray-700 leading-relaxed">
-                  To be a leading beauty & lifestyle brand known for excellence,
-                  innovation, and customer satisfaction across India.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* WHY FRANCHISE */}
-      <section
-        className="relative bg-center bg-cover text-white py-24 border-t border-white/10 md:bg-fixed"
-        style={{
-          backgroundImage: `url(${saloonBg})`,
-        }}
-      >
-        <div className="absolute inset-0 bg-black/50 pointer-events-none" />
-
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="text-4xl md:text-5xl font-extrabold mb-4">
-              Why Partner With Jaji’s?
-            </h2>
-            <p className="text-gray-300 text-lg">
-              A proven beauty brand with strong support, modern systems, and
-              growth-focused opportunities.
+      <section id="enquiry-form-section" className="bg-white text-black scroll-mt-24">
+        <div className="max-w-5xl mx-auto px-6 lg:px-12 py-20 md:py-24">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <p className={eyebrow}>Official partner programme</p>
+            <h2 className="mt-3 text-2xl md:text-4xl">Become a Jaji’s franchise partner</h2>
+            <p className="mt-4 text-gray-600 leading-relaxed">
+              Jaji’s began its journey in 2002 and has expanded across multiple locations in Kerala. We are now inviting
+              passionate entrepreneurs and investors to become part of our growing franchise network.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { icon: <FaChartLine />, text: "Proven Business Model" },
-              { icon: <FaTrophy />, text: "Strong Brand Trust" },
-              { icon: <FaChalkboardTeacher />, text: "Professional Training" },
-              { icon: <FaBullhorn />, text: "Marketing Support" },
-              { icon: <FaHandshake />, text: "Continuous Guidance" },
-              { icon: <FaStar />, text: "Premium Services" },
-              { icon: <FaLaptopCode />, text: "Modern Systems" },
-              { icon: <FaRocket />, text: "Growth Opportunities" },
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="group relative bg-black/60 border border-white/20 backdrop-blur-md p-6 md:p-8 rounded-2xl 
-                transition-all duration-300 hover:bg-white hover:text-black hover:shadow-2xl hover:-translate-y-1.5"
-              >
-                <div
-                  className="w-14 h-14 flex items-center justify-center rounded-2xl bg-white/10 text-white 
-                  group-hover:bg-black group-hover:text-white transition-all duration-300 text-2xl mb-5 mx-auto"
-                >
-                  {item.icon}
-                </div>
-                <p className="text-center font-bold text-base md:text-lg tracking-wide">
-                  {item.text}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ========================================================================= */}
-      {/* JAJI'S FRANCHISE ENQUIRY FORM SECTION (FULL WHITE BACKGROUND) */}
-      {/* ========================================================================= */}
-      <section
-        id="enquiry-form-section"
-        className="py-24 bg-white text-black relative border-t border-gray-200"
-      >
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 relative z-10">
-          {/* SECTION HEADER & BRAND OVERVIEW */}
-          <div className="text-center max-w-3xl mx-auto mb-14">
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gray-100 border border-gray-300 text-black text-xs font-semibold uppercase tracking-widest mb-4">
-              <FaFileContract /> Official Partner Program
-            </span>
-            <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-black uppercase">
-              Become a Jaji’s Franchise Partner
-            </h2>
-
-            <p className="mt-2 text-gray-600 text-sm md:text-base leading-relaxed">
-              Jaji’s began its journey in 2003 and has successfully expanded
-              across multiple locations in Kerala. We are now inviting
-              passionate entrepreneurs and investors to become part of our
-              growing franchise network.
-            </p>
-          </div>
-
-          {/* ESTIMATED INVESTMENT HIGHLIGHT CARD */}
-          <div className="bg-gray-900 border border-gray-300 rounded-2xl p-6 md:p-8 mb-12 shadow-md">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-              <div className="flex items-center gap-5">
-                <div className="w-16 h-16 rounded-xl bg-black text-white flex items-center justify-center text-3xl shrink-0 font-bold shadow">
-                  <FaCoins />
-                </div>
-                <div>
-                  <div className="text-xs uppercase tracking-widest text-white font-bold">
-                    Financial Requirement
-                  </div>
-                  <h3 className="text-2xl md:text-3xl font-extrabold text-white mt-1">
-                    Estimated Investment:{" "}
-                    <span className="text-white underline decoration-2 underline-offset-4">
-                      ₹30 Lakhs to ₹50 Lakhs
-                    </span>
-                  </h3>
-                </div>
-              </div>
-              <div className="bg-white border border-gray-200 rounded-xl p-4 text-xs text-gray-700 max-w-md shadow-sm">
-                <div className="flex items-start gap-2">
-                  <FaInfoCircle className="text-black shrink-0 text-sm mt-0.5" />
-                  <p>
-                    The final investment may vary depending on the location,
-                    outlet size, interior requirements, and selected franchise
-                    model.
-                  </p>
-                </div>
-              </div>
+          <div className="border border-black p-6 md:p-8 mb-12 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+            <div>
+              <p className="text-[0.75rem] tracking-[0.2em] uppercase text-gray-600">Estimated investment</p>
+              <p className="mt-2 text-3xl md:text-4xl font-light">₹30 lakhs – ₹50 lakhs</p>
             </div>
+            <p className="text-sm text-gray-600 max-w-md">
+              The final investment may vary depending on the location, outlet size, interior requirements and selected
+              franchise model.
+            </p>
           </div>
 
           {/* FORM CONTAINER / SUCCESS CONFIRMATION STATE */}
@@ -434,7 +303,7 @@ export default function Franchise() {
               <button
                 type="button"
                 onClick={handleResetForm}
-                className="mt-4 px-8 py-3.5 bg-black text-white hover:bg-gray-800 rounded-full font-bold transition-all cursor-pointer shadow-md"
+                className="mt-4 px-8 py-4 bg-black text-white hover:bg-gray-800 text-[0.8rem] font-medium tracking-[0.18em] uppercase transition-colors"
               >
                 Submit Another Enquiry
               </button>
@@ -442,7 +311,7 @@ export default function Franchise() {
           ) : (
             <form
               onSubmit={handleSubmit}
-              className="bg-white border border-gray-200 rounded-2xl p-6 sm:p-8 md:p-12 shadow-xl space-y-12 text-black"
+              className="bg-gray-100 p-6 sm:p-8 md:p-12 space-y-12 text-black"
             >
               {/* Form Heading Header */}
               <div className="border-b border-gray-200 pb-6 flex items-center justify-between flex-wrap gap-4">
