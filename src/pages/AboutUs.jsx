@@ -88,7 +88,7 @@ export default function AboutUs() {
               <div className="grid grid-cols-2 gap-8 mt-10">
                 <div className="bg-white shadow-md p-6 rounded-2xl hover:scale-105 hover:bg-gray-100 transition-transform">
                   <div className="text-5xl font-extrabold text-black mb-2">
-                    10+
+                    20+
                   </div>
                   <div className="text-gray-600 text-sm uppercase tracking-wide">
                     Years Experience

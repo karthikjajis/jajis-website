@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import { API } from "../config/api";
 import { FaMapMarkerAlt } from "react-icons/fa";
 
 import heroImg from "../assets/img/saloon-2.webp";
@@ -14,17 +13,17 @@ const btnGhostLight =
 const eyebrow = "text-[0.75rem] tracking-[0.2em] uppercase text-gray-600";
 
 const stats = [
-  ["5000+", "Happy clients"],
-  ["10+", "Years experience"],
-  ["9", "Salon locations"],
+  ["5,00,000+", "Happy clients"],
+  ["20+", "Years experience"],
+  ["6", "Salon locations"],
   ["100+", "Beauty services"],
 ];
 
 const achievements = [
   ["International recognition", "Award-winning team at the CMC Russia-Ural Championship"],
   ["Certified professionals", "Internationally trained and certified beauticians"],
-  ["50,000+ happy clients", "Trusted by thousands across Kerala since 2011"],
-  ["13+ years of excellence", "Consistently delivering quality beauty services"],
+  ["5,00,000+ happy clients", "Trusted by families across Kerala since 2002"],
+  ["20+ years of excellence", "Consistently delivering quality beauty services"],
 ];
 
 const services = [
@@ -50,26 +49,67 @@ const services = [
   },
 ];
 
+// Details checked against each salon's Google Maps listing (Oct 2026).
+const SALON_LOCATIONS = [
+  {
+    place: "RP Mall, Kollam",
+    name: "Jaji’s Innovation Unisex Beauty Salon & Bride/Groom Makeover Studio",
+    address: "4th Floor, RP Mall, Taluk Kachery, Kollam, Kerala 691001",
+    phone: "+91 98479 48242",
+    hours: "Open daily 10 AM – 9 PM",
+    placeId: "ChIJtU3XcFD8BTsRs7TsnLe-srk",
+  },
+  {
+    place: "Polayathodu, Kollam",
+    name: "Jaji’s Express Family Salon & Bride/Groom Lounge",
+    address: "1st Floor, Narayaneeyam, Near KFC, Polayathodu, Kollam, Kerala 691010",
+    phone: "+91 97440 12345",
+    hours: "Open daily 9 AM – 9 PM",
+    placeId: "ChIJvT-crZL8BTsRiW67ISJb_rw",
+  },
+  {
+    place: "Karunagappally",
+    name: "Jaji’s Innovation Unisex Beauty Salon",
+    address: "2nd Floor, KC Center, Opp. Boys Higher Secondary School, Near KSRTC Bus Stand, Karunagappally, Kerala 690518",
+    phone: "+91 88933 88090",
+    hours: "Open daily 10 AM – 9 PM",
+    placeId: "ChIJlaYFE5ADBjsRPqWN4zMyUB4",
+  },
+  {
+    place: "Sasthamcotta",
+    name: "Jaji’s Innovation Unisex Beauty Salon & Bridal Makeup Studio",
+    address: "Vijaya Tower, Adhikadu Junction, Chavara–Sasthamcotta Road, Sasthamcotta, Kerala 690521",
+    phone: "+91 94477 19988",
+    hours: "Open daily 10 AM – 8 PM",
+    placeId: "ChIJ5xJaFv4HBjsRR8ZwOhQOVu8",
+  },
+  {
+    place: "Paravur",
+    name: "Jaji’s Innovation Unisex Beauty Salon & Bridal Makeup Studio",
+    address: "Kottuvankonam, Paravur, Kollam, Kerala 691301",
+    phone: "+91 96332 10449",
+    hours: "Open daily 10 AM – 9 PM",
+    placeId: "ChIJVatVE93lBTsRpsxi_QfVNME",
+  },
+  {
+    place: "Vazhuthacaud, Trivandrum",
+    name: "Jaji’s Innovation Unisex Beauty Salon & Bridal Makeup Studio",
+    address: "Ground Floor, KEK Tower, Opposite Trivandrum Club, Nandavanam, Vazhuthacaud, Thiruvananthapuram, Kerala 695010",
+    phone: "+91 92072 09207",
+    hours: "Open daily 10 AM – 9 PM",
+    placeId: "ChIJQf-URDK7BTsR9Zwy0_MlSmY",
+  },
+];
+
 const whyUs = [
   ["Expert professionals", "Stylists trained to international standards."],
   ["Premium products", "Professional brands and our own Jaji’s Research range."],
   ["Personalised care", "Every service starts with a consultation."],
-  ["Family salons", "A welcoming place for the whole family since 2011."],
+  ["Family salons", "A welcoming place for the whole family since 2002."],
 ];
 
 export default function Salons() {
-  const [salons, setSalons] = useState(null);
   const [active, setActive] = useState(0);
-
-  useEffect(() => {
-    let alive = true;
-    API.get("salons/")
-      .then((res) => alive && setSalons(res.data?.data || []))
-      .catch(() => alive && setSalons([]));
-    return () => {
-      alive = false;
-    };
-  }, []);
 
   return (
     <div className="bg-white text-black pt-24">
@@ -77,7 +117,7 @@ export default function Salons() {
       <section className="relative h-[70vh] min-h-[480px] max-h-[760px] bg-black">
         <img src={heroImg} alt="Inside a Jaji's salon" fetchpriority="high" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-black/45 flex flex-col items-center justify-end text-center text-white px-6 pb-16 md:pb-20 gap-6">
-          <p className="text-[0.75rem] tracking-[0.2em] uppercase text-gray-200">Since 2011 · Across Kerala</p>
+          <p className="text-[0.75rem] tracking-[0.2em] uppercase text-gray-200">Since 2002 · Across Kerala</p>
           <h1 className="text-[2.1rem] sm:text-5xl lg:text-7xl">Jaji’s Innovation Salons</h1>
           <p className="text-base md:text-lg tracking-wide max-w-xl">Where beauty meets excellence.</p>
           <div className="flex flex-col sm:flex-row gap-3">
@@ -123,8 +163,8 @@ export default function Salons() {
           <p className={eyebrow}>About Jaji’s Innovation</p>
           <h2 className="text-3xl md:text-5xl font-light">Dr. K Jajimole — Founder</h2>
           <p className="text-gray-700 leading-relaxed">
-            Welcome to Jaji’s Innovation — a name synonymous with beauty, creativity and excellence. Founded in December
-            2011 by the visionary Dr. K Jajimole, our brand has been redefining the standards of beauty and wellness
+            Welcome to Jaji’s Innovation — a name synonymous with beauty, creativity and excellence. Founded in 2002 by
+            the visionary Dr. K Jajimole, our brand has been redefining the standards of beauty and wellness
             across Kerala.
           </p>
           <p className="text-gray-700 leading-relaxed">
@@ -207,41 +247,43 @@ export default function Salons() {
             <h2 className="text-2xl md:text-4xl">Our salon locations</h2>
             <p className="mt-3 text-gray-600">Visit any of our salons across Kerala.</p>
           </div>
-
-          {salons === null ? (
-            <div className="grid gap-x-5 gap-y-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3" aria-hidden="true">
-              {Array.from({ length: 3 }, (_, i) => (
-                <div key={i} className="flex flex-col gap-3">
-                  <div className="bg-gray-100 aspect-[4/3] animate-pulse" />
-                  <div className="h-4 bg-gray-100 w-2/3 animate-pulse" />
+          <ul className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 border-t border-gray-200">
+            {SALON_LOCATIONS.map((s) => (
+              <li key={s.place} className="border-b border-gray-200 py-8 flex flex-col gap-3">
+                <div className="flex items-start justify-between gap-4">
+                  <h3 className="text-[1rem] font-medium tracking-[0.14em]">{s.place}</h3>
+                  {s.soon && (
+                    <span className="shrink-0 text-[0.65rem] tracking-[0.16em] uppercase border border-black px-2 py-1">
+                      Coming soon
+                    </span>
+                  )}
                 </div>
-              ))}
-            </div>
-          ) : salons.length === 0 ? (
-            <p className="text-center text-gray-600">New locations coming soon.</p>
-          ) : (
-            <div className="grid gap-x-5 gap-y-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-              {salons.map((salon) => (
-                <Link key={salon.id} to={`/salons/${salon.id}`} className="group flex flex-col gap-3">
-                  <div className="overflow-hidden bg-gray-100">
-                    <img
-                      src={salon.image}
-                      alt={salon.name}
-                      loading="lazy"
-                      className="w-full aspect-[4/3] object-cover group-hover:scale-[1.03] transition-transform duration-500"
-                    />
-                  </div>
-                  <h3 className="text-[0.95rem] font-medium tracking-[0.12em] group-hover:underline underline-offset-4">
-                    {salon.name}
-                  </h3>
-                  <p className="flex items-center gap-2 text-sm text-gray-600">
-                    <FaMapMarkerAlt className="w-3 h-3" aria-hidden="true" />
-                    {salon.location}
-                  </p>
-                </Link>
-              ))}
-            </div>
-          )}
+                <p className="text-sm text-gray-800">{s.name}</p>
+                <p className="text-sm text-gray-600 flex gap-2">
+                  <FaMapMarkerAlt className="w-3 h-3 mt-1 shrink-0" aria-hidden="true" />
+                  {s.address}
+                </p>
+                {s.hours && <p className="text-sm text-gray-600">{s.hours}</p>}
+                <div className="mt-2 flex flex-wrap gap-x-6 gap-y-2 text-[0.75rem] font-medium tracking-[0.16em] uppercase">
+                  {s.phone && (
+                    <a href={`tel:${s.phone.replace(/\s/g, "")}`} className="underline underline-offset-4 hover:no-underline">
+                      Call {s.phone}
+                    </a>
+                  )}
+                  <a
+                    href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`Jaji's Innovation ${s.place}`)}${
+                      s.placeId ? `&query_place_id=${s.placeId}` : ""
+                    }`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline underline-offset-4 hover:no-underline"
+                  >
+                    Directions
+                  </a>
+                </div>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 

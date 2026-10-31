@@ -297,46 +297,12 @@ ${formData.message}`;
               </h3>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6" >
                 {[
-                  {
-                    name: "Jajis Innovation Unisex Beauty Salon",
-                    address: "4th Floor, RP Mall, Kollam, Kerala",
-                    contact: "+91 98479 48242",
-                    location: "RP Mall, Kollam",
-                  },
-                  {
-                    name: "Jaji's Innovation Unisex Beauty Salon",
-                    address:
-                      "2nd Floor, KC Center, Opp. Boys Higher Secondary School, Near KSRTC Bus Stand, Karunagappally, Kollam, Kerala 690518",
-                    contact: "+91 70346 2625",
-                    location: "Karunagappally",
-                  },
-                  {
-                    name: "Jajis Express Family Salon & Bride/Groom Lounge",
-                    address:
-                      "1st Floor, Narayaneeyam, Near KFC, Polayathodu, Kollam",
-                    contact: "+91 97440 12345",
-                    location: "Polayathodu",
-                  },
-                  {
-                    name: "Jajis Innovation Unisex Beauty Salon & Bridal Makeup Studio",
-                    address:
-                      "Ground Floor, KEK Towers, Opposite Trivandrum Club, Vazhuthacaud, Kerala 695014",
-                    contact: "+91 9207 20 9207",
-                    location: "Vazhuthacaud, Trivandrum",
-                  },
-                  {
-                    name: "Jajis Innovation Unisex Beauty Salon & Bridal Makeup Studio",
-                    address:
-                      "Vijaya Tower, Adhikadu Junction, Chavara–Shasthamcotta Road, Kollam, Kerala 690521",
-                    contact: "Coming Soon",
-                    location: "Chavara",
-                  },
-                  {
-                    name: "Jajis Innovation Unisex Beauty Salon & Bridal Makeup Studio",
-                    address: "Kottuvankonam, Paravur, Kollam, Kerala 691301",
-                    contact: "+91 96332 10449",
-                    location: "Paravur",
-                  },
+                  { name: "Jaji’s Innovation Unisex Beauty Salon & Bride/Groom Makeover Studio", address: "4th Floor, RP Mall, Taluk Kachery, Kollam, Kerala 691001", contact: "+91 98479 48242", location: "RP Mall, Kollam" },
+                  { name: "Jaji’s Express Family Salon & Bride/Groom Lounge", address: "1st Floor, Narayaneeyam, Near KFC, Polayathodu, Kollam, Kerala 691010", contact: "+91 97440 12345", location: "Polayathodu" },
+                  { name: "Jaji’s Innovation Unisex Beauty Salon", address: "2nd Floor, KC Center, Opp. Boys Higher Secondary School, Near KSRTC Bus Stand, Karunagappally, Kerala 690518", contact: "+91 88933 88090", location: "Karunagappally" },
+                  { name: "Jaji’s Innovation Unisex Beauty Salon & Bridal Makeup Studio", address: "Vijaya Tower, Adhikadu Junction, Chavara–Sasthamcotta Road, Sasthamcotta, Kerala 690521", contact: "+91 94477 19988", location: "Sasthamcotta" },
+                  { name: "Jaji’s Innovation Unisex Beauty Salon & Bridal Makeup Studio", address: "Kottuvankonam, Paravur, Kollam, Kerala 691301", contact: "+91 96332 10449", location: "Paravur" },
+                  { name: "Jaji’s Innovation Unisex Beauty Salon & Bridal Makeup Studio", address: "Ground Floor, KEK Tower, Opposite Trivandrum Club, Nandavanam, Vazhuthacaud, Thiruvananthapuram, Kerala 695010", contact: "+91 92072 09207", location: "Vazhuthacaud, Trivandrum" },
                 ].map((salon, index) => (
                   <div
                     key={index}

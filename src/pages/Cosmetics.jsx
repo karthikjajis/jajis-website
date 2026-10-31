@@ -85,7 +85,7 @@ export default function Cosmetics() {
             <p
               className="text-xl md:text-2xl max-w-3xl mb-6 text-gray-300"
             >
-              Where Beauty Meets Excellence - Professional Services Since 2011
+              Where Beauty Meets Excellence - Professional Services Since 2002
             </p>
             <div
               className="flex flex-wrap gap-4 justify-center"
