@@ -6,51 +6,46 @@ import ScrollToTop from "./components/ScrollToTop";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Home from "./pages/Home";
 import Seo from "./components/Seo";
+import { PAGE_SEO } from "./seo-pages";
 import { useLocation } from "react-router-dom";
 
-// Every other page is downloaded only when someone opens it.
-const Salons = lazy(() => import("./pages/Salons"));
-const SalonDetails = lazy(() => import("./pages/salon_details"));
-const Cosmetics = lazy(() => import("./pages/Cosmetics"));
-const EventHall = lazy(() => import("./pages/EventHall"));
-const FoodCourt = lazy(() => import("./pages/FoodCourt"));
-const DesigningStitching = lazy(() => import("./pages/DesigningStitching"));
-const Academy = lazy(() => import("./pages/Academy"));
-const Franchise = lazy(() => import("./pages/Franchise"));
-const AboutUs = lazy(() => import("./pages/AboutUs"));
-const Contact = lazy(() => import("./pages/Contact"));
-const Privacy = lazy(() => import("./pages/privacy"));
-const Terms = lazy(() => import("./pages/terms"));
-const HouseOfJajis = lazy(() => import("./pages/HouseOfJajis"));
-const ReturnPolicy = lazy(() => import("./pages/ReturnPolicy"));
-const Management = lazy(() => import("./pages/management"));
-const Login = lazy(() => import("./pages/E-Login"));
-const Register = lazy(() => import("./pages/E-Register"));
-const ForgotPassword = lazy(() => import("./pages/E-forgot-password"));
-const Product = lazy(() => import("./pages/E-product_list"));
-const ProductDetails = lazy(() => import("./pages/E-product_details"));
-const Cart = lazy(() => import("./pages/E-cart"));
-const WishList = lazy(() => import("./pages/E-wishlist"));
-const MyOrders = lazy(() => import("./pages/E-myorders"));
-const UserProfile = lazy(() => import("./pages/E-user_profile"));
+// Every other page is downloaded only when someone opens it. lazyPage() also lets
+// main.jsx load the current page *before* React starts, so the pre-rendered HTML
+// is swapped for the live page without a loading flash.
+function lazyPage(loader) {
+  let Loaded = null;
+  const Lazy = lazy(() => loader().then((m) => ((Loaded = m.default), m)));
+  function Page(props) {
+    return Loaded ? <Loaded {...props} /> : <Lazy {...props} />;
+  }
+  Page.preload = () => loader().then((m) => (Loaded = m.default));
+  return Page;
+}
+const Salons = lazyPage(() => import("./pages/Salons"));
+const SalonDetails = lazyPage(() => import("./pages/salon_details"));
+const Cosmetics = lazyPage(() => import("./pages/Cosmetics"));
+const EventHall = lazyPage(() => import("./pages/EventHall"));
+const FoodCourt = lazyPage(() => import("./pages/FoodCourt"));
+const DesigningStitching = lazyPage(() => import("./pages/DesigningStitching"));
+const Academy = lazyPage(() => import("./pages/Academy"));
+const Franchise = lazyPage(() => import("./pages/Franchise"));
+const AboutUs = lazyPage(() => import("./pages/AboutUs"));
+const Contact = lazyPage(() => import("./pages/Contact"));
+const Privacy = lazyPage(() => import("./pages/privacy"));
+const Terms = lazyPage(() => import("./pages/terms"));
+const HouseOfJajis = lazyPage(() => import("./pages/HouseOfJajis"));
+const ReturnPolicy = lazyPage(() => import("./pages/ReturnPolicy"));
+const Management = lazyPage(() => import("./pages/management"));
+const Login = lazyPage(() => import("./pages/E-Login"));
+const Register = lazyPage(() => import("./pages/E-Register"));
+const ForgotPassword = lazyPage(() => import("./pages/E-forgot-password"));
+const Product = lazyPage(() => import("./pages/E-product_list"));
+const ProductDetails = lazyPage(() => import("./pages/E-product_details"));
+const Cart = lazyPage(() => import("./pages/E-cart"));
+const WishList = lazyPage(() => import("./pages/E-wishlist"));
+const MyOrders = lazyPage(() => import("./pages/E-myorders"));
+const UserProfile = lazyPage(() => import("./pages/E-user_profile"));
 
-const PAGE_SEO = {
-  "/": {},
-  "/products": { title: "Shop hair & skin care online", description: "Shop Jaji's Research hair and skin care and professional salon brands online — shampoos, serums, sunscreen, face wash and more, delivered across India." },
-  "/salons": { title: "Salons in Kollam, Karunagappally, Sasthamcotta, Paravur & Trivandrum", description: "Jaji's Innovation unisex beauty salons and bridal makeup studios across Kerala — hair, skin, bridal and spa. Find your nearest salon." },
-  "/cosmetics": { title: "Cosmetics by Jaji's Research", description: "Hair and skin care developed by Jaji's Research and tested in our own salons." },
-  "/academy": { title: "Beauty & hairdressing academy", description: "Professional beauty, makeup and hairdressing courses at Jaji's Academy, Kollam." },
-  "/event-hall": { title: "Q Café & Event Hall, Asramam, Kollam", description: "Book the Q Café A/C hall or our larger venues in Kollam for birthdays, weddings, receptions and corporate events." },
-  "/food-court": { title: "Food Court at Ashramam Maidanam, Kollam", description: "Open-air dining at Ashramam Maidanam, Kollam — South Indian, Chinese, fresh juices and Q Chai." },
-  "/designing-stitching": { title: "Designing & Stitching Studio, Polayathodu", description: "Custom design, bridal wear, embroidery and alterations at Jaji's Designing & Stitching Studio, Kollam." },
-  "/franchise": { title: "Salon franchise opportunity", description: "Own a Jaji's salon. Training, branding, set-up and ongoing support from Kerala's family salon brand since 2002." },
-  "/about-us": { title: "About us", description: "The story of Jaji's Innovation — beauty and lifestyle in Kerala since 2002." },
-  "/management": { title: "Management", description: "Meet Dr. Jajimole K and the leadership team of Jaji's Innovation Pvt. Ltd." },
-  "/house-of-jajis": { title: "House of Jaji's — Hair, Skin & Academy, Kollam", description: "House of Jaji's: a new 13,000 sq ft destination in Kollam with Jaji\'s Signature Skin & Hair Clinic, an affordable salon, Jaji's Luxe premium lounge and academy. Opening soon.", image: "https://www.jajisinnovation.com/house-of-jajis-og.jpg" },
-  "/return-policy": { title: "Return & refund policy", description: "Jaji's Innovation return and refund policy: personal care products are non-returnable; damaged or wrong items are replaced or refunded." },
-  "/refund-policy": { title: "Return & refund policy", description: "Jaji's Innovation return and refund policy: personal care products are non-returnable; damaged or wrong items are replaced or refunded." },
-  "/contact": { title: "Contact us", description: "Call, WhatsApp or visit Jaji's salons, Q Café, Food Court, studio and academy across Kerala." },
-};
 
 function RouteSeo() {
   const { pathname } = useLocation();
@@ -68,6 +63,31 @@ function PageLoading() {
 }
 
 const guard = (el) => <ProtectedRoute>{el}</ProtectedRoute>;
+
+const PRELOAD = [
+  [/^\/salons\/?$/, () => Salons],
+  [/^\/cosmetics/, () => Cosmetics],
+  [/^\/event-hall/, () => EventHall],
+  [/^\/food-court/, () => FoodCourt],
+  [/^\/designing-stitching/, () => DesigningStitching],
+  [/^\/academy/, () => Academy],
+  [/^\/franchise/, () => Franchise],
+  [/^\/about-us/, () => AboutUs],
+  [/^\/contact/, () => Contact],
+  [/^\/privacy/, () => Privacy],
+  [/^\/terms/, () => Terms],
+  [/^\/house-of-jajis/, () => HouseOfJajis],
+  [/^\/(return|refund)-policy/, () => ReturnPolicy],
+  [/^\/management/, () => Management],
+  [/^\/products\/?$/, () => Product],
+  [/^\/product\//, () => ProductDetails],
+];
+
+/** Load the code for the page at `pathname` (if it is split out) before first render. */
+export function preloadRoute(pathname) {
+  const hit = PRELOAD.find(([re]) => re.test(pathname));
+  return hit ? hit[1]().preload().catch(() => {}) : Promise.resolve();
+}
 
 export default function App() {
   return (

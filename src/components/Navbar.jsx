@@ -32,7 +32,7 @@ const caps = "text-[0.8rem] font-medium tracking-[0.16em] uppercase";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
-  const isAuthenticated = !!localStorage.getItem("token");
+  const isAuthenticated = typeof window !== "undefined" && !!window.localStorage.getItem("token");
 
   // Close the menu whenever the page changes, and stop the page scrolling behind it.
   useEffect(() => setIsOpen(false), [location.pathname]);
