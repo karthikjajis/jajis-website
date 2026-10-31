@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaMapMarkerAlt } from "react-icons/fa";
+import { SALON_FAQ } from "../business-data";
 
 import heroImg from "../assets/img/saloon-2.webp";
 import founderImg from "../assets/img/founder-jajimole.webp";
@@ -284,6 +285,24 @@ export default function Salons() {
               </li>
             ))}
           </ul>
+        </div>
+      </section>
+
+      {/* ---------- FAQ ---------- */}
+      <section className="bg-gray-100">
+        <div className="max-w-3xl mx-auto px-6 py-20 md:py-24">
+          <h2 className="text-2xl md:text-4xl text-center mb-10">Frequently asked questions</h2>
+          <div className="border-t border-gray-300">
+            {SALON_FAQ.map(([q, a]) => (
+              <details key={q} className="group border-b border-gray-300 py-5">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-[0.95rem] font-medium tracking-[0.06em]">
+                  {q}
+                  <span aria-hidden="true" className="text-xl font-light group-open:rotate-45 transition-transform">+</span>
+                </summary>
+                <p className="mt-3 text-gray-700 leading-relaxed">{a}</p>
+              </details>
+            ))}
+          </div>
         </div>
       </section>
 

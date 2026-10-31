@@ -143,10 +143,45 @@ export const ACADEMY_LD = {
   parentOrganization: { "@id": `${SITE}/#organization` },
 };
 
+
+// Questions people search for; shown on the Salons page and marked up for Google.
+export const SALON_FAQ = [
+  [
+    "Where are Jaji's salons?",
+    "Jaji's has salons at RP Mall (Kollam), Polayathodu (Kollam), Karunagappally, Sasthamcotta, Paravur and Vazhuthacaud (Thiruvananthapuram). Each salon's address, phone number and directions are listed on this page.",
+  ],
+  [
+    "Do you do bridal makeup in Kollam?",
+    "Yes. Our bridal makeup studios and bride/groom makeover studios in Kollam, Sasthamcotta, Paravur and Trivandrum offer bridal makeup, hair styling and pre-wedding packages for brides and grooms.",
+  ],
+  [
+    "Are Jaji's salons unisex?",
+    "Yes. Jaji's Innovation salons are unisex family salons offering hair, skin, spa and grooming services for women, men and children.",
+  ],
+  [
+    "Are you open on Sundays?",
+    "Yes, our salons are open every day. Most are open from 10 AM to 9 PM; Polayathodu opens at 9 AM and Sasthamcotta closes at 8 PM.",
+  ],
+  [
+    "How do I book an appointment?",
+    "Call or WhatsApp your nearest salon using the numbers on this page, or contact us through the Contact page.",
+  ],
+];
+
+export const SALON_FAQ_LD = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: SALON_FAQ.map(([q, a]) => ({
+    "@type": "Question",
+    name: q,
+    acceptedAnswer: { "@type": "Answer", text: a },
+  })),
+};
+
 /** Which structured data goes on which page (Organization + WebSite go everywhere). */
 export const PAGE_LD = {
   "/": SALON_LD,
-  "/salons": SALON_LD,
+  "/salons": [...SALON_LD, SALON_FAQ_LD],
   "/contact": [...SALON_LD, EVENT_VENUE_LD, FOOD_COURT_LD, STUDIO_LD, ACADEMY_LD],
   "/event-hall": [EVENT_VENUE_LD],
   "/food-court": [FOOD_COURT_LD],

@@ -199,6 +199,16 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ---------- Intro ---------- */}
+      <section className="max-w-3xl mx-auto px-6 pb-16 text-center">
+        <h2 className="text-xl md:text-2xl">Kerala’s family salon since 2002</h2>
+        <p className="mt-4 text-gray-700 leading-relaxed">
+          Jaji’s Innovation runs unisex beauty salons and bridal makeup studios in Kollam, Karunagappally, Sasthamcotta,
+          Paravur and Thiruvananthapuram — along with Jaji’s Academy, the Q Café &amp; Event Hall and Food Court in
+          Kollam, and our own Jaji’s Research hair and skin care, available to order online across India.
+        </p>
+      </section>
+
       {/* ---------- Numbers ---------- */}
       <section className="border-y border-gray-200">
         <dl className="max-w-7xl mx-auto px-6 lg:px-12 py-12 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
