@@ -15,7 +15,7 @@ const eyebrow = "text-[0.75rem] tracking-[0.2em] uppercase text-gray-600";
 const stats = [
   ["5,00,000+", "Happy clients"],
   ["20+", "Years experience"],
-  ["6", "Salon locations"],
+  ["7", "Salon locations"],
   ["100+", "Beauty services"],
 ];
 
