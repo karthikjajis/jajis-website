@@ -33,7 +33,7 @@ export default function AboutUs() {
     <div className="bg-white text-black pt-24">
       <PageHero image={heroImg} alt="Inside a Jaji's salon" kicker="Since 2002 · Kerala" title="About us" subtitle="Beauty, lifestyle and celebration — under one family brand." />
 
-      <Stats items={[["20+", "Years experience"], ["10,00,000+", "Happy customers"], ["200+", "Team members"], ["7", "Businesses"]]} />
+      <Stats items={[["20+", "Years experience"], ["1 million+", "Happy customers"], ["200+", "Team members"], ["7", "Businesses"]]} />
 
       <Split image={storyImg} alt="A Jaji's salon">
         <p className={eyebrow}>Our journey</p>
