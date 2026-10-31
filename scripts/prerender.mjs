@@ -50,7 +50,8 @@ function page({ url, title, description, image, type = "website", body, jsonLd =
 }
 
 function write(url, html) {
-  const file = url === "/" ? path.join(dist, "index.html") : path.join(dist, url.replace(/^\//, ""), "index.html");
+  // "/salons" -> dist/salons.html; Vercel's cleanUrls serves it at /salons
+  const file = url === "/" ? path.join(dist, "index.html") : path.join(dist, `${url.replace(/^\//, "")}.html`);
   fs.mkdirSync(path.dirname(file), { recursive: true });
   fs.writeFileSync(file, html);
 }
