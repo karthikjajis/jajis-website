@@ -11,13 +11,22 @@ import {
 import { API } from "../config/api";
 import { Link, useNavigate } from "react-router-dom";
 import { SkeletonCartItem } from "../components/SkeletonLoader";
+import Combobox from "../components/Combobox";
+import { INDIA_DISTRICTS, INDIA_STATES } from "../data/india-districts";
+
+const ALL_DISTRICTS = [...new Set(Object.values(INDIA_DISTRICTS).flat())].sort((a, b) => a.localeCompare(b));
+const districtsFor = (state) => {
+  const key = INDIA_STATES.find((s) => s.toLowerCase() === String(state || "").trim().toLowerCase());
+  return key ? INDIA_DISTRICTS[key] : ALL_DISTRICTS;
+};
+const PHONE_RE = /^[6-9]\d{9}$/;
 
 const emptyAddress = {
   label: "Home",
   line1: "",
   line2: "",
   city: "",
-  state: "",
+  state: "Kerala",
   postal_code: "",
   country: "India",
   phone: "",
@@ -35,6 +44,7 @@ export default function CartPage() {
   const [savingAddress, setSavingAddress] = useState(false);
   const [deletingAddress, setDeletingAddress] = useState(null);
   const [processingPayment, setProcessingPayment] = useState(false);
+  const [confirming, setConfirming] = useState(false);
   const [message, setMessage] = useState(null);
 
   const [addressForm, setAddressForm] = useState(emptyAddress);
@@ -135,6 +145,14 @@ export default function CartPage() {
 
   const handleAddressSubmit = async (e) => {
     e.preventDefault();
+    if (!PHONE_RE.test(addressForm.phone || "")) {
+      showMessage("Enter a valid 10-digit mobile number", "error");
+      return;
+    }
+    if (!addressForm.state.trim()) {
+      showMessage("Select your state", "error");
+      return;
+    }
     setSavingAddress(true);
     try {
       // Prepare data - only required fields
@@ -143,10 +161,10 @@ export default function CartPage() {
         line1: addressForm.line1.trim(),
         line2: addressForm.line2 || null,
         city: addressForm.city.trim(),
-        state: addressForm.state || null,
+        state: addressForm.state.trim(),
         postal_code: addressForm.postal_code.trim(),
         country: addressForm.country || "India",
-        phone: addressForm.phone || null,
+        phone: addressForm.phone,
         is_default: addressForm.is_default,
       };
 
@@ -240,6 +258,16 @@ export default function CartPage() {
       return;
     }
 
+    const shipTo = addresses.find((a) => a.id === selectedShippingId);
+    if (!PHONE_RE.test(String(shipTo?.phone || "").replace(/\D/g, "").replace(/^(91|0)(?=\d{10}$)/, ""))) {
+      showMessage("Please add your mobile number to the delivery address", "warning");
+      if (shipTo) handleEditAddress(shipTo);
+      return;
+    }
+
+    // Load the thank-you page now so it opens instantly after payment.
+    import("./OrderSuccess").catch(() => {});
+
     setProcessingPayment(true);
     try {
       await loadRazorpay();
@@ -257,6 +285,7 @@ export default function CartPage() {
         description: "Secure checkout",
         order_id: data.order_id,
         handler: async (response) => {
+          setConfirming(true);
           let verified = false;
           let lastError = null;
           let orderId = null;
@@ -276,7 +305,7 @@ export default function CartPage() {
               lastError = err;
               console.warn(`Payment verification attempt ${attempt} failed:`, err);
               if (attempt < 3) {
-                await new Promise((resolve) => setTimeout(resolve, 1200));
+                await new Promise((resolve) => setTimeout(resolve, 800));
               }
             }
           }
@@ -293,6 +322,7 @@ export default function CartPage() {
             }, 1500);
           }
           setProcessingPayment(false);
+          setConfirming(false);
         },
         prefill: {
           name:
@@ -315,7 +345,7 @@ export default function CartPage() {
       rzp.open();
     } catch (err) {
       console.error("Checkout error", err);
-      showMessage("Unable to start payment", "error");
+      showMessage(err.response?.data?.error || "Unable to start payment", "error");
       setProcessingPayment(false);
     }
   };
@@ -332,6 +362,13 @@ export default function CartPage() {
 
   return (
     <div className="bg-white min-h-screen relative pb-16">
+      {confirming && (
+        <div className="fixed inset-0 z-[100] bg-white/95 flex flex-col items-center justify-center gap-5 text-center px-6" role="status" aria-live="polite">
+          <div className="w-12 h-12 border-2 border-gray-200 border-t-black rounded-full animate-spin" />
+          <p className="text-xl tracking-[0.12em] uppercase">Confirming your payment</p>
+          <p className="text-gray-600 text-sm">Please don't close or refresh this page.</p>
+        </div>
+      )}
       {message && (
         <div
           className={`fixed top-20 left-1/2 -translate-x-1/2 px-6 py-3 rounded shadow-lg z-50 text-white ${
@@ -608,20 +645,24 @@ export default function CartPage() {
                         }
                       />
                       <input
-                        type="text"
-                        placeholder="Phone"
+                        type="tel"
+                        inputMode="numeric"
+                        autoComplete="tel-national"
+                        placeholder="Mobile number *"
                         className="border rounded px-3 py-2"
                         value={addressForm.phone}
                         onChange={(e) => {
-                          const value = e.target.value.replace(/\D/g, "");
-                          setAddressForm({ ...addressForm, phone: value });
+                          const value = e.target.value.replace(/\D/g, "").replace(/^(91|0)(?=\d{10}$)/, "");
+                          setAddressForm({ ...addressForm, phone: value.slice(0, 10) });
                         }}
-                        maxLength={10}
+                        pattern="[6-9][0-9]{9}"
+                        title="10-digit mobile number"
+                        required
                       />
                     </div>
                     <input
                       type="text"
-                      placeholder="Address line 1"
+                      placeholder="House / building, street *"
                       className="w-full border rounded px-3 py-2"
                       value={addressForm.line1}
                       onChange={(e) =>
@@ -634,7 +675,7 @@ export default function CartPage() {
                     />
                     <input
                       type="text"
-                      placeholder="Address line 2 (optional)"
+                      placeholder="Area / landmark (optional)"
                       className="w-full border rounded px-3 py-2"
                       value={addressForm.line2}
                       onChange={(e) =>
@@ -645,36 +686,33 @@ export default function CartPage() {
                       }
                     />
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                      <input
-                        type="text"
-                        placeholder="City"
-                        className="border rounded px-3 py-2"
-                        value={addressForm.city}
-                        onChange={(e) =>
-                          setAddressForm({
-                            ...addressForm,
-                            city: e.target.value,
+                      <Combobox
+                        placeholder="State *"
+                        options={INDIA_STATES}
+                        value={addressForm.state}
+                        onChange={(v) =>
+                          setAddressForm((f) => {
+                            const same = f.state.trim().toLowerCase() === v.trim().toLowerCase();
+                            return { ...f, state: v, city: same ? f.city : "" };
                           })
                         }
                         required
                       />
-                      <input
-                        type="text"
-                        placeholder="State"
-                        className="border rounded px-3 py-2"
-                        value={addressForm.state}
-                        onChange={(e) =>
-                          setAddressForm({
-                            ...addressForm,
-                            state: e.target.value,
-                          })
-                        }
+                      <Combobox
+                        placeholder="District *"
+                        options={districtsFor(addressForm.state)}
+                        value={addressForm.city}
+                        onChange={(v) => setAddressForm((f) => ({ ...f, city: v }))}
+                        required
                       />
                     </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                    <div className="grid grid-cols-2 gap-3">
                       <input
                         type="text"
-                        placeholder="Postal code"
+                        placeholder="PIN code *"
+                        inputMode="numeric"
+                        pattern="[0-9]{6}"
+                        title="6-digit PIN code"
                         className="border rounded px-3 py-2"
                         value={addressForm.postal_code}
                         onChange={(e) => {
@@ -700,7 +738,7 @@ export default function CartPage() {
                           })
                         }
                       />
-                      <label className="flex items-center gap-2 text-sm">
+                      <label className="col-span-2 flex items-center gap-2 text-sm">
                         <input
                           type="checkbox"
                           checked={addressForm.is_default}
