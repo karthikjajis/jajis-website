@@ -122,9 +122,9 @@ export default function App() {
               <Route path="/forgot-password" element={<ForgotPassword />} />
               <Route path="/products" element={<Product />} />
               <Route path="/product/:id" element={<ProductDetails />} />
-              <Route path="/cart" element={guard(<Cart />)} />
+              <Route path="/cart" element={<Cart />} />
               <Route path="/myorders" element={guard(<MyOrders />)} />
-              <Route path="/order-success/:id" element={guard(<OrderSuccess />)} />
+              <Route path="/order-success/:id" element={<OrderSuccess />} />
               <Route path="/wishlist" element={guard(<WishList />)} />
               <Route path="/profile" element={guard(<UserProfile />)} />
             </Routes>

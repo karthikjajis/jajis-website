@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { API } from "../config/api";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate, useLocation, Link } from "react-router-dom";
+import { getGuestCart } from "../utils/guestCart";
 import { User, Mail, Lock } from "lucide-react";
 
 export default function Register() {
   const navigate = useNavigate();
+  const location = useLocation();
 
   const [formData, setFormData] = useState({
     username: "",
@@ -25,7 +27,9 @@ export default function Register() {
     try {
       const response = await API.post("signup/", formData);
       localStorage.setItem("token", response.data.token);
-      navigate("/products");
+      localStorage.removeItem("guestToken");
+      // Back to the cart if they came from checkout or have items waiting; it is moved into their account there.
+      navigate(location.state?.from || (getGuestCart().length ? "/cart" : "/products"));
     } catch (err) {
       setError("Username already exists or invalid input");
     }

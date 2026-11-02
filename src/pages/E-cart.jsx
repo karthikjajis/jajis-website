@@ -13,6 +13,10 @@ import { Link, useNavigate } from "react-router-dom";
 import { SkeletonCartItem } from "../components/SkeletonLoader";
 import Combobox from "../components/Combobox";
 import { INDIA_DISTRICTS, INDIA_STATES } from "../data/india-districts";
+import GuestCheckoutForm, { guestDetailsError, loadGuestDetails, saveGuestDetails } from "../components/GuestCheckoutForm";
+import {
+  clearGuestCart, getGuestCart, guestToken, mergeGuestCartIntoAccount, removeFromGuestCart, setGuestQty,
+} from "../utils/guestCart";
 
 const ALL_DISTRICTS = [...new Set(Object.values(INDIA_DISTRICTS).flat())].sort((a, b) => a.localeCompare(b));
 const districtsFor = (state) => {
@@ -50,6 +54,7 @@ export default function CartPage() {
   const [addressForm, setAddressForm] = useState(emptyAddress);
   const [editingAddressId, setEditingAddressId] = useState(null);
   const [showAddressForm, setShowAddressForm] = useState(false);
+  const [guestForm, setGuestForm] = useState(loadGuestDetails);
 
   const BASE_URL = import.meta.env.VITE_BASE_URL;
 
@@ -63,11 +68,23 @@ export default function CartPage() {
   const fetchCart = async () => {
     setLoadingCart(true);
     try {
+      if (!token) {
+        // Not signed in: the cart lives in this browser; fetch fresh prices and stock.
+        const local = getGuestCart();
+        if (!local.length) { setCartItems([]); return; }
+        const { data } = await API.post("/variants/lookup/", { ids: local.map((i) => i.variant_id) });
+        const byId = new Map((data || []).map((v) => [v.id, v]));
+        setCartItems(local.filter((i) => byId.has(i.variant_id))
+          .map((i) => ({ id: i.variant_id, quantity: i.quantity, variant: byId.get(i.variant_id) })));
+        return;
+      }
+      await mergeGuestCartIntoAccount();
       const response = await API.get("/cart/");
       setCartItems(response.data.items || []);
+      window.dispatchEvent(new Event("cart-change"));
     } catch (error) {
       console.error("Error fetching cart:", error);
-      showMessage("Login to load cart", "error");
+      showMessage("Could not load your cart", "error");
     } finally {
       setLoadingCart(false);
     }
@@ -119,6 +136,12 @@ export default function CartPage() {
       }
     }
 
+    if (!token) {
+      setGuestQty(itemId, newQuantity);
+      fetchCart();
+      return;
+    }
+
     try {
       await API.post("/cart/update/", {
         item_id: itemId,
@@ -133,6 +156,12 @@ export default function CartPage() {
   };
 
   const removeItem = async (itemId) => {
+    if (!token) {
+      removeFromGuestCart(itemId);
+      showMessage("Item removed");
+      fetchCart();
+      return;
+    }
     try {
       await API.post("/cart/remove/", { item_id: itemId });
       showMessage("Item removed");
@@ -238,10 +267,7 @@ export default function CartPage() {
     });
 
   const startCheckout = async () => {
-    if (!token) {
-      navigate("/login");
-      return;
-    }
+    const guest = !token;
 
     // Check if all items have stock available
     const outOfStockItems = cartItems.filter((item) => item.variant.stock < 1);
@@ -253,16 +279,25 @@ export default function CartPage() {
       return;
     }
 
-    if (!selectedShippingId) {
-      showMessage("Select a shipping address", "warning");
-      return;
-    }
-
-    const shipTo = addresses.find((a) => a.id === selectedShippingId);
-    if (!PHONE_RE.test(String(shipTo?.phone || "").replace(/\D/g, "").replace(/^(91|0)(?=\d{10}$)/, ""))) {
-      showMessage("Please add your mobile number to the delivery address", "warning");
-      if (shipTo) handleEditAddress(shipTo);
-      return;
+    if (guest) {
+      const problem = guestDetailsError(guestForm);
+      if (problem) {
+        showMessage(problem, "warning");
+        document.getElementById("checkout-details")?.scrollIntoView({ behavior: "smooth", block: "start" });
+        return;
+      }
+      saveGuestDetails(guestForm);
+    } else {
+      if (!selectedShippingId) {
+        showMessage("Select a shipping address", "warning");
+        return;
+      }
+      const shipTo = addresses.find((a) => a.id === selectedShippingId);
+      if (!PHONE_RE.test(String(shipTo?.phone || "").replace(/\D/g, "").replace(/^(91|0)(?=\d{10}$)/, ""))) {
+        showMessage("Please add your mobile number to the delivery address", "warning");
+        if (shipTo) handleEditAddress(shipTo);
+        return;
+      }
     }
 
     // Load the thank-you page now so it opens instantly after payment.
@@ -272,10 +307,16 @@ export default function CartPage() {
     try {
       await loadRazorpay();
 
-      const { data } = await API.post("/payment/create/", {
-        shipping_address_id: selectedShippingId,
-        billing_address_id: null,
-      });
+      let data;
+      if (guest) {
+        ({ data } = await API.post("/guest/checkout/", { ...guestForm, items: getGuestCart() }));
+        guestToken.set(data.guest_token);
+      } else {
+        ({ data } = await API.post("/payment/create/", {
+          shipping_address_id: selectedShippingId,
+          billing_address_id: null,
+        }));
+      }
 
       const options = {
         key: data.key,
@@ -310,6 +351,7 @@ export default function CartPage() {
             }
           }
 
+          if (guest) clearGuestCart();
           if (verified) {
             fetchCart();
             navigate(orderId ? `/order-success/${orderId}` : "/myorders", { replace: true });
@@ -324,13 +366,15 @@ export default function CartPage() {
           setProcessingPayment(false);
           setConfirming(false);
         },
-        prefill: {
-          name:
-            addresses.find((a) => a.id === selectedShippingId)?.label ||
-            "Customer",
-          contact:
-            addresses.find((a) => a.id === selectedShippingId)?.phone || "",
-        },
+        prefill: guest
+          ? { name: guestForm.name, email: guestForm.email, contact: guestForm.phone }
+          : {
+              name:
+                addresses.find((a) => a.id === selectedShippingId)?.label ||
+                "Customer",
+              contact:
+                addresses.find((a) => a.id === selectedShippingId)?.phone || "",
+            },
         theme: { color: "#000000" },
         modal: {
           ondismiss: () => setProcessingPayment(false),
@@ -345,7 +389,9 @@ export default function CartPage() {
       rzp.open();
     } catch (err) {
       console.error("Checkout error", err);
-      showMessage(err.response?.data?.error || "Unable to start payment", "error");
+      const d = err.response?.data || {};
+      const first = d.error || d.detail || Object.values(d).flat().find((v) => typeof v === "string");
+      showMessage(first || "Unable to start payment", "error");
       setProcessingPayment(false);
     }
   };
@@ -518,13 +564,13 @@ export default function CartPage() {
 
             {/* RIGHT SIDE - ADDRESS + SUMMARY */}
             <div className="space-y-6">
-              <div className="border rounded-xl shadow-sm p-6">
+              <div id="checkout-details" className="border rounded-xl shadow-sm p-6 scroll-mt-28">
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-2">
                     <MapPin size={18} />
-                    <h2 className="text-lg font-semibold">Delivery Address</h2>
+                    <h2 className="text-lg font-semibold">{token ? "Delivery Address" : "Express checkout"}</h2>
                   </div>
-                  <button
+                  {token && <button
                     className="flex items-center gap-1 text-sm bg-black text-white px-3 py-1.5 rounded"
                     onClick={() => {
                       setAddressForm(emptyAddress);
@@ -534,7 +580,7 @@ export default function CartPage() {
                   >
                     <Plus size={14} />
                     {showAddressForm ? "Close" : "Add"}
-                  </button>
+                  </button>}
                 </div>
 
                 {token ? (
@@ -617,16 +663,18 @@ export default function CartPage() {
                     )}
                   </>
                 ) : (
-                  <p className="text-sm text-gray-600">
-                    Please{" "}
-                    <Link className="underline" to="/login">
-                      login
-                    </Link>{" "}
-                    to add an address.
-                  </p>
+                  <>
+                    <p className="text-sm text-gray-600 mb-4">
+                      No account needed. Enter your details and pay securely.{" "}
+                      <Link className="underline text-black" to="/login" state={{ from: "/cart" }}>
+                        Have an account? Log in
+                      </Link>
+                    </p>
+                    <GuestCheckoutForm value={guestForm} onChange={setGuestForm} />
+                  </>
                 )}
 
-                {showAddressForm && (
+                {token && showAddressForm && (
                   <form
                     onSubmit={handleAddressSubmit}
                     className="mt-4 space-y-3"
@@ -818,12 +866,12 @@ export default function CartPage() {
                     onClick={startCheckout}
                     disabled={processingPayment || subtotal <= 0}
                   >
-                    Proceed to Checkout
+                    {token ? "Proceed to Checkout" : `Pay ₹${subtotal.toFixed(2)} securely`}
                   </button>
                 )}
                 {!token && !loadingCart && (
                   <p className="text-xs text-gray-500 mt-2 text-center">
-                    Login to checkout and save addresses.
+                    Secure payment by Razorpay · UPI, cards, net banking
                   </p>
                 )}
               </div>

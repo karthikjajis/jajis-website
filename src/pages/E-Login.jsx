@@ -1,12 +1,14 @@
 import { useState } from "react";
 import { API } from "../config/api";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate, useLocation, Link } from "react-router-dom";
+import { getGuestCart } from "../utils/guestCart";
 
 // Icons
 import { HiUser, HiLockClosed } from "react-icons/hi";
 
 export default function Login() {
   const navigate = useNavigate();
+  const location = useLocation();
 
   const [formData, setFormData] = useState({
     username: "",
@@ -30,7 +32,9 @@ export default function Login() {
 
       localStorage.setItem("token", response.data.token);
 
-      navigate("/products");
+      localStorage.removeItem("guestToken");
+      // Back to the cart if they came from checkout or have items waiting; it is moved into their account there.
+      navigate(location.state?.from || (getGuestCart().length ? "/cart" : "/products"));
     } catch (err) {
       setError("Invalid username or password");
     } finally {

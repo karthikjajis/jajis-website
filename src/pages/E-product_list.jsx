@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { API } from "../config/api";
 import { FaHeart, FaRegHeart, FaFilter } from "react-icons/fa";
 import { SkeletonProductCard } from "../components/SkeletonLoader";
+import { addToAnyCart } from "../utils/guestCart";
 
 const FilterContent = ({
   categories,
@@ -193,14 +194,9 @@ export default function EcommerceHome() {
   };
 
   const handleAddToCart = async (variantId, productId) => {
-    if (!token) {
-      showMessage("Please login to add items to cart.", "warning");
-      return;
-    }
-
     try {
       setAddingItem(productId);
-      await API.post("/cart/add/", { variant_id: variantId, quantity: 1 });
+      await addToAnyCart(variantId, 1);
       showMessage("Added to cart!", "success");
     } catch (err) {
       console.error(err);

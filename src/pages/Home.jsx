@@ -13,6 +13,7 @@ import foodCourt from "../assets/img/home-foodcourt.webp";
 import designStudio from "../assets/img/home-design.webp";
 import academyImg from "../assets/img/saloon-7.webp";
 import hojImg from "../assets/img/house-of-jajis.webp";
+import { addToAnyCart } from "../utils/guestCart";
 
 const btnSolid =
   "inline-flex items-center justify-center min-w-[180px] px-7 py-4 bg-black text-white text-[0.8rem] font-medium tracking-[0.18em] uppercase hover:bg-gray-800 transition-colors";
@@ -138,13 +139,9 @@ export default function Home() {
   }, [toast]);
 
   const addToCart = async (variantId) => {
-    if (!localStorage.getItem("token")) {
-      navigate("/login");
-      return;
-    }
     setAddingId(variantId);
     try {
-      await API.post("cart/add/", { variant_id: variantId, quantity: 1 });
+      await addToAnyCart(variantId, 1);
       setToast("Added to your cart");
     } catch {
       setToast("Couldn’t add to cart. Please try again.");

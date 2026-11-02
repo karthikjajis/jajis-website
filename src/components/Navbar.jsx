@@ -3,6 +3,8 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import { Menu, X, ShoppingBag, Heart, User, Home, Store } from "lucide-react";
 import { FaInstagram, FaFacebookF, FaYoutube } from "react-icons/fa";
 import logo from "../assets/img/images-logo.webp";
+import { API } from "../config/api";
+import { guestCartCount } from "../utils/guestCart";
 
 const menuItems = [
   { path: "/", label: "Home" },
@@ -33,6 +35,20 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
   const isAuthenticated = typeof window !== "undefined" && !!window.localStorage.getItem("token");
+  const [cartCount, setCartCount] = useState(0);
+  useEffect(() => {
+    let alive = true;
+    const refresh = async () => {
+      if (!localStorage.getItem("token")) return alive && setCartCount(guestCartCount());
+      try {
+        const { data } = await API.get("/cart/");
+        if (alive) setCartCount((data.items || []).reduce((n, i) => n + (i.quantity || 0), 0));
+      } catch { /* ignore */ }
+    };
+    refresh();
+    window.addEventListener("cart-change", refresh);
+    return () => { alive = false; window.removeEventListener("cart-change", refresh); };
+  }, [location.pathname]);
 
   // Close the menu whenever the page changes, and stop the page scrolling behind it.
   useEffect(() => setIsOpen(false), [location.pathname]);
@@ -89,8 +105,15 @@ export default function Navbar() {
               {isAuthenticated ? "Account" : "Log in"}
             </NavLink>
             <NavLink to="/cart" className={linkClass} aria-label="Cart">
-              <span className="hidden md:inline">Cart</span>
-              <ShoppingBag className="w-5 h-5 md:hidden" strokeWidth={1.5} />
+              <span className="hidden md:inline">Cart{cartCount > 0 ? ` (${cartCount})` : ""}</span>
+              <span className="relative md:hidden">
+                <ShoppingBag className="w-5 h-5" strokeWidth={1.5} />
+                {cartCount > 0 && (
+                  <span className="absolute -top-1.5 -right-2 min-w-4 h-4 px-1 rounded-full bg-black text-white text-[10px] leading-4 text-center">
+                    {cartCount}
+                  </span>
+                )}
+              </span>
             </NavLink>
           </div>
         </div>

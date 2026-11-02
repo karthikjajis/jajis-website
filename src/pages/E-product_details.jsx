@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo } from "react";
 import Seo, { productJsonLd } from "../components/Seo";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import { API } from "../config/api";
 import {
@@ -15,9 +15,11 @@ import {
 } from "lucide-react";
 import { Dialog } from "@headlessui/react";
 import { SkeletonProductDetails } from "../components/SkeletonLoader";
+import { addToAnyCart } from "../utils/guestCart";
 
 export default function ProductDetails() {
   const { id } = useParams();
+  const navigate = useNavigate();
   const [product, setProduct] = useState(null);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [selectedVariant, setSelectedVariant] = useState(null);
@@ -65,19 +67,15 @@ export default function ProductDetails() {
     }
   };
 
-  const handleAddToCart = async () => {
-    const token = localStorage.getItem("token");
-    if (!token) {
-      showMessage("Please login to add items to cart.", "warning");
-      return;
-    }
-
+  const handleAddToCart = async ({ buyNow = false } = {}) => {
+    if (!selectedVariant) return;
     try {
       setAddingItem(true);
-      await API.post("/cart/add/", {
-        variant_id: selectedVariant.id,
-        quantity: 1,
-      });
+      await addToAnyCart(selectedVariant.id, 1);
+      if (buyNow) {
+        navigate("/cart");
+        return;
+      }
       showMessage("Added to cart!", "success");
     } catch (err) {
       console.error("Add to cart failed:", err);
@@ -298,13 +296,22 @@ export default function ProductDetails() {
                 Out of Stock
               </button>
             ) : (
-              <button
-                className="px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800"
-                onClick={handleAddToCart}
-                disabled={!selectedVariant}
-              >
-                {addingItem ? "Adding…" : "Add to Cart"}
-              </button>
+              <>
+                <button
+                  className="px-6 py-3 border border-black text-black rounded-lg hover:bg-black hover:text-white transition-colors"
+                  onClick={() => handleAddToCart()}
+                  disabled={!selectedVariant || addingItem}
+                >
+                  {addingItem ? "Adding…" : "Add to Cart"}
+                </button>
+                <button
+                  className="px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800"
+                  onClick={() => handleAddToCart({ buyNow: true })}
+                  disabled={!selectedVariant || addingItem}
+                >
+                  Buy Now
+                </button>
+              </>
             )}
           </div>
         </div>
