@@ -8,12 +8,14 @@ import heroRight from "../assets/img/home-hero-makeup.webp";
 import salonFront from "../assets/img/home-salon-front.webp";
 import spa from "../assets/img/home-spa.webp";
 import hojImg from "../assets/img/house-of-jajis.webp";
-import tileSalon from "../assets/img/tile-salon.webp";
-import tileCosmetics from "../assets/img/tile-cosmetics.webp";
-import tileAcademy from "../assets/img/tile-academy.webp";
-import tileEventHall from "../assets/img/tile-eventhall.webp";
-import tileFoodCourt from "../assets/img/tile-foodcourt.webp";
-import tileDesign from "../assets/img/tile-design.webp";
+// Tile photos (AI-generated in Canva, free to use) served from the site's Supabase storage.
+const TILE = (name) => `https://tbkvtcuqszgmahzswspe.supabase.co/storage/v1/object/public/site/${name}`;
+const tileSalon = TILE("tile-salon.jpg");
+const tileCosmetics = TILE("tile-cosmetics.jpg");
+const tileAcademy = TILE("tile-academy.jpg");
+const tileEventHall = TILE("tile-eventhall.jpg");
+const tileFoodCourt = TILE("tile-foodcourt.jpg");
+const tileDesign = TILE("tile-design.jpg");
 import { addToAnyCart } from "../utils/guestCart";
 
 const btnSolid =
@@ -26,12 +28,12 @@ const btnGhostLight =
   "inline-flex items-center justify-center min-w-[180px] px-7 py-4 border border-white text-white text-[0.8rem] font-medium tracking-[0.18em] uppercase hover:bg-white hover:text-black transition-colors";
 
 const worlds = [
-  { title: "Find a salon", to: "/salons", img: tileSalon, alt: "The lit Jaji's Innovation sign at a salon entrance" },
-  { title: "Cosmetics", to: "/cosmetics", img: tileCosmetics, alt: "A Jaji's artist applying makeup" },
-  { title: "Academy", to: "/academy", img: tileAcademy, alt: "A Jaji's stylist colouring a client's hair" },
-  { title: "Q Café & Event Hall", to: "/event-hall", img: tileEventHall, alt: "An exhibition in the Q Café & Event Hall, Asramam" },
-  { title: "Food Court", to: "/food-court", img: tileFoodCourt, alt: "Jaji's Food Court lit up at night, Ashramam Maidanam" },
-  { title: "Designing & Stitching", to: "/designing-stitching", img: tileDesign, alt: "A craftsman hand-embroidering at Jaji's studio" },
+  { title: "Find a salon", to: "/salons", img: tileSalon, alt: "A luxury salon with brass-framed mirrors" },
+  { title: "Cosmetics", to: "/cosmetics", img: tileCosmetics, alt: "Skin care and makeup products on stone" },
+  { title: "Academy", to: "/academy", img: tileAcademy, alt: "A trainer teaching haircutting to students" },
+  { title: "Q Café & Event Hall", to: "/event-hall", img: tileEventHall, alt: "An event hall decorated with white flowers and warm lights" },
+  { title: "Food Court", to: "/food-court", img: tileFoodCourt, alt: "An open-air food court lit up at night" },
+  { title: "Designing & Stitching", to: "/designing-stitching", img: tileDesign, alt: "Hand embroidery in gold thread on silk" },
 ];
 
 const stats = [
