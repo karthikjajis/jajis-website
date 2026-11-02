@@ -14,12 +14,19 @@ API.interceptors.request.use((config) => {
   return config;
 });
 
-// A guest token can expire; if the server rejects it, forget it and retry once without it.
+// A saved login (or guest token) can expire. If the server rejects it, forget it and retry once
+// without it, so public pages keep working; pages that need a login then ask the shopper to sign in.
 API.interceptors.response.use(undefined, async (error) => {
   const cfg = error.config;
-  if (error.response?.status === 401 && !localStorage.getItem("token") && localStorage.getItem("guestToken") && cfg && !cfg._guestRetry) {
-    localStorage.removeItem("guestToken");
-    cfg._guestRetry = true;
+  const sent = cfg?.headers?.Authorization;
+  if (error.response?.status === 401 && sent && !cfg._authRetry) {
+    const stale = String(sent).replace(/^Token\s+/, "");
+    if (localStorage.getItem("token") === stale) {
+      localStorage.removeItem("token");
+      window.dispatchEvent(new Event("auth-change"));
+    }
+    if (localStorage.getItem("guestToken") === stale) localStorage.removeItem("guestToken");
+    cfg._authRetry = true;
     delete cfg.headers.Authorization;
     return API(cfg);
   }
