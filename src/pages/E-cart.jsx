@@ -259,15 +259,17 @@ export default function CartPage() {
         handler: async (response) => {
           let verified = false;
           let lastError = null;
+          let orderId = null;
 
           // Attempt verification up to 3 times to handle network blips
           for (let attempt = 1; attempt <= 3; attempt++) {
             try {
-              await API.post("/payment/verify/", {
+              const res = await API.post("/payment/verify/", {
                 razorpay_order_id: response.razorpay_order_id,
                 razorpay_payment_id: response.razorpay_payment_id,
                 razorpay_signature: response.razorpay_signature,
               });
+              orderId = res?.data?.order_id ?? null;
               verified = true;
               break;
             } catch (err) {
@@ -280,9 +282,8 @@ export default function CartPage() {
           }
 
           if (verified) {
-            showMessage("Payment successful");
             fetchCart();
-            navigate("/myorders");
+            navigate(orderId ? `/order-success/${orderId}` : "/myorders", { replace: true });
           } else {
             console.error("Verification failed after retries:", lastError);
             showMessage("Payment completed! Processing order...", "success");

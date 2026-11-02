@@ -44,6 +44,7 @@ const ProductDetails = lazyPage(() => import("./pages/E-product_details"));
 const Cart = lazyPage(() => import("./pages/E-cart"));
 const WishList = lazyPage(() => import("./pages/E-wishlist"));
 const MyOrders = lazyPage(() => import("./pages/E-myorders"));
+const OrderSuccess = lazyPage(() => import("./pages/OrderSuccess"));
 const UserProfile = lazyPage(() => import("./pages/E-user_profile"));
 
 
@@ -123,6 +124,7 @@ export default function App() {
               <Route path="/product/:id" element={<ProductDetails />} />
               <Route path="/cart" element={guard(<Cart />)} />
               <Route path="/myorders" element={guard(<MyOrders />)} />
+              <Route path="/order-success/:id" element={guard(<OrderSuccess />)} />
               <Route path="/wishlist" element={guard(<WishList />)} />
               <Route path="/profile" element={guard(<UserProfile />)} />
             </Routes>
