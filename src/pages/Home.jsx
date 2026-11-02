@@ -6,13 +6,14 @@ import QCafeBooking from "../components/QCafeBooking";
 import heroLeft from "../assets/img/home-bridal.webp";
 import heroRight from "../assets/img/home-hero-makeup.webp";
 import salonFront from "../assets/img/home-salon-front.webp";
-import salonInterior from "../assets/img/home-salon-interior.webp";
 import spa from "../assets/img/home-spa.webp";
-import eventHall from "../assets/img/home-eventhall.webp";
-import foodCourt from "../assets/img/home-foodcourt.webp";
-import designStudio from "../assets/img/home-design.webp";
-import academyImg from "../assets/img/saloon-7.webp";
 import hojImg from "../assets/img/house-of-jajis.webp";
+import tileSalon from "../assets/img/tile-salon.webp";
+import tileCosmetics from "../assets/img/tile-cosmetics.webp";
+import tileAcademy from "../assets/img/tile-academy.webp";
+import tileEventHall from "../assets/img/tile-eventhall.webp";
+import tileFoodCourt from "../assets/img/tile-foodcourt.webp";
+import tileDesign from "../assets/img/tile-design.webp";
 import { addToAnyCart } from "../utils/guestCart";
 
 const btnSolid =
@@ -25,12 +26,12 @@ const btnGhostLight =
   "inline-flex items-center justify-center min-w-[180px] px-7 py-4 border border-white text-white text-[0.8rem] font-medium tracking-[0.18em] uppercase hover:bg-white hover:text-black transition-colors";
 
 const worlds = [
-  { title: "Find a salon", to: "/salons", img: salonInterior, alt: "Inside a Jaji's salon" },
-  { title: "Cosmetics", to: "/cosmetics", img: spa, alt: "Jaji's spa and skin care" },
-  { title: "Academy", to: "/academy", img: academyImg, alt: "Jaji's Academy" },
-  { title: "Q Café & Event Hall", to: "/event-hall", img: eventHall, alt: "Q Café and Event Hall, Asramam" },
-  { title: "Food Court", to: "/food-court", img: foodCourt, alt: "Jaji's Food Court, Ashramam Maidanam" },
-  { title: "Designing & Stitching", to: "/designing-stitching", img: designStudio, alt: "Embroidery from Jaji's studio" },
+  { title: "Find a salon", to: "/salons", img: tileSalon, alt: "The lit Jaji's Innovation sign at a salon entrance" },
+  { title: "Cosmetics", to: "/cosmetics", img: tileCosmetics, alt: "A Jaji's artist applying makeup" },
+  { title: "Academy", to: "/academy", img: tileAcademy, alt: "A Jaji's stylist colouring a client's hair" },
+  { title: "Q Café & Event Hall", to: "/event-hall", img: tileEventHall, alt: "An exhibition in the Q Café & Event Hall, Asramam" },
+  { title: "Food Court", to: "/food-court", img: tileFoodCourt, alt: "Jaji's Food Court lit up at night, Ashramam Maidanam" },
+  { title: "Designing & Stitching", to: "/designing-stitching", img: tileDesign, alt: "A craftsman hand-embroidering at Jaji's studio" },
 ];
 
 const stats = [
