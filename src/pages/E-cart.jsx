@@ -17,6 +17,7 @@ import GuestCheckoutForm, { guestDetailsError, loadGuestDetails, saveGuestDetail
 import {
   clearGuestCart, getGuestCart, guestToken, mergeGuestCartIntoAccount, removeFromGuestCart, setGuestQty,
 } from "../utils/guestCart";
+import { shippingFor } from "../utils/shipping";
 
 const ALL_DISTRICTS = [...new Set(Object.values(INDIA_DISTRICTS).flat())].sort((a, b) => a.localeCompare(b));
 const districtsFor = (state) => {
@@ -55,6 +56,10 @@ export default function CartPage() {
   const [editingAddressId, setEditingAddressId] = useState(null);
   const [showAddressForm, setShowAddressForm] = useState(false);
   const [guestForm, setGuestForm] = useState(loadGuestDetails);
+  const [shipRules, setShipRules] = useState(null);
+  useEffect(() => {
+    API.get("/shipping/rates/").then((r) => setShipRules(r.data)).catch(() => {});
+  }, []);
 
   const BASE_URL = import.meta.env.VITE_BASE_URL;
 
@@ -405,6 +410,15 @@ export default function CartPage() {
     0,
   );
   const totalDiscount = originalSubtotal - subtotal;
+
+  // Shipping depends on where the order goes: the selected saved address, or the express-checkout form.
+  const shipTo = token
+    ? addresses.find((a) => a.id === selectedShippingId)
+    : guestForm.state && guestForm.city ? { state: guestForm.state, city: guestForm.city } : null;
+  const shipping = shipTo ? shippingFor(shipRules, shipTo.state, shipTo.city, subtotal) : null;
+  const freeAbove = shipRules ? Number(shipRules.free_above) : null;
+  const toFree = freeAbove != null && subtotal < freeAbove ? freeAbove - subtotal : 0;
+  const grandTotal = subtotal + (shipping || 0);
 
   return (
     <div className="bg-white min-h-screen relative pb-16">
@@ -852,10 +866,23 @@ export default function CartPage() {
                       <span>Subtotal</span>
                       <span>₹{subtotal.toFixed(2)}</span>
                     </div>
+                    <div className="flex justify-between text-gray-600">
+                      <span>Shipping</span>
+                      <span>
+                        {shipping === null
+                          ? freeAbove != null && toFree === 0 ? <b className="text-green-600">FREE</b> : "Select district"
+                          : shipping === 0 ? <b className="text-green-600">FREE</b> : `₹${shipping.toFixed(2)}`}
+                      </span>
+                    </div>
+                    {toFree > 0 && (
+                      <p className="text-xs bg-gray-50 border border-gray-200 px-3 py-2">
+                        Add <b>₹{toFree.toFixed(2)}</b> more for <b>FREE shipping</b> (orders of ₹{freeAbove} and above).
+                      </p>
+                    )}
                     <hr className="mt-2" />
                     <div className="flex justify-between font-bold text-black">
                       <span>Total</span>
-                      <span>₹{subtotal.toFixed(2)}</span>
+                      <span>₹{grandTotal.toFixed(2)}</span>
                     </div>
                   </div>
                 )}
@@ -866,7 +893,7 @@ export default function CartPage() {
                     onClick={startCheckout}
                     disabled={processingPayment || subtotal <= 0}
                   >
-                    {token ? "Proceed to Checkout" : `Pay ₹${subtotal.toFixed(2)} securely`}
+                    {token ? "Proceed to Checkout" : `Pay ₹${grandTotal.toFixed(2)} securely`}
                   </button>
                 )}
                 {!token && !loadingCart && (

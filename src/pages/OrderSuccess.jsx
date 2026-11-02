@@ -73,11 +73,9 @@ export default function OrderSuccess() {
             </ul>
 
             <div className="px-6 py-4 border-t border-gray-200 space-y-1 text-sm">
-              {Number(order.shipping_cost) > 0 && (
-                <div className="flex justify-between text-gray-600">
-                  <span>Shipping</span><span>{inr(order.shipping_cost)}</span>
-                </div>
-              )}
+              <div className="flex justify-between text-gray-600">
+                <span>Shipping</span><span>{Number(order.shipping_cost) > 0 ? inr(order.shipping_cost) : "Free"}</span>
+              </div>
               <div className="flex justify-between text-base font-medium">
                 <span>Total paid</span><span>{inr(order.total_amount)}</span>
               </div>
