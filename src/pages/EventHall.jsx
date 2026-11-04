@@ -17,7 +17,7 @@ export default function EventHall() {
         subtitle="Celebrate life’s most important moments in style."
       >
         <Btn href="#qcafe-booking" variant="light">Book the Q Café hall</Btn>
-        <Btn href="#venues" variant="ghostLight">Larger venues</Btn>
+        <Btn href="tel:+917034626625" variant="ghostLight">Call +91 70346 26625</Btn>
       </PageHero>
 
       <QCafeBooking />
@@ -44,22 +44,6 @@ export default function EventHall() {
         </div>
       </section>
 
-      {/* Venues */}
-      <section id="venues" className={`${wrap} ${sectionPad} scroll-mt-24`}>
-        <SectionTitle title="Our event venues" sub="Spaces for every size of celebration and business event." />
-        <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 border-t border-gray-200">
-          {venues.map(([title, desc, capacity]) => (
-            <li key={title} className="border-b border-gray-200 py-8 flex flex-col gap-3">
-              <h3 className="text-[1rem] font-medium tracking-[0.14em] uppercase">{title}</h3>
-              <p className="text-[0.75rem] tracking-[0.18em] uppercase text-gray-600">{capacity}</p>
-              <p className="text-sm text-gray-700 leading-relaxed">{desc}</p>
-              <a href="tel:+917034626625" className="mt-1 self-start text-[0.75rem] font-medium tracking-[0.16em] uppercase underline underline-offset-4 hover:no-underline">
-                Call to enquire
-              </a>
-            </li>
-          ))}
-        </ul>
-      </section>
 
 
 
@@ -78,15 +62,6 @@ export default function EventHall() {
     </div>
   );
 }
-
-const venues = [
-  ["AC conference halls", "Modern air-conditioned halls with the latest technology for meetings and corporate events.", "50–300 attendees"],
-  ["Auditoriums", "Spacious auditoriums with premium acoustics and seating for presentations and seminars.", "300–800 attendees"],
-  ["Banquet halls", "Elegant décor and fine dining facilities for special celebrations and gatherings.", "100–500 guests"],
-  ["Convention halls", "Large flexible halls for exhibitions, trade shows and major business events.", "500–2000 visitors"],
-  ["Kalyana mandapams", "Traditional wedding halls with mandap decoration and cultural ambience.", "200–800 guests"],
-  ["Reception hall", "Elegant halls for wedding receptions, anniversaries and milestone celebrations.", "150–600 guests"],
-];
 
 const amenities = [
   ["Catering services"],
