@@ -179,8 +179,9 @@ export default function BookAppointment() {
             <Row k="Service" v={[done.service, mins(done.duration)].filter(Boolean).join(" · ")} />
             <Row k="Date" v={longDate(done.date)} />
             <Row k="Time" v={done.slot_time ? timeLabel(done.slot_time) : ""} />
-            {done.price ? <Row k="Price" v={`${inr(done.price)} (pay at the salon)`} /> : null}
+            {done.price ? <Row k="Price" v={`From ${inr(done.price)} (pay at the salon)`} /> : null}
           </div>
+          <Disclaimer className="mt-6 text-left" />
           <p className="mt-6 text-gray-600 text-sm">
             The salon will send a confirmation to {done.phone ? `+91 ${done.phone}` : "your phone"}. To change or cancel, please call the salon.
           </p>
@@ -199,7 +200,7 @@ export default function BookAppointment() {
         <div className="text-center">
           <p className={eyebrow}>Jaji's salons</p>
           <h1 className="text-3xl md:text-5xl mt-3">Book an appointment</h1>
-          <p className="mt-4 text-gray-600">Choose your salon, service and a time that suits you. Pay at the salon.</p>
+          <p className="mt-4 text-gray-600">Choose your salon, service and a time that suits you. Pay at the salon. Times and prices are confirmed by the salon.</p>
         </div>
 
         {status !== false && (
@@ -269,7 +270,7 @@ export default function BookAppointment() {
                           <span className="block">{s.name}</span>
                           {s.duration ? <span className="text-sm text-gray-500 inline-flex items-center gap-1 mt-1"><Clock size={14} />{mins(s.duration)}</span> : null}
                         </span>
-                        <span className="shrink-0 text-right">{inr(s.price)}</span>
+                        <span className="shrink-0 text-right">{s.price ? <><span className="text-xs text-gray-500">from </span>{inr(s.price)}</> : null}</span>
                       </button>
                     </li>
                   ))}
@@ -365,17 +366,37 @@ export default function BookAppointment() {
                   <Row k="Salon" v={center.name} />
                   <Row k="Service" v={[service.name, mins(service.duration)].filter(Boolean).join(" · ")} />
                   <Row k="When" v={slot ? `${dayLabel(booking.date)}, ${timeLabel(slot)}` : "Choose a time"} />
-                  {service.price ? <Row k="Price" v={`${inr(service.price)} · pay at the salon`} /> : null}
+                  {service.price ? <Row k="Price" v={`From ${inr(service.price)} · pay at the salon`} /> : null}
                 </div>
+                <Disclaimer className="mt-6" />
                 <button type="button" onClick={confirm} disabled={busy || !slot} className={`${btn.solid} mt-6 w-full sm:w-auto disabled:opacity-60`}>
                   {busy ? "Booking…" : "Confirm appointment"}
                 </button>
+                <p className="mt-3 text-xs text-gray-500">By confirming, you agree to the note above.</p>
               </div>
             )}
           </div>
         )}
       </div>
     </section>
+  );
+}
+
+function Disclaimer({ className = "" }) {
+  return (
+    <div className={`border-l-2 border-black bg-gray-50 px-5 py-4 text-sm text-gray-700 leading-relaxed ${className}`} role="note">
+      <p className="text-[0.7rem] tracking-[0.16em] uppercase text-black mb-2">Please note</p>
+      <ul className="space-y-1.5 list-disc pl-4">
+        <li>
+          Appointment times may vary slightly depending on the availability of your stylist on the day. If your time needs
+          to change, the salon will contact you before your visit.
+        </li>
+        <li>
+          Prices shown are starting prices. The final amount may vary depending on the service category, stylist level,
+          hair length and type, and any products or add-ons used. The salon will confirm the price with you before your service.
+        </li>
+      </ul>
+    </div>
   );
 }
 
