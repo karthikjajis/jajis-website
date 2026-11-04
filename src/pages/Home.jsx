@@ -295,7 +295,7 @@ export default function Home() {
             Hair, skin, bridal and spa — by stylists trained to international standards, in salons across Kerala.
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
-            <Link to="/salons" className={btnSolid}>
+            <Link to="/book" className={btnSolid}>
               Book now
             </Link>
             <Link to="/contact" className={btnOutline}>

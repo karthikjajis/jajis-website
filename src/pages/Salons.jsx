@@ -122,7 +122,7 @@ export default function Salons() {
           <h1 className="text-[2.1rem] sm:text-5xl lg:text-7xl">Jaji’s Innovation Salons</h1>
           <p className="text-base md:text-lg tracking-wide max-w-xl">Where beauty meets excellence.</p>
           <div className="flex flex-col sm:flex-row gap-3">
-            <Link to="/contact" className={btnLight}>
+            <Link to="/book" className={btnLight}>
               Book appointment
             </Link>
             <a href="#locations" className={btnGhostLight}>
@@ -313,8 +313,8 @@ export default function Salons() {
           <h2 className="text-3xl md:text-5xl font-light">Ready for your beauty transformation?</h2>
           <p className="text-gray-300 max-w-2xl">Book your appointment today and experience the Jaji’s difference.</p>
           <div className="flex flex-col sm:flex-row gap-3">
-            <Link to="/contact" className={btnLight}>
-              Contact us
+            <Link to="/book" className={btnLight}>
+              Book appointment
             </Link>
             <Link to="/products" className={btnGhostLight}>
               Shop products

@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 
 import Home from "./pages/Home";
 import Salons from "./pages/Salons";
+import BookAppointment from "./pages/BookAppointment";
 import Cosmetics from "./pages/Cosmetics";
 import EventHall from "./pages/EventHall";
 import FoodCourt from "./pages/FoodCourt";
@@ -27,6 +28,7 @@ export { PAGE_SEO } from "./seo-pages";
 const PAGES = {
   "/": Home,
   "/salons": Salons,
+  "/book": BookAppointment,
   "/cosmetics": Cosmetics,
   "/event-hall": EventHall,
   "/food-court": FoodCourt,

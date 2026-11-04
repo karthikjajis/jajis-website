@@ -86,7 +86,7 @@ export default function SalonDetails() {
             <span>{data.location}</span>
           </div>
           <a
-            href="tel:"
+            href="/book"
             className="bg-gray-900 hover:bg-gray-800 text-white px-8 py-3 rounded-full font-semibold shadow-lg transition-all"
           >
             Book Now
@@ -161,10 +161,10 @@ export default function SalonDetails() {
             Book your appointment today and treat yourself to excellence
           </p>
           <a
-            href="tel:"
+            href="/book"
             className="bg-black text-white px-8 py-4 rounded-full font-semibold"
           >
-            Contact Us
+            Book an appointment
           </a>
         </div>
       </div>

@@ -14,5 +14,6 @@ export const PAGE_SEO = {
   "/house-of-jajis": { title: "House of Jaji's — Hair, Skin & Academy, Kollam", description: "House of Jaji's: a new 13,000 sq ft destination in Kollam with Jaji\'s Signature Skin & Hair Clinic, an affordable salon, Jaji's Luxe premium lounge and academy. Opening soon.", image: "https://www.jajisinnovation.com/house-of-jajis-og.jpg" },
   "/return-policy": { title: "Return & refund policy", description: "Jaji's Innovation return and refund policy: personal care products are non-returnable; damaged or wrong items are replaced or refunded." },
   "/refund-policy": { title: "Return & refund policy", description: "Jaji's Innovation return and refund policy: personal care products are non-returnable; damaged or wrong items are replaced or refunded." },
+  "/book": { title: "Book a salon appointment online", description: "Book hair, skin, bridal and spa appointments at Jaji's salons in Kollam, Karunagappally, Sasthamcotta, Paravur and Trivandrum. Pick a time online and pay at the salon." },
   "/contact": { title: "Contact us", description: "Call, WhatsApp or visit Jaji's salons, Q Café, Food Court, studio and academy across Kerala." },
 };

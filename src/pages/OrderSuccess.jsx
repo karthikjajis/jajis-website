@@ -27,7 +27,7 @@ export default function OrderSuccess() {
     : "";
 
   return (
-    <section className="bg-white py-16 md:py-24 px-6">
+    <section className="bg-white pt-32 md:pt-40 pb-16 md:pb-24 px-6">
       <div className="max-w-2xl mx-auto">
         <div className="text-center">
           <CheckCircle className="mx-auto text-black" size={56} strokeWidth={1.25} />
