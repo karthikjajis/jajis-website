@@ -166,7 +166,7 @@ export default function Home() {
             world of Jaji’s
           </h1>
           <p className="text-base md:text-lg tracking-wide max-w-xl">
-            Where beauty isn’t just experienced — it’s created. Salons, academy and our own skin &amp; hair care.
+            Kollam’s family salon since 2002 — unisex salons, bridal studios, academy and our own skin &amp; hair care.
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
             <Link to="/salons" className={btnLight}>
@@ -293,6 +293,10 @@ export default function Home() {
           <h2 className="text-3xl md:text-5xl font-light">Your beauty journey starts here</h2>
           <p className="text-gray-700 max-w-md">
             Hair, skin, bridal and spa — by stylists trained to international standards, in salons across Kerala.
+            Rated 4.6★ on Google by more than 15,000 guests.
+          </p>
+          <p>
+            <Link to="/kollam" className="underline underline-offset-4">Our salons in Kollam — RP Mall &amp; Polayathodu</Link>
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
             <Link to="/book" className={btnSolid}>

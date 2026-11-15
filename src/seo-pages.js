@@ -2,6 +2,7 @@
 export const PAGE_SEO = {
   "/": {},
   "/products": { title: "Shop hair & skin care online", description: "Shop Jaji's Research hair and skin care and professional salon brands online — shampoos, serums, sunscreen, face wash and more, delivered across India." },
+  "/kollam": { title: "Best Salon in Kollam – Unisex Salon & Bridal Studio since 2002", description: "Jaji's Innovation, Kollam's family salon since 2002: rated 4.6★ on Google by 8,400+ guests at RP Mall and Polayathodu. Haircuts, colour, keratin, facials, spa and bridal makeup. Book online." },
   "/salons": { title: "Salons in Kollam, Karunagappally, Sasthamcotta, Paravur & Trivandrum", description: "Jaji's Innovation unisex beauty salons and bridal makeup studios across Kerala — hair, skin, bridal and spa. Find your nearest salon." },
   "/cosmetics": { title: "Cosmetics by Jaji's Research", description: "Hair and skin care developed by Jaji's Research and tested in our own salons." },
   "/academy": { title: "Beauty & hairdressing academy", description: "Professional beauty, makeup and hairdressing courses at Jaji's Academy, Kollam." },

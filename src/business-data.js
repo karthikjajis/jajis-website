@@ -55,7 +55,7 @@ export const SALON_LD = SALONS.map(([slug, name, street, city, pin, phone, lat, 
   "@type": ["HairSalon", "BeautySalon"],
   "@id": `${SITE}/salons#${slug}`,
   name,
-  url: `${SITE}/salons`,
+  url: ["rp-mall-kollam", "polayathodu-kollam"].includes(slug) ? `${SITE}/kollam` : `${SITE}/salons`,
   image: LOGO,
   telephone: phone,
   priceRange: "₹₹",
@@ -179,9 +179,53 @@ export const SALON_FAQ_LD = {
 };
 
 /** Which structured data goes on which page (Organization + WebSite go everywhere). */
+export const KOLLAM_FAQ = [
+  [
+    "Which is the best salon in Kollam?",
+    "Jaji's Innovation has been Kollam's family salon since 2002. Our RP Mall and Polayathodu salons are rated 4.6 on Google by more than 8,400 guests, and offer hair, skin, spa and bridal services under one roof.",
+  ],
+  [
+    "Where are Jaji's salons in Kollam?",
+    "Jaji's Innovation is on the 4th floor of RP Mall, Taluk Kachery, Kollam, and Jaji's Express Family Salon is on the 1st floor of Narayaneeyam, near KFC, Polayathodu. We also have salons at Karunagappally, Sasthamcotta and Paravur.",
+  ],
+  [
+    "Is Jaji's a unisex salon?",
+    "Yes. Jaji's salons in Kollam are unisex family salons for women, men and children, with bride and groom makeover studios.",
+  ],
+  [
+    "Can I book a salon appointment online in Kollam?",
+    "Yes. Choose RP Mall or Polayathodu at jajisinnovation.com/book, pick your service and a free time, and pay at the salon. You can also call or walk in.",
+  ],
+  [
+    "Do you do bridal makeup in Kollam?",
+    "Yes. Our bride and groom studios at RP Mall and Polayathodu offer bridal makeup, hairstyling, saree draping and pre-wedding skin and hair care. Call the salon to plan your look and trial.",
+  ],
+  [
+    "What are the opening hours of Jaji's salons in Kollam?",
+    "Both Kollam salons are open every day. RP Mall is open 10 AM to 9 PM and Polayathodu 9 AM to 9 PM.",
+  ],
+];
+
+export const KOLLAM_FAQ_LD = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: KOLLAM_FAQ.map(([q, a]) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } })),
+};
+
+const KOLLAM_BREADCRUMB_LD = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: `${SITE}/` },
+    { "@type": "ListItem", position: 2, name: "Salons", item: `${SITE}/salons` },
+    { "@type": "ListItem", position: 3, name: "Salons in Kollam", item: `${SITE}/kollam` },
+  ],
+};
+
 export const PAGE_LD = {
   "/": SALON_LD,
   "/salons": [...SALON_LD, SALON_FAQ_LD],
+  "/kollam": [...SALON_LD.slice(0, 2), KOLLAM_FAQ_LD, KOLLAM_BREADCRUMB_LD],
   "/contact": [...SALON_LD, EVENT_VENUE_LD, FOOD_COURT_LD, STUDIO_LD, ACADEMY_LD],
   "/event-hall": [EVENT_VENUE_LD],
   "/food-court": [FOOD_COURT_LD],

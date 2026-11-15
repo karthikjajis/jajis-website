@@ -2,9 +2,9 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 const SITE = "https://www.jajisinnovation.com";
-const DEFAULT_TITLE = "Jaji's Innovation | Salons, Academy & Beauty Products in Kerala";
+const DEFAULT_TITLE = "Jaji's Innovation | Best Salon & Bridal Studio in Kollam, Kerala";
 const DEFAULT_DESC =
-  "Jaji's — Kerala's family salon brand since 2002. Salons, academy, Jaji's Research skin and hair care, Q Café & Event Hall, Food Court and Designing & Stitching studio in Kollam.";
+  "Jaji's — Kollam's family salon since 2002, rated 4.6★ on Google by 15,000+ guests. Unisex salons, bridal studios, academy, Jaji's Research skin and hair care, Q Café & Event Hall, Food Court and Designing & Stitching studio in Kollam.";
 
 function setMeta(attr, key, value) {
   let el = document.head.querySelector(`meta[${attr}="${key}"]`);

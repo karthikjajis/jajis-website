@@ -7,6 +7,7 @@ const columns = [
     title: "Book",
     links: [
       ["Book a salon appointment", "/book"],
+      ["Salons in Kollam", "/kollam"],
       ["Find a salon", "/salons"],
       ["Book the Q Café hall", "https://jajisqcafe.com/book"],
       ["Q Café & Event Hall", "/event-hall"],

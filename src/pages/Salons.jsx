@@ -246,7 +246,10 @@ export default function Salons() {
         <div className="max-w-7xl mx-auto px-6 lg:px-12 py-20 md:py-24">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-4xl">Our salon locations</h2>
-            <p className="mt-3 text-gray-600">Visit any of our salons across Kerala.</p>
+            <p className="mt-3 text-gray-600">
+              Visit any of our salons across Kerala. In Kollam city?{" "}
+              <Link to="/kollam" className="underline underline-offset-4">See our Kollam salons</Link>.
+            </p>
           </div>
           <ul className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 border-t border-gray-200">
             {SALON_LOCATIONS.map((s) => (
