@@ -185,6 +185,10 @@ export const KOLLAM_FAQ = [
     "Jaji's Innovation has been Kollam's family salon since 2002. Our RP Mall and Polayathodu salons are rated 4.6 on Google by more than 8,400 guests, and offer hair, skin, spa and bridal services under one roof.",
   ],
   [
+    "Which is the best beauty parlour in Kollam?",
+    "Jaji's Innovation at RP Mall and Polayathodu is a full beauty parlour and salon in one: facials and clean-ups, threading, waxing, manicure, pedicure, hair treatments and bridal makeup for ladies, gents and kids. Both are rated 4.6 on Google and open every day.",
+  ],
+  [
     "Where are Jaji's salons in Kollam?",
     "Jaji's Innovation is on the 4th floor of RP Mall, Taluk Kachery, Kollam, and Jaji's Express Family Salon is on the 1st floor of Narayaneeyam, near KFC, Polayathodu. We also have salons at Karunagappally, Sasthamcotta and Paravur.",
   ],

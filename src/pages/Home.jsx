@@ -296,7 +296,7 @@ export default function Home() {
             Rated 4.6★ on Google by more than 15,000 guests.
           </p>
           <p>
-            <Link to="/kollam" className="underline underline-offset-4">Our salons in Kollam — RP Mall &amp; Polayathodu</Link>
+            <Link to="/kollam" className="underline underline-offset-4">Our salons &amp; beauty parlours in Kollam — RP Mall &amp; Polayathodu</Link>
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
             <Link to="/book" className={btnSolid}>

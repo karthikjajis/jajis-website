@@ -14,7 +14,7 @@ const careers = await import(pathToFileURL(path.join(root, "src", "careers-data.
 
 const SITE = "https://www.jajisinnovation.com";
 const API = (process.env.VITE_API_URL || "https://tbkvtcuqszgmahzswspe.supabase.co/functions/v1/api/").replace(/\/?$/, "/");
-const DEFAULT_TITLE = "Jaji's Innovation | Best Salon & Bridal Studio in Kollam, Kerala";
+const DEFAULT_TITLE = "Jaji's Innovation | Best Salon & Beauty Parlour in Kollam, Kerala";
 const DEFAULT_DESC =
   "Jaji's — Kollam's family salon since 2002, rated 4.6★ on Google by 15,000+ guests. Unisex salons, bridal studios, academy, Jaji's Research skin and hair care, Q Café & Event Hall, Food Court and Designing & Stitching studio in Kollam.";
 const DEFAULT_IMAGE = `${SITE}/house-of-jajis-og.jpg`;

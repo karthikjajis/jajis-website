@@ -58,7 +58,7 @@ export default function KollamSalons() {
         <img src={heroImg} alt="Inside Jaji's salon at RP Mall, Kollam" fetchpriority="high" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-end text-center text-white px-6 pb-14 md:pb-20 gap-5">
           <p className="text-[0.75rem] tracking-[0.2em] uppercase text-gray-200">Kollam's family salon since 2002</p>
-          <h1 className="text-[2rem] sm:text-5xl lg:text-6xl max-w-4xl">Best salon in Kollam for hair, skin &amp; bridal</h1>
+          <h1 className="text-[2rem] sm:text-5xl lg:text-6xl max-w-4xl">Best salon &amp; beauty parlour in Kollam</h1>
           <p className="text-base md:text-lg max-w-2xl">
             <FaStar className="inline -mt-1 mr-1" aria-hidden="true" />4.6 on Google from {totalReviews.toLocaleString("en-IN")}+ reviews
             across our two Kollam salons — RP Mall and Polayathodu.
@@ -74,12 +74,13 @@ export default function KollamSalons() {
       <section className={`${wrap} py-16 md:py-20 grid md:grid-cols-2 gap-10 items-center`}>
         <div>
           <p className={eyebrow}>Why Kollam chooses Jaji's</p>
-          <h2 className="text-3xl md:text-4xl mt-3">A unisex salon and bridal studio trusted by Kollam for over 20 years</h2>
+          <h2 className="text-3xl md:text-4xl mt-3">A unisex salon, beauty parlour and bridal studio trusted by Kollam for over 20 years</h2>
           <div className="mt-6 space-y-4 text-gray-700 leading-relaxed">
             <p>
               Jaji's Innovation started in Kollam in 2002 and has grown into one of Kerala's best-known salon families, with
-              more than 200 trained team members. Our two Kollam city salons — at RP Mall and Polayathodu — offer haircuts,
-              colour, keratin and smoothening, facials and skin treatments, and complete bride and groom makeovers.
+              more than 200 trained team members. Our two Kollam city salons — at RP Mall and Polayathodu — are a full salon and
+              beauty parlour in one: haircuts, colour, keratin and smoothening, facials and clean-ups, threading, waxing,
+              manicure and pedicure, and complete bride and groom makeovers.
             </p>
             <p>
               We also run Jaji's Academy for beauty and hairdressing, and our own Jaji's Research hair and skin care is tested
@@ -123,7 +124,7 @@ export default function KollamSalons() {
 
       {/* Services */}
       <section className={`${wrap} py-16 md:py-20`}>
-        <p className={`${eyebrow} text-center`}>Services in Kollam</p>
+        <p className={`${eyebrow} text-center`}>Salon &amp; beauty parlour services in Kollam</p>
         <h2 className="text-3xl md:text-4xl text-center mt-3">Everything for hair, skin and your big day</h2>
         <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-gray-200 border border-gray-200">
           {SERVICES.map(([t, d]) => (
