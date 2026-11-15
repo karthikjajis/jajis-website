@@ -43,11 +43,11 @@ export const WEBSITE = {
 
 const SALONS = [
   ["rp-mall-kollam", "Jaji's Innovation Unisex Beauty Salon & Bride/Groom Makeover Studio – RP Mall, Kollam", "4th Floor, RP Mall, Taluk Kachery", "Kollam", "691001", "+91 98479 48242", 8.889425, 76.585812, "10:00", "21:00"],
-  ["polayathodu-kollam", "Jaji's Express Family Salon & Bride/Groom Lounge – Polayathodu, Kollam", "1st Floor, Narayaneeyam, Near KFC, Polayathodu", "Kollam", "691010", "+91 97440 12345", 8.8792292, 76.6071918, "09:00", "21:00"],
+  ["polayathodu-kollam", "Jaji's Express Family Salon & Bride/Groom Lounge – Polayathodu, Kollam", "1st Floor, Narayaneeyam, Near KFC, Polayathodu", "Kollam", "691021", "+91 97440 12345", 8.8792292, 76.6071918, "09:00", "21:00"],
   ["karunagappally", "Jaji's Innovation Unisex Beauty Salon – Karunagappally", "2nd Floor, KC Center, Opp. Boys Higher Secondary School, Near KSRTC Bus Stand", "Karunagappally", "690518", "+91 88933 88090", 9.0592921, 76.5358352, "10:00", "21:00"],
   ["sasthamcotta", "Jaji's Innovation Unisex Beauty Salon & Bridal Makeup Studio – Sasthamcotta", "Vijaya Tower, Adhikadu Junction, Chavara–Sasthamcotta Road", "Sasthamcotta", "690521", "+91 94477 19988", 9.0294422, 76.6120031, "10:00", "20:00"],
-  ["paravur", "Jaji's Innovation Unisex Beauty Salon & Bridal Makeup Studio – Paravur", "Kottuvankonam", "Paravur", "691301", "+91 96332 10449", 8.8121822, 76.687411, "10:00", "21:00"],
-  ["vazhuthacaud-trivandrum", "Jaji's Innovation Unisex Beauty Salon & Bridal Makeup Studio – Vazhuthacaud, Trivandrum", "Ground Floor, KEK Tower, Opposite Trivandrum Club, Nandavanam, Vazhuthacaud", "Thiruvananthapuram", "695010", "+91 92072 09207", 8.5060777, 76.9611105, "10:00", "21:00"],
+  ["paravur", "Jaji's Innovation Unisex Beauty Salon & Bridal Makeup Studio – Paravur", "Kottuvankonam", "Paravur", "691301", "+91 97440 12345", 8.8121822, 76.687411, "10:00", "21:00"],
+  ["vazhuthacaud-trivandrum", "Jaji's Innovation Unisex Beauty Salon & Bridal Makeup Studio – Vazhuthacaud, Trivandrum", "Ground Floor, KEK Tower, Opposite Trivandrum Club, Nandavanam, Vazhuthacaud", "Thiruvananthapuram", "695014", "+91 92072 09207", 8.5060777, 76.9611105, "10:00", "21:00"],
 ];
 
 export const SALON_LD = SALONS.map(([slug, name, street, city, pin, phone, lat, lng, opens, closes]) => ({

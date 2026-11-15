@@ -24,7 +24,7 @@ const SALONS = [
   {
     name: "Jaji's Express Family Salon – Polayathodu",
     tag: "Family salon · Bride & groom lounge · Next to our Designing & Stitching studio",
-    address: "1st Floor, Narayaneeyam, Near KFC, Polayathodu, Kollam 691010",
+    address: "1st Floor, Narayaneeyam, Near KFC, Polayathodu, Kollam 691021",
     hours: "Open every day, 9 AM – 9 PM",
     phone: "+91 97440 12345",
     rating: 4.6,

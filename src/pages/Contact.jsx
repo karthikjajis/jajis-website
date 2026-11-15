@@ -11,11 +11,11 @@ const tel = (p) => `tel:${p.replace(/\s/g, "")}`;
 // Salon details checked against each salon's Google Maps listing (Oct 2026).
 const salons = [
   { location: "RP Mall, Kollam", name: "Jaji’s Innovation Unisex Beauty Salon & Bride/Groom Makeover Studio", address: "4th Floor, RP Mall, Taluk Kachery, Kollam, Kerala 691001", phone: "+91 98479 48242" },
-  { location: "Polayathodu", name: "Jaji’s Express Family Salon & Bride/Groom Lounge", address: "1st Floor, Narayaneeyam, Near KFC, Polayathodu, Kollam, Kerala 691010", phone: "+91 97440 12345" },
+  { location: "Polayathodu", name: "Jaji’s Express Family Salon & Bride/Groom Lounge", address: "1st Floor, Narayaneeyam, Near KFC, Polayathodu, Kollam, Kerala 691021", phone: "+91 97440 12345" },
   { location: "Karunagappally", name: "Jaji’s Innovation Unisex Beauty Salon", address: "2nd Floor, KC Center, Opp. Boys Higher Secondary School, Near KSRTC Bus Stand, Karunagappally, Kerala 690518", phone: "+91 88933 88090" },
   { location: "Sasthamcotta", name: "Jaji’s Innovation Unisex Beauty Salon & Bridal Makeup Studio", address: "Vijaya Tower, Adhikadu Junction, Chavara–Sasthamcotta Road, Sasthamcotta, Kerala 690521", phone: "+91 94477 19988" },
-  { location: "Paravur", name: "Jaji’s Innovation Unisex Beauty Salon & Bridal Makeup Studio", address: "Kottuvankonam, Paravur, Kollam, Kerala 691301", phone: "+91 96332 10449" },
-  { location: "Vazhuthacaud, Trivandrum", name: "Jaji’s Innovation Unisex Beauty Salon & Bridal Makeup Studio", address: "Ground Floor, KEK Tower, Opposite Trivandrum Club, Nandavanam, Vazhuthacaud, Thiruvananthapuram, Kerala 695010", phone: "+91 92072 09207" },
+  { location: "Paravur", name: "Jaji’s Innovation Unisex Beauty Salon & Bridal Makeup Studio", address: "Kottuvankonam, Paravur, Kollam, Kerala 691301", phone: "+91 97440 12345" },
+  { location: "Vazhuthacaud, Trivandrum", name: "Jaji’s Innovation Unisex Beauty Salon & Bridal Makeup Studio", address: "Ground Floor, KEK Tower, Opposite Trivandrum Club, Nandavanam, Vazhuthacaud, Thiruvananthapuram, Kerala 695014", phone: "+91 92072 09207" },
 ];
 
 const ventures = [

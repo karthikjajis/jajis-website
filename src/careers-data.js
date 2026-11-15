@@ -9,16 +9,16 @@ export const EMPLOYMENT_LABEL = {
 // Street addresses for each branch a job can be at (Google needs a real address for the job).
 export const BRANCH_ADDRESS = {
   "RP Mall, Kollam": ["4th Floor, RP Mall, Taluk Kachery", "Kollam", "691001"],
-  "Polayathodu, Kollam": ["1st Floor, Narayaneeyam, Near KFC, Polayathodu", "Kollam", "691010"],
+  "Polayathodu, Kollam": ["1st Floor, Narayaneeyam, Near KFC, Polayathodu", "Kollam", "691021"],
   Karunagappally: ["2nd Floor, KC Center, Near KSRTC Bus Stand", "Karunagappally", "690518"],
   Sasthamcotta: ["Vijaya Tower, Adhikadu Junction, Chavara–Sasthamcotta Road", "Sasthamcotta", "690521"],
   Paravur: ["Kottuvankonam", "Paravur", "691301"],
-  "Vazhuthacaud, Trivandrum": ["Ground Floor, KEK Tower, Opposite Trivandrum Club, Vazhuthacaud", "Thiruvananthapuram", "695010"],
+  "Vazhuthacaud, Trivandrum": ["Ground Floor, KEK Tower, Opposite Trivandrum Club, Vazhuthacaud", "Thiruvananthapuram", "695014"],
   "Head Office, Kollam": ["", "Kollam", ""],
   "Q Café & Event Hall, Kollam": ["Near Children's Park, Asramam", "Kollam", "691002"],
   "Food Court, Kollam": ["Ashramam Maidanam", "Kollam", "691002"],
-  "Designing & Stitching Studio, Polayathodu": ["Opposite KFC, Polayathodu", "Kollam", "691010"],
-  "Jaji's Academy, Polayathodu": ["1st Floor, Narayaneeyam, Near KFC, Polayathodu", "Kollam", "691010"],
+  "Designing & Stitching Studio, Polayathodu": ["Opposite KFC, Polayathodu", "Kollam", "691021"],
+  "Jaji's Academy, Polayathodu": ["1st Floor, Narayaneeyam, Near KFC, Polayathodu", "Kollam", "691021"],
 };
 
 export const jobSlug = (job) =>
