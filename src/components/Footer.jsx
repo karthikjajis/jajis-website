@@ -37,6 +37,7 @@ const columns = [
       ["About us", "/about-us"],
       ["Management", "/management"],
       ["Franchise", "/franchise"],
+      ["Careers", "/careers"],
       ["Contact", "/contact"],
     ],
   },

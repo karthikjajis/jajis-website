@@ -24,6 +24,8 @@ function lazyPage(loader) {
 const Salons = lazyPage(() => import("./pages/Salons"));
 const BookAppointment = lazyPage(() => import("./pages/BookAppointment"));
 const KollamSalons = lazyPage(() => import("./pages/KollamSalons"));
+const Careers = lazyPage(() => import("./pages/Careers"));
+const JobDetails = lazyPage(() => import("./pages/JobDetails"));
 const SalonDetails = lazyPage(() => import("./pages/salon_details"));
 const Cosmetics = lazyPage(() => import("./pages/Cosmetics"));
 const EventHall = lazyPage(() => import("./pages/EventHall"));
@@ -52,7 +54,7 @@ const UserProfile = lazyPage(() => import("./pages/E-user_profile"));
 
 function RouteSeo() {
   const { pathname } = useLocation();
-  if (pathname.startsWith("/product/")) return null; // product pages set their own
+  if (pathname.startsWith("/product/") || pathname.startsWith("/careers/")) return null; // these pages set their own
   return <Seo {...(PAGE_SEO[pathname] || {})} />;
 }
 
@@ -106,6 +108,8 @@ export default function App() {
               <Route path="/salons" element={<Salons />} />
               <Route path="/book" element={<BookAppointment />} />
               <Route path="/kollam" element={<KollamSalons />} />
+              <Route path="/careers" element={<Careers />} />
+              <Route path="/careers/:id" element={<JobDetails />} />
               <Route path="/salons/:id" element={<SalonDetails />} />
               <Route path="/cosmetics" element={<Cosmetics />} />
               <Route path="/event-hall" element={<EventHall />} />

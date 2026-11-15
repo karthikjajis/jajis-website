@@ -16,5 +16,6 @@ export const PAGE_SEO = {
   "/return-policy": { title: "Return & refund policy", description: "Jaji's Innovation return and refund policy: personal care products are non-returnable; damaged or wrong items are replaced or refunded." },
   "/refund-policy": { title: "Return & refund policy", description: "Jaji's Innovation return and refund policy: personal care products are non-returnable; damaged or wrong items are replaced or refunded." },
   "/book": { title: "Book a salon appointment online", description: "Book hair, skin, bridal and spa appointments at Jaji's salons in Kollam, Karunagappally, Sasthamcotta, Paravur and Trivandrum. Pick a time online and pay at the salon." },
+  "/careers": { title: "Careers – Salon jobs in Kollam & Trivandrum", description: "Jobs at Jaji's Innovation: hair stylists, beauticians, makeup artists, therapists, managers and front desk across Kollam, Karunagappally, Paravur, Sasthamcotta and Trivandrum. Apply online." },
   "/contact": { title: "Contact us", description: "Call, WhatsApp or visit Jaji's salons, Q Café, Food Court, studio and academy across Kerala." },
 };

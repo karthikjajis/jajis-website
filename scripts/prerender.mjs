@@ -10,6 +10,7 @@ const dist = path.join(root, "dist");
 const ssr = await import(pathToFileURL(path.join(root, "dist-ssr", "entry-server.js")).href);
 const { render, renderProduct, ROUTES, PAGE_SEO } = ssr;
 const biz = await import(pathToFileURL(path.join(root, "src", "business-data.js")).href);
+const careers = await import(pathToFileURL(path.join(root, "src", "careers-data.js")).href);
 
 const SITE = "https://www.jajisinnovation.com";
 const API = (process.env.VITE_API_URL || "https://tbkvtcuqszgmahzswspe.supabase.co/functions/v1/api/").replace(/\/?$/, "/");
@@ -170,4 +171,35 @@ write(
 );
 count++;
 
-console.log(`[prerender] wrote ${count} pages (${products.length} products)`);
+// ---- careers: one page per open job, with Google "JobPosting" data for Google's Jobs box
+let jobs = [];
+try {
+  jobs = (await getJson("jobs/")).jobs || [];
+} catch (e) {
+  console.warn(`[prerender] jobs skipped (${e.message})`);
+}
+const jobLinks = [];
+for (const j of jobs) {
+  const url = `/careers/${careers.jobSlug(j)}`;
+  const sal = careers.salaryText(j);
+  const type = careers.EMPLOYMENT_LABEL[j.employment_type] || j.employment_type;
+  jobLinks.push(`<li><a href="${url}">${esc(j.title)} — ${esc(j.branch)}</a></li>`);
+  const inner = `
+<article class="max-w-3xl mx-auto px-6 py-16">
+  <p class="text-[0.75rem] tracking-[0.2em] uppercase text-gray-600"><a href="/careers">Careers</a> / ${esc(j.branch)}</p>
+  <h1 class="text-3xl md:text-5xl mt-4">${esc(j.title)}</h1>
+  <p class="mt-6 text-gray-700">Jaji's ${esc(j.branch)}, Kerala · ${esc(type)}${sal ? ` · ${esc(sal)}` : ""}${j.experience ? ` · ${esc(j.experience)}` : ""}</p>
+  <div class="mt-10 space-y-4">${careers.descriptionHtml(j.description)}</div>
+  <p class="mt-10"><a href="#apply">Apply now</a></p>
+</article>`;
+  write(url, page({
+    url,
+    title: `${j.title} job in ${j.branch}`,
+    description: `${j.title} — ${type} at Jaji's ${j.branch}, Kerala.${sal ? ` Salary ${sal}.` : ""} Apply online.`,
+    body: renderProduct(url, inner),
+    jsonLd: [careers.jobPostingLd(j)],
+  }));
+  count++;
+}
+
+console.log(`[prerender] wrote ${count} pages (${products.length} products, ${jobs.length} jobs)`);
