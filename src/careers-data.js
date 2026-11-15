@@ -36,13 +36,19 @@ const escHtml = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;
 
 /** Plain-text description (blank lines = paragraphs, "-" or "•" lines = bullet lists) -> simple HTML. */
 export function descriptionHtml(text) {
+  const isBullet = (l) => /^[-•*]\s+/.test(l);
   return String(text ?? "")
     .split(/\n{2,}/)
     .map((block) => {
       const lines = block.split("\n").map((l) => l.trim()).filter(Boolean);
-      if (lines.length && lines.every((l) => /^[-•*]\s*/.test(l)))
-        return `<ul>${lines.map((l) => `<li>${escHtml(l.replace(/^[-•*]\s*/, ""))}</li>`).join("")}</ul>`;
-      return `<p>${lines.map(escHtml).join("<br>")}</p>`;
+      let html = "", para = [], items = [];
+      const flushP = () => { if (para.length) html += `<p>${para.map(escHtml).join("<br>")}</p>`; para = []; };
+      const flushL = () => { if (items.length) html += `<ul>${items.map((l) => `<li>${escHtml(l.replace(/^[-•*]\s+/, ""))}</li>`).join("")}</ul>`; items = []; };
+      for (const l of lines) {
+        if (isBullet(l)) { flushP(); items.push(l); } else { flushL(); para.push(l); }
+      }
+      flushP(); flushL();
+      return html;
     })
     .join("");
 }
