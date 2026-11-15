@@ -51,9 +51,7 @@ function page({ url, title, description, image, type = "website", body, jsonLd =
     .replace('<div id="root"></div>', `<div id="root">${body}</div>`);
 }
 
-const sitemapUrls = [];
 function write(url, html) {
-  if (url !== "/refund-policy") sitemapUrls.push(url);
   // "/salons" -> dist/salons.html; Vercel's cleanUrls serves it at /salons
   const file = url === "/" ? path.join(dist, "index.html") : path.join(dist, `${url.replace(/^\//, "")}.html`);
   fs.mkdirSync(path.dirname(file), { recursive: true });
@@ -172,14 +170,4 @@ write(
 );
 count++;
 
-// ---- sitemap.xml (robots.txt points Google here)
-const today = new Date().toISOString().slice(0, 10);
-const prio = (u) => (u === "/" ? "1.0" : ["/kollam", "/book", "/salons"].includes(u) ? "0.9" : u.startsWith("/product/") ? "0.6" : "0.7");
-fs.writeFileSync(
-  path.join(dist, "sitemap.xml"),
-  `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
-    sitemapUrls.map((u) => `  <url><loc>${SITE}${u === "/" ? "/" : u}</loc><lastmod>${today}</lastmod><priority>${prio(u)}</priority></url>`).join("\n") +
-    "\n</urlset>\n",
-);
-
-console.log(`[prerender] wrote ${count} pages (${products.length} products), sitemap with ${sitemapUrls.length} URLs`);
+console.log(`[prerender] wrote ${count} pages (${products.length} products)`);
