@@ -9,6 +9,7 @@ export const EMPLOYMENT_LABEL = {
 // Street addresses for each branch a job can be at (Google needs a real address for the job).
 export const BRANCH_ADDRESS = {
   "RP Mall, Kollam": ["4th Floor, RP Mall, Taluk Kachery", "Kollam", "691001"],
+  "Signature Skin & Hair Clinic, RP Mall": ["4th Floor, RP Mall, Taluk Kachery", "Kollam", "691001"],
   "Polayathodu, Kollam": ["1st Floor, Narayaneeyam, Near KFC, Polayathodu", "Kollam", "691021"],
   Karunagappally: ["2nd Floor, KC Center, Near KSRTC Bus Stand", "Karunagappally", "690518"],
   Sasthamcotta: ["Vijaya Tower, Adhikadu Junction, Chavara–Sasthamcotta Road", "Sasthamcotta", "690521"],
