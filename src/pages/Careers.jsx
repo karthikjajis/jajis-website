@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import { FaMapMarkerAlt, FaBriefcase, FaRupeeSign } from "react-icons/fa";
+import { FaMapMarkerAlt, FaBriefcase, FaMoneyBillAlt } from "react-icons/fa";
 import { API } from "../config/api";
 import { btn, eyebrow, wrap } from "../components/ui";
 import ApplyForm from "../components/ApplyForm";
@@ -81,7 +81,7 @@ export default function Careers({ initialJobs = null }) {
                 <div className="flex flex-wrap gap-x-5 gap-y-2 text-sm text-gray-700">
                   <span className="flex items-center gap-2"><FaMapMarkerAlt aria-hidden="true" />Jaji's {j.branch}</span>
                   <span className="flex items-center gap-2"><FaBriefcase aria-hidden="true" />{EMPLOYMENT_LABEL[j.employment_type] || j.employment_type}</span>
-                  {salaryText(j) && <span className="flex items-center gap-2"><FaRupeeSign aria-hidden="true" />{salaryText(j).replace(/^₹/, "")}</span>}
+                  {salaryText(j) && <span className="flex items-center gap-2"><FaMoneyBillAlt aria-hidden="true" />{salaryText(j)}</span>}
                 </div>
                 {j.experience && <p className="text-sm text-gray-600">Experience: {j.experience}</p>}
                 <span className="mt-1 text-[0.75rem] tracking-[0.16em] uppercase underline underline-offset-4">View & apply</span>

@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { FaMapMarkerAlt, FaBriefcase, FaRupeeSign, FaClock } from "react-icons/fa";
+import { FaMapMarkerAlt, FaBriefcase, FaMoneyBillAlt, FaClock } from "react-icons/fa";
 import { API } from "../config/api";
 import Seo from "../components/Seo";
 import ApplyForm from "../components/ApplyForm";
@@ -48,7 +48,7 @@ export default function JobDetails({ initialJob = null }) {
         <div className="mt-6 flex flex-wrap gap-x-6 gap-y-3 text-gray-700">
           <span className="flex items-center gap-2"><FaMapMarkerAlt aria-hidden="true" />Jaji's {job.branch}, Kerala</span>
           <span className="flex items-center gap-2"><FaBriefcase aria-hidden="true" />{EMPLOYMENT_LABEL[job.employment_type] || job.employment_type}</span>
-          {sal && <span className="flex items-center gap-2"><FaRupeeSign aria-hidden="true" />{sal.replace(/^₹/, "")}</span>}
+          {sal && <span className="flex items-center gap-2"><FaMoneyBillAlt aria-hidden="true" />{sal}</span>}
           {job.experience && <span className="flex items-center gap-2"><FaClock aria-hidden="true" />{job.experience}</span>}
         </div>
         <a href="#apply" className={`${btn.solid} mt-8`}>Apply now</a>

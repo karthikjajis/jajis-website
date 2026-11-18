@@ -29,7 +29,9 @@ export const rupees = (n) => `₹${Number(n).toLocaleString("en-IN", { maximumFr
 export function salaryText(job) {
   const a = job.salary_min, b = job.salary_max;
   if (a && b && a !== b) return `${rupees(a)} – ${rupees(b)} a month`;
-  if (a || b) return `${rupees(a || b)} a month`;
+  if (a && b) return `${rupees(a)} a month`;
+  if (a) return `From ${rupees(a)} a month`;
+  if (b) return `Up to ${rupees(b)} a month`;
   return "";
 }
 
@@ -98,7 +100,11 @@ export function jobPostingLd(job) {
         "@type": "QuantitativeValue",
         ...(job.salary_min && job.salary_max && job.salary_min !== job.salary_max
           ? { minValue: job.salary_min, maxValue: job.salary_max }
-          : { value: job.salary_min || job.salary_max }),
+          : job.salary_min && job.salary_max
+            ? { value: job.salary_min }
+            : job.salary_min
+              ? { minValue: job.salary_min }
+              : { maxValue: job.salary_max }),
         unitText: "MONTH",
       },
     };
