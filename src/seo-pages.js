@@ -16,6 +16,7 @@ export const PAGE_SEO = {
   "/return-policy": { title: "Return & refund policy", description: "Jaji's Innovation return and refund policy: personal care products are non-returnable; damaged or wrong items are replaced or refunded." },
   "/refund-policy": { title: "Return & refund policy", description: "Jaji's Innovation return and refund policy: personal care products are non-returnable; damaged or wrong items are replaced or refunded." },
   "/book": { title: "Book a salon appointment online", description: "Book hair, skin, bridal and spa appointments at Jaji's salons in Kollam, Karunagappally, Sasthamcotta, Paravur and Trivandrum. Pick a time online and pay at the salon." },
+  "/skin-hair-clinic": { title: "Skin & Hair Clinic in Kollam – Jaji's Signature, RP Mall", description: "Jaji's Signature Skin & Hair Clinic at RP Mall, Kollam: dermatologists and aesthetic doctors for hair fall (PRP, GFC), laser hair reduction, acne scars, CO2 laser, HIFU, skin boosters and medi facials. Rated 4.9 on Google. Open daily 10–8." },
   "/careers": { title: "Careers – Salon jobs in Kollam & Trivandrum", description: "Jobs at Jaji's Innovation: hair stylists, beauticians, makeup artists, therapists, managers and front desk across Kollam, Karunagappally, Paravur, Sasthamcotta and Trivandrum. Apply online." },
   "/contact": { title: "Contact us", description: "Call, WhatsApp or visit Jaji's salons, Q Café, Food Court, studio and academy across Kerala." },
 };

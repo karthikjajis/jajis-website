@@ -38,7 +38,7 @@ const SERVICES = [
   ["Haircuts & styling", "Precision cuts for women, men and kids, blow-dries, party styling and updos."],
   ["Hair colour", "Global colour, highlights, balayage and grey coverage with professional brands."],
   ["Hair treatments", "Keratin, smoothening, hair botox, scalp and hair-fall treatments, hair spa."],
-  ["Facials & skin", "Clean-ups, glow and de-tan facials, acne care and advanced skin treatments at our Signature Skin & Hair Clinic."],
+  ["Facials & skin", "Clean-ups, glow and de-tan facials, acne care — and medical skin and hair treatments by doctors at our Signature Skin & Hair Clinic in the same mall."],
   ["Bridal & groom makeover", "Bridal makeup, saree draping, hairstyling and pre-wedding packages for brides and grooms."],
   ["Hands, feet & waxing", "Manicure, pedicure, nail care, threading and waxing."],
 ];

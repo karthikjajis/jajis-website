@@ -10,6 +10,7 @@ const menuItems = [
   { path: "/", label: "Home" },
   { path: "/products", label: "Shop online" },
   { path: "/salons", label: "Salons" },
+  { path: "/skin-hair-clinic", label: "Skin & Hair Clinic" },
   { path: "/house-of-jajis", label: "House of Jaji’s · Coming soon" },
   { path: "/cosmetics", label: "Cosmetics" },
   { path: "/academy", label: "Academy" },
@@ -24,6 +25,7 @@ const menuItems = [
 
 const desktopLinks = [
   { path: "/salons", label: "Salons" },
+  { path: "/skin-hair-clinic", label: "Clinic" },
   { path: "/products", label: "Shop" },
   { path: "/academy", label: "Academy" },
   { path: "/event-hall", label: "Book a hall" },

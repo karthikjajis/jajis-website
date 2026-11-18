@@ -24,6 +24,7 @@ function lazyPage(loader) {
 const Salons = lazyPage(() => import("./pages/Salons"));
 const BookAppointment = lazyPage(() => import("./pages/BookAppointment"));
 const KollamSalons = lazyPage(() => import("./pages/KollamSalons"));
+const SignatureClinic = lazyPage(() => import("./pages/SignatureClinic"));
 const Careers = lazyPage(() => import("./pages/Careers"));
 const JobDetails = lazyPage(() => import("./pages/JobDetails"));
 const SalonDetails = lazyPage(() => import("./pages/salon_details"));
@@ -108,6 +109,7 @@ export default function App() {
               <Route path="/salons" element={<Salons />} />
               <Route path="/book" element={<BookAppointment />} />
               <Route path="/kollam" element={<KollamSalons />} />
+              <Route path="/skin-hair-clinic" element={<SignatureClinic />} />
               <Route path="/careers" element={<Careers />} />
               <Route path="/careers/:id" element={<JobDetails />} />
               <Route path="/salons/:id" element={<SalonDetails />} />

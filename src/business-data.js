@@ -179,6 +179,63 @@ export const SALON_FAQ_LD = {
 };
 
 /** Which structured data goes on which page (Organization + WebSite go everywhere). */
+// Jaji's Signature Skin & Hair Clinic (its own site: jajissignatureclinic.com). Details as on that site, Nov 2026.
+export const CLINIC = {
+  name: "Jaji's Signature Skin & Hair Clinic",
+  address: "4th Floor, RP Mall, Taluk Kachery, Kollam, Kerala 691001",
+  phone: "+91 90615 61500",
+  rating: "4.9",
+  site: "https://jajissignatureclinic.com/",
+  image: "https://jajissignatureclinic.com/media/hero-poster.webp",
+  maps: "https://www.google.com/maps/search/?api=1&query=Jajis+Signature+Skin+%26+Hair+Clinic+RP+Mall+Kollam&query_place_id=ChIJSyNpBQr9BTsRORPkU1npRJ4",
+};
+
+export const CLINIC_FAQ = [
+  [
+    "Where is Jaji's Signature Skin & Hair Clinic?",
+    "On the 4th floor of RP Mall, Taluk Kachery, Kollam, next to Jaji's salon. It is open every day from 10 AM to 8 PM. Call +91 90615 61500 to book a consultation.",
+  ],
+  [
+    "Who treats patients at the clinic?",
+    "Every treatment plan is made by our dermatologists and aesthetic doctors after a consultation, and treatments are carried out by the doctors and our clinical team.",
+  ],
+  [
+    "Which hair fall treatments do you offer?",
+    "Hair PRP therapy, GFC hair treatment and Exos GFC with exosomes, planned after a scalp examination. Hair PRP is also available as a 6-sitting package.",
+  ],
+  [
+    "Do you offer laser hair reduction in Kollam?",
+    "Yes — with an 808 nm diode laser with cooling, for the face, underarms, arms, legs and full body. Usually 6–8 sessions are recommended.",
+  ],
+  [
+    "Is the clinic the same as the salon?",
+    "No. The salon does hair, beauty and bridal services; the clinic is a medical skin and hair clinic run by doctors. Both are part of Jaji's Innovation and sit side by side at RP Mall.",
+  ],
+];
+
+const CLINIC_LD = {
+  "@context": "https://schema.org",
+  "@type": ["MedicalClinic", "MedicalBusiness"],
+  "@id": "https://jajissignatureclinic.com/#clinic",
+  name: "Jaji's Signature Hair & Skin Clinic",
+  alternateName: ["Jajis Signature Skin & Hair Clinic", "Jaji's Signature Clinic"],
+  url: "https://jajissignatureclinic.com/",
+  telephone: "+91-9061561500",
+  medicalSpecialty: "Dermatology",
+  priceRange: "₹₹",
+  image: "https://jajissignatureclinic.com/media/hero-poster.webp",
+  address: { "@type": "PostalAddress", streetAddress: "4th Floor, RP Mall, Taluk Kachery", addressLocality: "Kollam", addressRegion: "Kerala", postalCode: "691001", addressCountry: "IN" },
+  geo: { "@type": "GeoCoordinates", latitude: 8.8897821, longitude: 76.5858082 },
+  openingHoursSpecification: [{ "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], opens: "10:00", closes: "20:00" }],
+  parentOrganization: { "@id": `${SITE}/#organization` },
+};
+
+const CLINIC_FAQ_LD = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: CLINIC_FAQ.map(([q, a]) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } })),
+};
+
 export const KOLLAM_FAQ = [
   [
     "Which is the best salon in Kollam?",
@@ -229,6 +286,7 @@ const KOLLAM_BREADCRUMB_LD = {
 export const PAGE_LD = {
   "/": SALON_LD,
   "/salons": [...SALON_LD, SALON_FAQ_LD],
+  "/skin-hair-clinic": [CLINIC_LD, CLINIC_FAQ_LD],
   "/kollam": [...SALON_LD.slice(0, 2), KOLLAM_FAQ_LD, KOLLAM_BREADCRUMB_LD],
   "/contact": [...SALON_LD, EVENT_VENUE_LD, FOOD_COURT_LD, STUDIO_LD, ACADEMY_LD],
   "/event-hall": [EVENT_VENUE_LD],

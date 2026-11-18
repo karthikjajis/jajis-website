@@ -9,6 +9,7 @@ const columns = [
       ["Book a salon appointment", "/book"],
       ["Salons in Kollam", "/kollam"],
       ["Find a salon", "/salons"],
+      ["Skin & Hair Clinic", "/skin-hair-clinic"],
       ["Book the Q Café hall", "https://jajisqcafe.com/book"],
       ["Q Café & Event Hall", "/event-hall"],
       ["Food Court", "/food-court"],

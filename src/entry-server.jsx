@@ -10,6 +10,7 @@ import Home from "./pages/Home";
 import Salons from "./pages/Salons";
 import BookAppointment from "./pages/BookAppointment";
 import KollamSalons from "./pages/KollamSalons";
+import SignatureClinic from "./pages/SignatureClinic";
 import Careers from "./pages/Careers";
 import Cosmetics from "./pages/Cosmetics";
 import EventHall from "./pages/EventHall";
@@ -32,6 +33,7 @@ const PAGES = {
   "/salons": Salons,
   "/book": BookAppointment,
   "/kollam": KollamSalons,
+  "/skin-hair-clinic": SignatureClinic,
   "/careers": Careers,
   "/cosmetics": Cosmetics,
   "/event-hall": EventHall,
